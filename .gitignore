@@ -1,0 +1,19 @@
+logs
+*.log
+npm-debug.log*
+
+node_modules
+dist
+coverage
+
+.env
+.DS_Store
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+# Optional REPL history
+.node_repl_history
+
