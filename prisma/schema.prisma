@@ -1,0 +1,217 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  // Connection URL moved to prisma.config.ts
+}
+
+model Hotel {
+  id           String   @id @default(cuid())
+  hotelName    String
+  adresse      String
+  city         String
+  classement   String
+  code_postal  String
+  country      String
+  departement  String
+  region       String
+  lat          Float
+  lng          Float
+  mail         String
+  partnership  Boolean
+  phone        String
+  room         Int
+  website      String
+  appLink      String?
+  base64Url    String?
+  logo         String?
+  pricingModel String?
+
+  createdAt    DateTime
+  updatedAt    DateTime
+
+  chatRoom ChatMessage[]
+  businessUsers BusinessUser[]
+  guestUsers    GuestUser[]
+  feedbacks     Feedback[]
+  supports      Support[]
+
+  @@map("hotels")
+}
+
+model BusinessUser {
+  id           String   @id @default(cuid())
+  userId       String   @unique
+  adminStatus  Boolean
+  appLink      String
+  city         String
+  classement   String
+  code_postal  String
+  country      String
+  email        String
+  hotelDept    String
+  hotelId      String
+  hotelName    String
+  hotelRegion  String
+  language     String
+  password     String
+  pricingModel String
+  room         String
+  username     String
+  adresse      String?
+  base64Url    String?
+  logo         String?
+  mail         String?
+  phone        String?
+  website      String?
+
+  createdAt    DateTime
+  updatedAt    DateTime
+
+  hotel Hotel @relation(fields: [hotelId], references: [id])
+
+  @@map("business_users")
+}
+
+model GuestUser {
+  id                 String    @id @default(cuid())
+  userId             String    @unique
+  username           String
+  email              String
+  password           String    
+  phone              String
+  gender             String
+  photo              String?
+  language           String
+  localLanguage      String
+  room               String
+  hotelId            String
+  hotelName          String
+  hotelDept          String
+  hotelRegion        String
+  hotelPhone         String
+  city               String
+  classement         String
+  logo               String
+  website            String
+  journeyId          String
+  guestCategory      String
+  guestCategoryClone String?
+  checkoutDate       String
+  notificationStatus String
+  lastTimeConnected  BigInt
+  newConnection      Boolean
+  isChatting         Boolean?
+
+  createdAt          DateTime
+  updatedAt          DateTime
+
+  // Room amenities
+  babyBed     Boolean
+  blanket     Boolean
+  hairDryer   Boolean
+  iron        Boolean
+  pillow      Boolean
+  soap        Boolean
+  toiletPaper Boolean
+  towel       Boolean
+
+  // Visited hotels stored as array of hotel IDs
+  hotelVisitedArray String[]
+
+  hotel Hotel        @relation(fields: [hotelId], references: [id])
+  token GuestToken?
+
+  @@map("guest_users")
+}
+
+model GuestToken {
+  id             String    @id @default(cuid())
+  guestUserId    String    @unique
+  endpoint       String
+  expirationTime String?
+  auth           String
+  p256dh         String
+  createdAt      DateTime
+  updatedAt      DateTime
+
+  guestUser GuestUser @relation(fields: [guestUserId], references: [id])
+
+  @@map("guest_tokens")
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  hotelId   String
+
+  createdAt DateTime
+  updatedAt DateTime
+
+  hotel        Hotel          @relation(fields: [hotelId], references: [id])
+  satisfaction FeedbackItem[] @relation("SatisfactionItems")
+  improvement  FeedbackItem[] @relation("ImprovementItems")
+
+  @@map("feedbacks")
+}
+
+model FeedbackItem {
+  id                   String   @id @default(cuid())
+  author               String
+  text                 String
+  hotelDept            String
+  hotelName            String
+  hotelRegion          String
+  satisfactionFeedback Feedback? @relation("SatisfactionItems", fields: [satisfactionFeedbackId], references: [id])
+  satisfactionFeedbackId String?
+  improvementFeedback  Feedback? @relation("ImprovementItems", fields: [improvementFeedbackId], references: [id])
+  improvementFeedbackId String?
+
+  createdAt            DateTime
+  updatedAt            DateTime
+
+  @@map("feedback_items")
+}
+
+model Support {
+  id           String        @id @default(cuid())
+  hotelId      String
+  hotelName    String
+  pricingModel String
+  checkoutDate String
+  adminSpeak   Boolean
+  status       Boolean
+
+  createdAt    DateTime
+  updatedAt    DateTime
+
+  hotel    Hotel         @relation(fields: [hotelId], references: [id])
+  chatRoom ChatMessage[]
+
+  @@map("support")
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid()) 
+  supportId String
+  hotelId   String  
+  author    String
+  email     String  
+  text      String
+  photo     String?
+  date      DateTime
+  
+  createdAt DateTime
+  updatedAt DateTime
+
+  support Support @relation(fields: [supportId], references: [id])
+  hotel Hotel @relation(fields: [hotelId], references: [id])
+
+
+  @@map("chat_messages")
+}

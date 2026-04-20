@@ -7,8 +7,8 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
+    "module": "esnext",
+    "target": "es2023",
     // For nodejs:
     "lib": ["esnext"],
     "types": ["node"],
@@ -39,8 +39,9 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
-    
+    "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "5.0",
+    "moduleResolution": "bundler"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
