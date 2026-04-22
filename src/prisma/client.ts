@@ -47,6 +47,16 @@ export { Prisma }
  */
 export type Hotel = Prisma.HotelModel
 /**
+ * Model CheckList
+ * 
+ */
+export type CheckList = Prisma.CheckListModel
+/**
+ * Model CheckListItem
+ * 
+ */
+export type CheckListItem = Prisma.CheckListItemModel
+/**
  * Model BusinessUser
  * 
  */
@@ -56,6 +66,16 @@ export type BusinessUser = Prisma.BusinessUserModel
  * 
  */
 export type GuestUser = Prisma.GuestUserModel
+/**
+ * Model RoomAmeneties
+ * 
+ */
+export type RoomAmeneties = Prisma.RoomAmenetiesModel
+/**
+ * Model Amenety
+ * 
+ */
+export type Amenety = Prisma.AmenetyModel
 /**
  * Model GuestToken
  * 
@@ -76,6 +96,11 @@ export type FeedbackItem = Prisma.FeedbackItemModel
  * 
  */
 export type Support = Prisma.SupportModel
+/**
+ * Model Chat
+ * 
+ */
+export type Chat = Prisma.ChatModel
 /**
  * Model ChatMessage
  * 

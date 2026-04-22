@@ -385,12 +385,17 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 
 export const ModelName = {
   Hotel: 'Hotel',
+  CheckList: 'CheckList',
+  CheckListItem: 'CheckListItem',
   BusinessUser: 'BusinessUser',
   GuestUser: 'GuestUser',
+  RoomAmeneties: 'RoomAmeneties',
+  Amenety: 'Amenety',
   GuestToken: 'GuestToken',
   Feedback: 'Feedback',
   FeedbackItem: 'FeedbackItem',
   Support: 'Support',
+  Chat: 'Chat',
   ChatMessage: 'ChatMessage'
 } as const
 
@@ -407,7 +412,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "hotel" | "businessUser" | "guestUser" | "guestToken" | "feedback" | "feedbackItem" | "support" | "chatMessage"
+    modelProps: "hotel" | "checkList" | "checkListItem" | "businessUser" | "guestUser" | "roomAmeneties" | "amenety" | "guestToken" | "feedback" | "feedbackItem" | "support" | "chat" | "chatMessage"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -482,6 +487,154 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         count: {
           args: Prisma.HotelCountArgs<ExtArgs>
           result: runtime.Types.Utils.Optional<Prisma.HotelCountAggregateOutputType> | number
+        }
+      }
+    }
+    CheckList: {
+      payload: Prisma.$CheckListPayload<ExtArgs>
+      fields: Prisma.CheckListFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.CheckListFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.CheckListFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>
+        }
+        findFirst: {
+          args: Prisma.CheckListFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.CheckListFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>
+        }
+        findMany: {
+          args: Prisma.CheckListFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>[]
+        }
+        create: {
+          args: Prisma.CheckListCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>
+        }
+        createMany: {
+          args: Prisma.CheckListCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.CheckListCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>[]
+        }
+        delete: {
+          args: Prisma.CheckListDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>
+        }
+        update: {
+          args: Prisma.CheckListUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>
+        }
+        deleteMany: {
+          args: Prisma.CheckListDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.CheckListUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.CheckListUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>[]
+        }
+        upsert: {
+          args: Prisma.CheckListUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListPayload>
+        }
+        aggregate: {
+          args: Prisma.CheckListAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateCheckList>
+        }
+        groupBy: {
+          args: Prisma.CheckListGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.CheckListGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.CheckListCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.CheckListCountAggregateOutputType> | number
+        }
+      }
+    }
+    CheckListItem: {
+      payload: Prisma.$CheckListItemPayload<ExtArgs>
+      fields: Prisma.CheckListItemFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.CheckListItemFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.CheckListItemFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>
+        }
+        findFirst: {
+          args: Prisma.CheckListItemFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.CheckListItemFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>
+        }
+        findMany: {
+          args: Prisma.CheckListItemFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>[]
+        }
+        create: {
+          args: Prisma.CheckListItemCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>
+        }
+        createMany: {
+          args: Prisma.CheckListItemCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.CheckListItemCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>[]
+        }
+        delete: {
+          args: Prisma.CheckListItemDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>
+        }
+        update: {
+          args: Prisma.CheckListItemUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>
+        }
+        deleteMany: {
+          args: Prisma.CheckListItemDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.CheckListItemUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.CheckListItemUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>[]
+        }
+        upsert: {
+          args: Prisma.CheckListItemUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$CheckListItemPayload>
+        }
+        aggregate: {
+          args: Prisma.CheckListItemAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateCheckListItem>
+        }
+        groupBy: {
+          args: Prisma.CheckListItemGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.CheckListItemGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.CheckListItemCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.CheckListItemCountAggregateOutputType> | number
         }
       }
     }
@@ -630,6 +783,154 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         count: {
           args: Prisma.GuestUserCountArgs<ExtArgs>
           result: runtime.Types.Utils.Optional<Prisma.GuestUserCountAggregateOutputType> | number
+        }
+      }
+    }
+    RoomAmeneties: {
+      payload: Prisma.$RoomAmenetiesPayload<ExtArgs>
+      fields: Prisma.RoomAmenetiesFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.RoomAmenetiesFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.RoomAmenetiesFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>
+        }
+        findFirst: {
+          args: Prisma.RoomAmenetiesFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.RoomAmenetiesFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>
+        }
+        findMany: {
+          args: Prisma.RoomAmenetiesFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>[]
+        }
+        create: {
+          args: Prisma.RoomAmenetiesCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>
+        }
+        createMany: {
+          args: Prisma.RoomAmenetiesCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.RoomAmenetiesCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>[]
+        }
+        delete: {
+          args: Prisma.RoomAmenetiesDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>
+        }
+        update: {
+          args: Prisma.RoomAmenetiesUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>
+        }
+        deleteMany: {
+          args: Prisma.RoomAmenetiesDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.RoomAmenetiesUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.RoomAmenetiesUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>[]
+        }
+        upsert: {
+          args: Prisma.RoomAmenetiesUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RoomAmenetiesPayload>
+        }
+        aggregate: {
+          args: Prisma.RoomAmenetiesAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateRoomAmeneties>
+        }
+        groupBy: {
+          args: Prisma.RoomAmenetiesGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.RoomAmenetiesGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.RoomAmenetiesCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.RoomAmenetiesCountAggregateOutputType> | number
+        }
+      }
+    }
+    Amenety: {
+      payload: Prisma.$AmenetyPayload<ExtArgs>
+      fields: Prisma.AmenetyFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.AmenetyFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.AmenetyFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>
+        }
+        findFirst: {
+          args: Prisma.AmenetyFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.AmenetyFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>
+        }
+        findMany: {
+          args: Prisma.AmenetyFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>[]
+        }
+        create: {
+          args: Prisma.AmenetyCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>
+        }
+        createMany: {
+          args: Prisma.AmenetyCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.AmenetyCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>[]
+        }
+        delete: {
+          args: Prisma.AmenetyDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>
+        }
+        update: {
+          args: Prisma.AmenetyUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>
+        }
+        deleteMany: {
+          args: Prisma.AmenetyDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.AmenetyUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.AmenetyUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>[]
+        }
+        upsert: {
+          args: Prisma.AmenetyUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AmenetyPayload>
+        }
+        aggregate: {
+          args: Prisma.AmenetyAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateAmenety>
+        }
+        groupBy: {
+          args: Prisma.AmenetyGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AmenetyGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.AmenetyCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AmenetyCountAggregateOutputType> | number
         }
       }
     }
@@ -929,6 +1230,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    Chat: {
+      payload: Prisma.$ChatPayload<ExtArgs>
+      fields: Prisma.ChatFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.ChatFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.ChatFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+        }
+        findFirst: {
+          args: Prisma.ChatFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.ChatFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+        }
+        findMany: {
+          args: Prisma.ChatFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>[]
+        }
+        create: {
+          args: Prisma.ChatCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+        }
+        createMany: {
+          args: Prisma.ChatCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.ChatCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>[]
+        }
+        delete: {
+          args: Prisma.ChatDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+        }
+        update: {
+          args: Prisma.ChatUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+        }
+        deleteMany: {
+          args: Prisma.ChatDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.ChatUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.ChatUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>[]
+        }
+        upsert: {
+          args: Prisma.ChatUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+        }
+        aggregate: {
+          args: Prisma.ChatAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateChat>
+        }
+        groupBy: {
+          args: Prisma.ChatGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ChatGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.ChatCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ChatCountAggregateOutputType> | number
+        }
+      }
+    }
     ChatMessage: {
       payload: Prisma.$ChatMessagePayload<ExtArgs>
       fields: Prisma.ChatMessageFieldRefs
@@ -1070,31 +1445,38 @@ export const HotelScalarFieldEnum = {
 export type HotelScalarFieldEnum = (typeof HotelScalarFieldEnum)[keyof typeof HotelScalarFieldEnum]
 
 
+export const CheckListScalarFieldEnum = {
+  id: 'id',
+  hotelId: 'hotelId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CheckListScalarFieldEnum = (typeof CheckListScalarFieldEnum)[keyof typeof CheckListScalarFieldEnum]
+
+
+export const CheckListItemScalarFieldEnum = {
+  id: 'id',
+  task: 'task',
+  status: 'status',
+  checkListId: 'checkListId',
+  morningId: 'morningId',
+  eveningId: 'eveningId',
+  nightId: 'nightId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CheckListItemScalarFieldEnum = (typeof CheckListItemScalarFieldEnum)[keyof typeof CheckListItemScalarFieldEnum]
+
+
 export const BusinessUserScalarFieldEnum = {
   id: 'id',
-  userId: 'userId',
   adminStatus: 'adminStatus',
-  appLink: 'appLink',
-  city: 'city',
-  classement: 'classement',
-  code_postal: 'code_postal',
-  country: 'country',
   email: 'email',
-  hotelDept: 'hotelDept',
   hotelId: 'hotelId',
-  hotelName: 'hotelName',
-  hotelRegion: 'hotelRegion',
-  language: 'language',
   password: 'password',
-  pricingModel: 'pricingModel',
-  room: 'room',
   username: 'username',
-  adresse: 'adresse',
-  base64Url: 'base64Url',
-  logo: 'logo',
-  mail: 'mail',
-  phone: 'phone',
-  website: 'website',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
@@ -1104,7 +1486,6 @@ export type BusinessUserScalarFieldEnum = (typeof BusinessUserScalarFieldEnum)[k
 
 export const GuestUserScalarFieldEnum = {
   id: 'id',
-  userId: 'userId',
   username: 'username',
   email: 'email',
   password: 'password',
@@ -1115,14 +1496,6 @@ export const GuestUserScalarFieldEnum = {
   localLanguage: 'localLanguage',
   room: 'room',
   hotelId: 'hotelId',
-  hotelName: 'hotelName',
-  hotelDept: 'hotelDept',
-  hotelRegion: 'hotelRegion',
-  hotelPhone: 'hotelPhone',
-  city: 'city',
-  classement: 'classement',
-  logo: 'logo',
-  website: 'website',
   journeyId: 'journeyId',
   guestCategory: 'guestCategory',
   guestCategoryClone: 'guestCategoryClone',
@@ -1133,18 +1506,41 @@ export const GuestUserScalarFieldEnum = {
   isChatting: 'isChatting',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  babyBed: 'babyBed',
-  blanket: 'blanket',
-  hairDryer: 'hairDryer',
-  iron: 'iron',
-  pillow: 'pillow',
-  soap: 'soap',
-  toiletPaper: 'toiletPaper',
-  towel: 'towel',
   hotelVisitedArray: 'hotelVisitedArray'
 } as const
 
 export type GuestUserScalarFieldEnum = (typeof GuestUserScalarFieldEnum)[keyof typeof GuestUserScalarFieldEnum]
+
+
+export const RoomAmenetiesScalarFieldEnum = {
+  id: 'id',
+  guestUserId: 'guestUserId',
+  hotelId: 'hotelId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type RoomAmenetiesScalarFieldEnum = (typeof RoomAmenetiesScalarFieldEnum)[keyof typeof RoomAmenetiesScalarFieldEnum]
+
+
+export const AmenetyScalarFieldEnum = {
+  id: 'id',
+  checkoutDate: 'checkoutDate',
+  clientName: 'clientName',
+  room: 'room',
+  babyBedId: 'babyBedId',
+  blanketId: 'blanketId',
+  hairDryerId: 'hairDryerId',
+  ironId: 'ironId',
+  pillowId: 'pillowId',
+  soapId: 'soapId',
+  toiletPaperId: 'toiletPaperId',
+  towelId: 'towelId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type AmenetyScalarFieldEnum = (typeof AmenetyScalarFieldEnum)[keyof typeof AmenetyScalarFieldEnum]
 
 
 export const GuestTokenScalarFieldEnum = {
@@ -1202,15 +1598,37 @@ export const SupportScalarFieldEnum = {
 export type SupportScalarFieldEnum = (typeof SupportScalarFieldEnum)[keyof typeof SupportScalarFieldEnum]
 
 
+export const ChatScalarFieldEnum = {
+  id: 'id',
+  clientFullName: 'clientFullName',
+  checkoutDate: 'checkoutDate',
+  guestLanguage: 'guestLanguage',
+  hotelResponding: 'hotelResponding',
+  isChatting: 'isChatting',
+  room: 'room',
+  status: 'status',
+  userId: 'userId',
+  hotelId: 'hotelId',
+  supportId: 'supportId',
+  guestTokenId: 'guestTokenId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ChatScalarFieldEnum = (typeof ChatScalarFieldEnum)[keyof typeof ChatScalarFieldEnum]
+
+
 export const ChatMessageScalarFieldEnum = {
   id: 'id',
-  supportId: 'supportId',
-  hotelId: 'hotelId',
   author: 'author',
   email: 'email',
+  title: 'title',
   text: 'text',
   photo: 'photo',
   date: 'date',
+  room: 'room',
+  userId: 'userId',
+  chatId: 'chatId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
@@ -1420,12 +1838,17 @@ export type PrismaClientOptions = ({
 }
 export type GlobalOmitConfig = {
   hotel?: Prisma.HotelOmit
+  checkList?: Prisma.CheckListOmit
+  checkListItem?: Prisma.CheckListItemOmit
   businessUser?: Prisma.BusinessUserOmit
   guestUser?: Prisma.GuestUserOmit
+  roomAmeneties?: Prisma.RoomAmenetiesOmit
+  amenety?: Prisma.AmenetyOmit
   guestToken?: Prisma.GuestTokenOmit
   feedback?: Prisma.FeedbackOmit
   feedbackItem?: Prisma.FeedbackItemOmit
   support?: Prisma.SupportOmit
+  chat?: Prisma.ChatOmit
   chatMessage?: Prisma.ChatMessageOmit
 }
 

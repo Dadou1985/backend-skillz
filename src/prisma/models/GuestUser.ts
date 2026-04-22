@@ -36,7 +36,6 @@ export type GuestUserSumAggregateOutputType = {
 
 export type GuestUserMinAggregateOutputType = {
   id: string | null
-  userId: string | null
   username: string | null
   email: string | null
   password: string | null
@@ -47,14 +46,6 @@ export type GuestUserMinAggregateOutputType = {
   localLanguage: string | null
   room: string | null
   hotelId: string | null
-  hotelName: string | null
-  hotelDept: string | null
-  hotelRegion: string | null
-  hotelPhone: string | null
-  city: string | null
-  classement: string | null
-  logo: string | null
-  website: string | null
   journeyId: string | null
   guestCategory: string | null
   guestCategoryClone: string | null
@@ -65,19 +56,10 @@ export type GuestUserMinAggregateOutputType = {
   isChatting: boolean | null
   createdAt: Date | null
   updatedAt: Date | null
-  babyBed: boolean | null
-  blanket: boolean | null
-  hairDryer: boolean | null
-  iron: boolean | null
-  pillow: boolean | null
-  soap: boolean | null
-  toiletPaper: boolean | null
-  towel: boolean | null
 }
 
 export type GuestUserMaxAggregateOutputType = {
   id: string | null
-  userId: string | null
   username: string | null
   email: string | null
   password: string | null
@@ -88,14 +70,6 @@ export type GuestUserMaxAggregateOutputType = {
   localLanguage: string | null
   room: string | null
   hotelId: string | null
-  hotelName: string | null
-  hotelDept: string | null
-  hotelRegion: string | null
-  hotelPhone: string | null
-  city: string | null
-  classement: string | null
-  logo: string | null
-  website: string | null
   journeyId: string | null
   guestCategory: string | null
   guestCategoryClone: string | null
@@ -106,19 +80,10 @@ export type GuestUserMaxAggregateOutputType = {
   isChatting: boolean | null
   createdAt: Date | null
   updatedAt: Date | null
-  babyBed: boolean | null
-  blanket: boolean | null
-  hairDryer: boolean | null
-  iron: boolean | null
-  pillow: boolean | null
-  soap: boolean | null
-  toiletPaper: boolean | null
-  towel: boolean | null
 }
 
 export type GuestUserCountAggregateOutputType = {
   id: number
-  userId: number
   username: number
   email: number
   password: number
@@ -129,14 +94,6 @@ export type GuestUserCountAggregateOutputType = {
   localLanguage: number
   room: number
   hotelId: number
-  hotelName: number
-  hotelDept: number
-  hotelRegion: number
-  hotelPhone: number
-  city: number
-  classement: number
-  logo: number
-  website: number
   journeyId: number
   guestCategory: number
   guestCategoryClone: number
@@ -147,14 +104,6 @@ export type GuestUserCountAggregateOutputType = {
   isChatting: number
   createdAt: number
   updatedAt: number
-  babyBed: number
-  blanket: number
-  hairDryer: number
-  iron: number
-  pillow: number
-  soap: number
-  toiletPaper: number
-  towel: number
   hotelVisitedArray: number
   _all: number
 }
@@ -170,7 +119,6 @@ export type GuestUserSumAggregateInputType = {
 
 export type GuestUserMinAggregateInputType = {
   id?: true
-  userId?: true
   username?: true
   email?: true
   password?: true
@@ -181,14 +129,6 @@ export type GuestUserMinAggregateInputType = {
   localLanguage?: true
   room?: true
   hotelId?: true
-  hotelName?: true
-  hotelDept?: true
-  hotelRegion?: true
-  hotelPhone?: true
-  city?: true
-  classement?: true
-  logo?: true
-  website?: true
   journeyId?: true
   guestCategory?: true
   guestCategoryClone?: true
@@ -199,19 +139,10 @@ export type GuestUserMinAggregateInputType = {
   isChatting?: true
   createdAt?: true
   updatedAt?: true
-  babyBed?: true
-  blanket?: true
-  hairDryer?: true
-  iron?: true
-  pillow?: true
-  soap?: true
-  toiletPaper?: true
-  towel?: true
 }
 
 export type GuestUserMaxAggregateInputType = {
   id?: true
-  userId?: true
   username?: true
   email?: true
   password?: true
@@ -222,14 +153,6 @@ export type GuestUserMaxAggregateInputType = {
   localLanguage?: true
   room?: true
   hotelId?: true
-  hotelName?: true
-  hotelDept?: true
-  hotelRegion?: true
-  hotelPhone?: true
-  city?: true
-  classement?: true
-  logo?: true
-  website?: true
   journeyId?: true
   guestCategory?: true
   guestCategoryClone?: true
@@ -240,19 +163,10 @@ export type GuestUserMaxAggregateInputType = {
   isChatting?: true
   createdAt?: true
   updatedAt?: true
-  babyBed?: true
-  blanket?: true
-  hairDryer?: true
-  iron?: true
-  pillow?: true
-  soap?: true
-  toiletPaper?: true
-  towel?: true
 }
 
 export type GuestUserCountAggregateInputType = {
   id?: true
-  userId?: true
   username?: true
   email?: true
   password?: true
@@ -263,14 +177,6 @@ export type GuestUserCountAggregateInputType = {
   localLanguage?: true
   room?: true
   hotelId?: true
-  hotelName?: true
-  hotelDept?: true
-  hotelRegion?: true
-  hotelPhone?: true
-  city?: true
-  classement?: true
-  logo?: true
-  website?: true
   journeyId?: true
   guestCategory?: true
   guestCategoryClone?: true
@@ -281,14 +187,6 @@ export type GuestUserCountAggregateInputType = {
   isChatting?: true
   createdAt?: true
   updatedAt?: true
-  babyBed?: true
-  blanket?: true
-  hairDryer?: true
-  iron?: true
-  pillow?: true
-  soap?: true
-  toiletPaper?: true
-  towel?: true
   hotelVisitedArray?: true
   _all?: true
 }
@@ -381,7 +279,6 @@ export type GuestUserGroupByArgs<ExtArgs extends runtime.Types.Extensions.Intern
 
 export type GuestUserGroupByOutputType = {
   id: string
-  userId: string
   username: string
   email: string
   password: string
@@ -392,14 +289,6 @@ export type GuestUserGroupByOutputType = {
   localLanguage: string
   room: string
   hotelId: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone: string | null
@@ -410,14 +299,6 @@ export type GuestUserGroupByOutputType = {
   isChatting: boolean | null
   createdAt: Date
   updatedAt: Date
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray: string[]
   _count: GuestUserCountAggregateOutputType | null
   _avg: GuestUserAvgAggregateOutputType | null
@@ -446,7 +327,6 @@ export type GuestUserWhereInput = {
   OR?: Prisma.GuestUserWhereInput[]
   NOT?: Prisma.GuestUserWhereInput | Prisma.GuestUserWhereInput[]
   id?: Prisma.StringFilter<"GuestUser"> | string
-  userId?: Prisma.StringFilter<"GuestUser"> | string
   username?: Prisma.StringFilter<"GuestUser"> | string
   email?: Prisma.StringFilter<"GuestUser"> | string
   password?: Prisma.StringFilter<"GuestUser"> | string
@@ -457,14 +337,6 @@ export type GuestUserWhereInput = {
   localLanguage?: Prisma.StringFilter<"GuestUser"> | string
   room?: Prisma.StringFilter<"GuestUser"> | string
   hotelId?: Prisma.StringFilter<"GuestUser"> | string
-  hotelName?: Prisma.StringFilter<"GuestUser"> | string
-  hotelDept?: Prisma.StringFilter<"GuestUser"> | string
-  hotelRegion?: Prisma.StringFilter<"GuestUser"> | string
-  hotelPhone?: Prisma.StringFilter<"GuestUser"> | string
-  city?: Prisma.StringFilter<"GuestUser"> | string
-  classement?: Prisma.StringFilter<"GuestUser"> | string
-  logo?: Prisma.StringFilter<"GuestUser"> | string
-  website?: Prisma.StringFilter<"GuestUser"> | string
   journeyId?: Prisma.StringFilter<"GuestUser"> | string
   guestCategory?: Prisma.StringFilter<"GuestUser"> | string
   guestCategoryClone?: Prisma.StringNullableFilter<"GuestUser"> | string | null
@@ -475,22 +347,14 @@ export type GuestUserWhereInput = {
   isChatting?: Prisma.BoolNullableFilter<"GuestUser"> | boolean | null
   createdAt?: Prisma.DateTimeFilter<"GuestUser"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"GuestUser"> | Date | string
-  babyBed?: Prisma.BoolFilter<"GuestUser"> | boolean
-  blanket?: Prisma.BoolFilter<"GuestUser"> | boolean
-  hairDryer?: Prisma.BoolFilter<"GuestUser"> | boolean
-  iron?: Prisma.BoolFilter<"GuestUser"> | boolean
-  pillow?: Prisma.BoolFilter<"GuestUser"> | boolean
-  soap?: Prisma.BoolFilter<"GuestUser"> | boolean
-  toiletPaper?: Prisma.BoolFilter<"GuestUser"> | boolean
-  towel?: Prisma.BoolFilter<"GuestUser"> | boolean
   hotelVisitedArray?: Prisma.StringNullableListFilter<"GuestUser">
-  hotel?: Prisma.XOR<Prisma.HotelScalarRelationFilter, Prisma.HotelWhereInput>
   token?: Prisma.XOR<Prisma.GuestTokenNullableScalarRelationFilter, Prisma.GuestTokenWhereInput> | null
+  roomAmeneties?: Prisma.RoomAmenetiesListRelationFilter
+  hotel?: Prisma.XOR<Prisma.HotelScalarRelationFilter, Prisma.HotelWhereInput>
 }
 
 export type GuestUserOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   username?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password?: Prisma.SortOrder
@@ -501,14 +365,6 @@ export type GuestUserOrderByWithRelationInput = {
   localLanguage?: Prisma.SortOrder
   room?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  hotelPhone?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  logo?: Prisma.SortOrder
-  website?: Prisma.SortOrder
   journeyId?: Prisma.SortOrder
   guestCategory?: Prisma.SortOrder
   guestCategoryClone?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -519,22 +375,14 @@ export type GuestUserOrderByWithRelationInput = {
   isChatting?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  babyBed?: Prisma.SortOrder
-  blanket?: Prisma.SortOrder
-  hairDryer?: Prisma.SortOrder
-  iron?: Prisma.SortOrder
-  pillow?: Prisma.SortOrder
-  soap?: Prisma.SortOrder
-  toiletPaper?: Prisma.SortOrder
-  towel?: Prisma.SortOrder
   hotelVisitedArray?: Prisma.SortOrder
-  hotel?: Prisma.HotelOrderByWithRelationInput
   token?: Prisma.GuestTokenOrderByWithRelationInput
+  roomAmeneties?: Prisma.RoomAmenetiesOrderByRelationAggregateInput
+  hotel?: Prisma.HotelOrderByWithRelationInput
 }
 
 export type GuestUserWhereUniqueInput = Prisma.AtLeast<{
   id?: string
-  userId?: string
   AND?: Prisma.GuestUserWhereInput | Prisma.GuestUserWhereInput[]
   OR?: Prisma.GuestUserWhereInput[]
   NOT?: Prisma.GuestUserWhereInput | Prisma.GuestUserWhereInput[]
@@ -548,14 +396,6 @@ export type GuestUserWhereUniqueInput = Prisma.AtLeast<{
   localLanguage?: Prisma.StringFilter<"GuestUser"> | string
   room?: Prisma.StringFilter<"GuestUser"> | string
   hotelId?: Prisma.StringFilter<"GuestUser"> | string
-  hotelName?: Prisma.StringFilter<"GuestUser"> | string
-  hotelDept?: Prisma.StringFilter<"GuestUser"> | string
-  hotelRegion?: Prisma.StringFilter<"GuestUser"> | string
-  hotelPhone?: Prisma.StringFilter<"GuestUser"> | string
-  city?: Prisma.StringFilter<"GuestUser"> | string
-  classement?: Prisma.StringFilter<"GuestUser"> | string
-  logo?: Prisma.StringFilter<"GuestUser"> | string
-  website?: Prisma.StringFilter<"GuestUser"> | string
   journeyId?: Prisma.StringFilter<"GuestUser"> | string
   guestCategory?: Prisma.StringFilter<"GuestUser"> | string
   guestCategoryClone?: Prisma.StringNullableFilter<"GuestUser"> | string | null
@@ -566,22 +406,14 @@ export type GuestUserWhereUniqueInput = Prisma.AtLeast<{
   isChatting?: Prisma.BoolNullableFilter<"GuestUser"> | boolean | null
   createdAt?: Prisma.DateTimeFilter<"GuestUser"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"GuestUser"> | Date | string
-  babyBed?: Prisma.BoolFilter<"GuestUser"> | boolean
-  blanket?: Prisma.BoolFilter<"GuestUser"> | boolean
-  hairDryer?: Prisma.BoolFilter<"GuestUser"> | boolean
-  iron?: Prisma.BoolFilter<"GuestUser"> | boolean
-  pillow?: Prisma.BoolFilter<"GuestUser"> | boolean
-  soap?: Prisma.BoolFilter<"GuestUser"> | boolean
-  toiletPaper?: Prisma.BoolFilter<"GuestUser"> | boolean
-  towel?: Prisma.BoolFilter<"GuestUser"> | boolean
   hotelVisitedArray?: Prisma.StringNullableListFilter<"GuestUser">
-  hotel?: Prisma.XOR<Prisma.HotelScalarRelationFilter, Prisma.HotelWhereInput>
   token?: Prisma.XOR<Prisma.GuestTokenNullableScalarRelationFilter, Prisma.GuestTokenWhereInput> | null
-}, "id" | "userId">
+  roomAmeneties?: Prisma.RoomAmenetiesListRelationFilter
+  hotel?: Prisma.XOR<Prisma.HotelScalarRelationFilter, Prisma.HotelWhereInput>
+}, "id">
 
 export type GuestUserOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   username?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password?: Prisma.SortOrder
@@ -592,14 +424,6 @@ export type GuestUserOrderByWithAggregationInput = {
   localLanguage?: Prisma.SortOrder
   room?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  hotelPhone?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  logo?: Prisma.SortOrder
-  website?: Prisma.SortOrder
   journeyId?: Prisma.SortOrder
   guestCategory?: Prisma.SortOrder
   guestCategoryClone?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -610,14 +434,6 @@ export type GuestUserOrderByWithAggregationInput = {
   isChatting?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  babyBed?: Prisma.SortOrder
-  blanket?: Prisma.SortOrder
-  hairDryer?: Prisma.SortOrder
-  iron?: Prisma.SortOrder
-  pillow?: Prisma.SortOrder
-  soap?: Prisma.SortOrder
-  toiletPaper?: Prisma.SortOrder
-  towel?: Prisma.SortOrder
   hotelVisitedArray?: Prisma.SortOrder
   _count?: Prisma.GuestUserCountOrderByAggregateInput
   _avg?: Prisma.GuestUserAvgOrderByAggregateInput
@@ -631,7 +447,6 @@ export type GuestUserScalarWhereWithAggregatesInput = {
   OR?: Prisma.GuestUserScalarWhereWithAggregatesInput[]
   NOT?: Prisma.GuestUserScalarWhereWithAggregatesInput | Prisma.GuestUserScalarWhereWithAggregatesInput[]
   id?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  userId?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
   username?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
   email?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
   password?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
@@ -642,14 +457,6 @@ export type GuestUserScalarWhereWithAggregatesInput = {
   localLanguage?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
   room?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
   hotelId?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  hotelName?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  hotelDept?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  hotelRegion?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  hotelPhone?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  city?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  classement?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  logo?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
-  website?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
   journeyId?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
   guestCategory?: Prisma.StringWithAggregatesFilter<"GuestUser"> | string
   guestCategoryClone?: Prisma.StringNullableWithAggregatesFilter<"GuestUser"> | string | null
@@ -660,20 +467,11 @@ export type GuestUserScalarWhereWithAggregatesInput = {
   isChatting?: Prisma.BoolNullableWithAggregatesFilter<"GuestUser"> | boolean | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"GuestUser"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"GuestUser"> | Date | string
-  babyBed?: Prisma.BoolWithAggregatesFilter<"GuestUser"> | boolean
-  blanket?: Prisma.BoolWithAggregatesFilter<"GuestUser"> | boolean
-  hairDryer?: Prisma.BoolWithAggregatesFilter<"GuestUser"> | boolean
-  iron?: Prisma.BoolWithAggregatesFilter<"GuestUser"> | boolean
-  pillow?: Prisma.BoolWithAggregatesFilter<"GuestUser"> | boolean
-  soap?: Prisma.BoolWithAggregatesFilter<"GuestUser"> | boolean
-  toiletPaper?: Prisma.BoolWithAggregatesFilter<"GuestUser"> | boolean
-  towel?: Prisma.BoolWithAggregatesFilter<"GuestUser"> | boolean
   hotelVisitedArray?: Prisma.StringNullableListFilter<"GuestUser">
 }
 
 export type GuestUserCreateInput = {
   id?: string
-  userId: string
   username: string
   email: string
   password: string
@@ -683,14 +481,6 @@ export type GuestUserCreateInput = {
   language: string
   localLanguage: string
   room: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone?: string | null
@@ -701,22 +491,14 @@ export type GuestUserCreateInput = {
   isChatting?: boolean | null
   createdAt: Date | string
   updatedAt: Date | string
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
-  hotel: Prisma.HotelCreateNestedOneWithoutGuestUsersInput
   token?: Prisma.GuestTokenCreateNestedOneWithoutGuestUserInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutGuestUserInput
+  hotel: Prisma.HotelCreateNestedOneWithoutGuestUsersInput
 }
 
 export type GuestUserUncheckedCreateInput = {
   id?: string
-  userId: string
   username: string
   email: string
   password: string
@@ -727,14 +509,6 @@ export type GuestUserUncheckedCreateInput = {
   localLanguage: string
   room: string
   hotelId: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone?: string | null
@@ -745,21 +519,13 @@ export type GuestUserUncheckedCreateInput = {
   isChatting?: boolean | null
   createdAt: Date | string
   updatedAt: Date | string
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
   token?: Prisma.GuestTokenUncheckedCreateNestedOneWithoutGuestUserInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutGuestUserInput
 }
 
 export type GuestUserUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -769,14 +535,6 @@ export type GuestUserUpdateInput = {
   language?: Prisma.StringFieldUpdateOperationsInput | string
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -787,22 +545,14 @@ export type GuestUserUpdateInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
-  hotel?: Prisma.HotelUpdateOneRequiredWithoutGuestUsersNestedInput
   token?: Prisma.GuestTokenUpdateOneWithoutGuestUserNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutGuestUserNestedInput
+  hotel?: Prisma.HotelUpdateOneRequiredWithoutGuestUsersNestedInput
 }
 
 export type GuestUserUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -813,14 +563,6 @@ export type GuestUserUncheckedUpdateInput = {
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
   hotelId?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -831,21 +573,13 @@ export type GuestUserUncheckedUpdateInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
   token?: Prisma.GuestTokenUncheckedUpdateOneWithoutGuestUserNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutGuestUserNestedInput
 }
 
 export type GuestUserCreateManyInput = {
   id?: string
-  userId: string
   username: string
   email: string
   password: string
@@ -856,14 +590,6 @@ export type GuestUserCreateManyInput = {
   localLanguage: string
   room: string
   hotelId: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone?: string | null
@@ -874,20 +600,11 @@ export type GuestUserCreateManyInput = {
   isChatting?: boolean | null
   createdAt: Date | string
   updatedAt: Date | string
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
 }
 
 export type GuestUserUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -897,14 +614,6 @@ export type GuestUserUpdateManyMutationInput = {
   language?: Prisma.StringFieldUpdateOperationsInput | string
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -915,20 +624,11 @@ export type GuestUserUpdateManyMutationInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
 }
 
 export type GuestUserUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -939,14 +639,6 @@ export type GuestUserUncheckedUpdateManyInput = {
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
   hotelId?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -957,14 +649,6 @@ export type GuestUserUncheckedUpdateManyInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
 }
 
@@ -988,7 +672,6 @@ export type StringNullableListFilter<$PrismaModel = never> = {
 
 export type GuestUserCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   username?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password?: Prisma.SortOrder
@@ -999,14 +682,6 @@ export type GuestUserCountOrderByAggregateInput = {
   localLanguage?: Prisma.SortOrder
   room?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  hotelPhone?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  logo?: Prisma.SortOrder
-  website?: Prisma.SortOrder
   journeyId?: Prisma.SortOrder
   guestCategory?: Prisma.SortOrder
   guestCategoryClone?: Prisma.SortOrder
@@ -1017,14 +692,6 @@ export type GuestUserCountOrderByAggregateInput = {
   isChatting?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  babyBed?: Prisma.SortOrder
-  blanket?: Prisma.SortOrder
-  hairDryer?: Prisma.SortOrder
-  iron?: Prisma.SortOrder
-  pillow?: Prisma.SortOrder
-  soap?: Prisma.SortOrder
-  toiletPaper?: Prisma.SortOrder
-  towel?: Prisma.SortOrder
   hotelVisitedArray?: Prisma.SortOrder
 }
 
@@ -1034,7 +701,6 @@ export type GuestUserAvgOrderByAggregateInput = {
 
 export type GuestUserMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   username?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password?: Prisma.SortOrder
@@ -1045,14 +711,6 @@ export type GuestUserMaxOrderByAggregateInput = {
   localLanguage?: Prisma.SortOrder
   room?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  hotelPhone?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  logo?: Prisma.SortOrder
-  website?: Prisma.SortOrder
   journeyId?: Prisma.SortOrder
   guestCategory?: Prisma.SortOrder
   guestCategoryClone?: Prisma.SortOrder
@@ -1063,19 +721,10 @@ export type GuestUserMaxOrderByAggregateInput = {
   isChatting?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  babyBed?: Prisma.SortOrder
-  blanket?: Prisma.SortOrder
-  hairDryer?: Prisma.SortOrder
-  iron?: Prisma.SortOrder
-  pillow?: Prisma.SortOrder
-  soap?: Prisma.SortOrder
-  toiletPaper?: Prisma.SortOrder
-  towel?: Prisma.SortOrder
 }
 
 export type GuestUserMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   username?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password?: Prisma.SortOrder
@@ -1086,14 +735,6 @@ export type GuestUserMinOrderByAggregateInput = {
   localLanguage?: Prisma.SortOrder
   room?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  hotelPhone?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  logo?: Prisma.SortOrder
-  website?: Prisma.SortOrder
   journeyId?: Prisma.SortOrder
   guestCategory?: Prisma.SortOrder
   guestCategoryClone?: Prisma.SortOrder
@@ -1104,18 +745,15 @@ export type GuestUserMinOrderByAggregateInput = {
   isChatting?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  babyBed?: Prisma.SortOrder
-  blanket?: Prisma.SortOrder
-  hairDryer?: Prisma.SortOrder
-  iron?: Prisma.SortOrder
-  pillow?: Prisma.SortOrder
-  soap?: Prisma.SortOrder
-  toiletPaper?: Prisma.SortOrder
-  towel?: Prisma.SortOrder
 }
 
 export type GuestUserSumOrderByAggregateInput = {
   lastTimeConnected?: Prisma.SortOrder
+}
+
+export type GuestUserNullableScalarRelationFilter = {
+  is?: Prisma.GuestUserWhereInput | null
+  isNot?: Prisma.GuestUserWhereInput | null
 }
 
 export type GuestUserScalarRelationFilter = {
@@ -1186,6 +824,22 @@ export type GuestUserUpdatehotelVisitedArrayInput = {
   push?: string | string[]
 }
 
+export type GuestUserCreateNestedOneWithoutRoomAmenetiesInput = {
+  create?: Prisma.XOR<Prisma.GuestUserCreateWithoutRoomAmenetiesInput, Prisma.GuestUserUncheckedCreateWithoutRoomAmenetiesInput>
+  connectOrCreate?: Prisma.GuestUserCreateOrConnectWithoutRoomAmenetiesInput
+  connect?: Prisma.GuestUserWhereUniqueInput
+}
+
+export type GuestUserUpdateOneWithoutRoomAmenetiesNestedInput = {
+  create?: Prisma.XOR<Prisma.GuestUserCreateWithoutRoomAmenetiesInput, Prisma.GuestUserUncheckedCreateWithoutRoomAmenetiesInput>
+  connectOrCreate?: Prisma.GuestUserCreateOrConnectWithoutRoomAmenetiesInput
+  upsert?: Prisma.GuestUserUpsertWithoutRoomAmenetiesInput
+  disconnect?: Prisma.GuestUserWhereInput | boolean
+  delete?: Prisma.GuestUserWhereInput | boolean
+  connect?: Prisma.GuestUserWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.GuestUserUpdateToOneWithWhereWithoutRoomAmenetiesInput, Prisma.GuestUserUpdateWithoutRoomAmenetiesInput>, Prisma.GuestUserUncheckedUpdateWithoutRoomAmenetiesInput>
+}
+
 export type GuestUserCreateNestedOneWithoutTokenInput = {
   create?: Prisma.XOR<Prisma.GuestUserCreateWithoutTokenInput, Prisma.GuestUserUncheckedCreateWithoutTokenInput>
   connectOrCreate?: Prisma.GuestUserCreateOrConnectWithoutTokenInput
@@ -1202,7 +856,6 @@ export type GuestUserUpdateOneRequiredWithoutTokenNestedInput = {
 
 export type GuestUserCreateWithoutHotelInput = {
   id?: string
-  userId: string
   username: string
   email: string
   password: string
@@ -1212,14 +865,6 @@ export type GuestUserCreateWithoutHotelInput = {
   language: string
   localLanguage: string
   room: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone?: string | null
@@ -1230,21 +875,13 @@ export type GuestUserCreateWithoutHotelInput = {
   isChatting?: boolean | null
   createdAt: Date | string
   updatedAt: Date | string
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
   token?: Prisma.GuestTokenCreateNestedOneWithoutGuestUserInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutGuestUserInput
 }
 
 export type GuestUserUncheckedCreateWithoutHotelInput = {
   id?: string
-  userId: string
   username: string
   email: string
   password: string
@@ -1254,14 +891,6 @@ export type GuestUserUncheckedCreateWithoutHotelInput = {
   language: string
   localLanguage: string
   room: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone?: string | null
@@ -1272,16 +901,9 @@ export type GuestUserUncheckedCreateWithoutHotelInput = {
   isChatting?: boolean | null
   createdAt: Date | string
   updatedAt: Date | string
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
   token?: Prisma.GuestTokenUncheckedCreateNestedOneWithoutGuestUserInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutGuestUserInput
 }
 
 export type GuestUserCreateOrConnectWithoutHotelInput = {
@@ -1315,7 +937,6 @@ export type GuestUserScalarWhereInput = {
   OR?: Prisma.GuestUserScalarWhereInput[]
   NOT?: Prisma.GuestUserScalarWhereInput | Prisma.GuestUserScalarWhereInput[]
   id?: Prisma.StringFilter<"GuestUser"> | string
-  userId?: Prisma.StringFilter<"GuestUser"> | string
   username?: Prisma.StringFilter<"GuestUser"> | string
   email?: Prisma.StringFilter<"GuestUser"> | string
   password?: Prisma.StringFilter<"GuestUser"> | string
@@ -1326,14 +947,6 @@ export type GuestUserScalarWhereInput = {
   localLanguage?: Prisma.StringFilter<"GuestUser"> | string
   room?: Prisma.StringFilter<"GuestUser"> | string
   hotelId?: Prisma.StringFilter<"GuestUser"> | string
-  hotelName?: Prisma.StringFilter<"GuestUser"> | string
-  hotelDept?: Prisma.StringFilter<"GuestUser"> | string
-  hotelRegion?: Prisma.StringFilter<"GuestUser"> | string
-  hotelPhone?: Prisma.StringFilter<"GuestUser"> | string
-  city?: Prisma.StringFilter<"GuestUser"> | string
-  classement?: Prisma.StringFilter<"GuestUser"> | string
-  logo?: Prisma.StringFilter<"GuestUser"> | string
-  website?: Prisma.StringFilter<"GuestUser"> | string
   journeyId?: Prisma.StringFilter<"GuestUser"> | string
   guestCategory?: Prisma.StringFilter<"GuestUser"> | string
   guestCategoryClone?: Prisma.StringNullableFilter<"GuestUser"> | string | null
@@ -1344,20 +957,11 @@ export type GuestUserScalarWhereInput = {
   isChatting?: Prisma.BoolNullableFilter<"GuestUser"> | boolean | null
   createdAt?: Prisma.DateTimeFilter<"GuestUser"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"GuestUser"> | Date | string
-  babyBed?: Prisma.BoolFilter<"GuestUser"> | boolean
-  blanket?: Prisma.BoolFilter<"GuestUser"> | boolean
-  hairDryer?: Prisma.BoolFilter<"GuestUser"> | boolean
-  iron?: Prisma.BoolFilter<"GuestUser"> | boolean
-  pillow?: Prisma.BoolFilter<"GuestUser"> | boolean
-  soap?: Prisma.BoolFilter<"GuestUser"> | boolean
-  toiletPaper?: Prisma.BoolFilter<"GuestUser"> | boolean
-  towel?: Prisma.BoolFilter<"GuestUser"> | boolean
   hotelVisitedArray?: Prisma.StringNullableListFilter<"GuestUser">
 }
 
-export type GuestUserCreateWithoutTokenInput = {
+export type GuestUserCreateWithoutRoomAmenetiesInput = {
   id?: string
-  userId: string
   username: string
   email: string
   password: string
@@ -1367,14 +971,6 @@ export type GuestUserCreateWithoutTokenInput = {
   language: string
   localLanguage: string
   room: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone?: string | null
@@ -1385,21 +981,13 @@ export type GuestUserCreateWithoutTokenInput = {
   isChatting?: boolean | null
   createdAt: Date | string
   updatedAt: Date | string
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
+  token?: Prisma.GuestTokenCreateNestedOneWithoutGuestUserInput
   hotel: Prisma.HotelCreateNestedOneWithoutGuestUsersInput
 }
 
-export type GuestUserUncheckedCreateWithoutTokenInput = {
+export type GuestUserUncheckedCreateWithoutRoomAmenetiesInput = {
   id?: string
-  userId: string
   username: string
   email: string
   password: string
@@ -1410,14 +998,6 @@ export type GuestUserUncheckedCreateWithoutTokenInput = {
   localLanguage: string
   room: string
   hotelId: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone?: string | null
@@ -1428,15 +1008,128 @@ export type GuestUserUncheckedCreateWithoutTokenInput = {
   isChatting?: boolean | null
   createdAt: Date | string
   updatedAt: Date | string
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
+  token?: Prisma.GuestTokenUncheckedCreateNestedOneWithoutGuestUserInput
+}
+
+export type GuestUserCreateOrConnectWithoutRoomAmenetiesInput = {
+  where: Prisma.GuestUserWhereUniqueInput
+  create: Prisma.XOR<Prisma.GuestUserCreateWithoutRoomAmenetiesInput, Prisma.GuestUserUncheckedCreateWithoutRoomAmenetiesInput>
+}
+
+export type GuestUserUpsertWithoutRoomAmenetiesInput = {
+  update: Prisma.XOR<Prisma.GuestUserUpdateWithoutRoomAmenetiesInput, Prisma.GuestUserUncheckedUpdateWithoutRoomAmenetiesInput>
+  create: Prisma.XOR<Prisma.GuestUserCreateWithoutRoomAmenetiesInput, Prisma.GuestUserUncheckedCreateWithoutRoomAmenetiesInput>
+  where?: Prisma.GuestUserWhereInput
+}
+
+export type GuestUserUpdateToOneWithWhereWithoutRoomAmenetiesInput = {
+  where?: Prisma.GuestUserWhereInput
+  data: Prisma.XOR<Prisma.GuestUserUpdateWithoutRoomAmenetiesInput, Prisma.GuestUserUncheckedUpdateWithoutRoomAmenetiesInput>
+}
+
+export type GuestUserUpdateWithoutRoomAmenetiesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  username?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  gender?: Prisma.StringFieldUpdateOperationsInput | string
+  photo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  language?: Prisma.StringFieldUpdateOperationsInput | string
+  localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
+  room?: Prisma.StringFieldUpdateOperationsInput | string
+  journeyId?: Prisma.StringFieldUpdateOperationsInput | string
+  guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
+  guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  checkoutDate?: Prisma.StringFieldUpdateOperationsInput | string
+  notificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  lastTimeConnected?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  newConnection?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
+  token?: Prisma.GuestTokenUpdateOneWithoutGuestUserNestedInput
+  hotel?: Prisma.HotelUpdateOneRequiredWithoutGuestUsersNestedInput
+}
+
+export type GuestUserUncheckedUpdateWithoutRoomAmenetiesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  username?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  gender?: Prisma.StringFieldUpdateOperationsInput | string
+  photo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  language?: Prisma.StringFieldUpdateOperationsInput | string
+  localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
+  room?: Prisma.StringFieldUpdateOperationsInput | string
+  hotelId?: Prisma.StringFieldUpdateOperationsInput | string
+  journeyId?: Prisma.StringFieldUpdateOperationsInput | string
+  guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
+  guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  checkoutDate?: Prisma.StringFieldUpdateOperationsInput | string
+  notificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  lastTimeConnected?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  newConnection?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
+  token?: Prisma.GuestTokenUncheckedUpdateOneWithoutGuestUserNestedInput
+}
+
+export type GuestUserCreateWithoutTokenInput = {
+  id?: string
+  username: string
+  email: string
+  password: string
+  phone: string
+  gender: string
+  photo?: string | null
+  language: string
+  localLanguage: string
+  room: string
+  journeyId: string
+  guestCategory: string
+  guestCategoryClone?: string | null
+  checkoutDate: string
+  notificationStatus: string
+  lastTimeConnected: bigint | number
+  newConnection: boolean
+  isChatting?: boolean | null
+  createdAt: Date | string
+  updatedAt: Date | string
+  hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutGuestUserInput
+  hotel: Prisma.HotelCreateNestedOneWithoutGuestUsersInput
+}
+
+export type GuestUserUncheckedCreateWithoutTokenInput = {
+  id?: string
+  username: string
+  email: string
+  password: string
+  phone: string
+  gender: string
+  photo?: string | null
+  language: string
+  localLanguage: string
+  room: string
+  hotelId: string
+  journeyId: string
+  guestCategory: string
+  guestCategoryClone?: string | null
+  checkoutDate: string
+  notificationStatus: string
+  lastTimeConnected: bigint | number
+  newConnection: boolean
+  isChatting?: boolean | null
+  createdAt: Date | string
+  updatedAt: Date | string
+  hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutGuestUserInput
 }
 
 export type GuestUserCreateOrConnectWithoutTokenInput = {
@@ -1457,7 +1150,6 @@ export type GuestUserUpdateToOneWithWhereWithoutTokenInput = {
 
 export type GuestUserUpdateWithoutTokenInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1467,14 +1159,6 @@ export type GuestUserUpdateWithoutTokenInput = {
   language?: Prisma.StringFieldUpdateOperationsInput | string
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1485,21 +1169,13 @@ export type GuestUserUpdateWithoutTokenInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutGuestUserNestedInput
   hotel?: Prisma.HotelUpdateOneRequiredWithoutGuestUsersNestedInput
 }
 
 export type GuestUserUncheckedUpdateWithoutTokenInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1510,14 +1186,6 @@ export type GuestUserUncheckedUpdateWithoutTokenInput = {
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
   hotelId?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1528,20 +1196,12 @@ export type GuestUserUncheckedUpdateWithoutTokenInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutGuestUserNestedInput
 }
 
 export type GuestUserCreateManyHotelInput = {
   id?: string
-  userId: string
   username: string
   email: string
   password: string
@@ -1551,14 +1211,6 @@ export type GuestUserCreateManyHotelInput = {
   language: string
   localLanguage: string
   room: string
-  hotelName: string
-  hotelDept: string
-  hotelRegion: string
-  hotelPhone: string
-  city: string
-  classement: string
-  logo: string
-  website: string
   journeyId: string
   guestCategory: string
   guestCategoryClone?: string | null
@@ -1569,20 +1221,11 @@ export type GuestUserCreateManyHotelInput = {
   isChatting?: boolean | null
   createdAt: Date | string
   updatedAt: Date | string
-  babyBed: boolean
-  blanket: boolean
-  hairDryer: boolean
-  iron: boolean
-  pillow: boolean
-  soap: boolean
-  toiletPaper: boolean
-  towel: boolean
   hotelVisitedArray?: Prisma.GuestUserCreatehotelVisitedArrayInput | string[]
 }
 
 export type GuestUserUpdateWithoutHotelInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1592,14 +1235,6 @@ export type GuestUserUpdateWithoutHotelInput = {
   language?: Prisma.StringFieldUpdateOperationsInput | string
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1610,21 +1245,13 @@ export type GuestUserUpdateWithoutHotelInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
   token?: Prisma.GuestTokenUpdateOneWithoutGuestUserNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutGuestUserNestedInput
 }
 
 export type GuestUserUncheckedUpdateWithoutHotelInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1634,14 +1261,6 @@ export type GuestUserUncheckedUpdateWithoutHotelInput = {
   language?: Prisma.StringFieldUpdateOperationsInput | string
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1652,21 +1271,13 @@ export type GuestUserUncheckedUpdateWithoutHotelInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
   token?: Prisma.GuestTokenUncheckedUpdateOneWithoutGuestUserNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutGuestUserNestedInput
 }
 
 export type GuestUserUncheckedUpdateManyWithoutHotelInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1676,14 +1287,6 @@ export type GuestUserUncheckedUpdateManyWithoutHotelInput = {
   language?: Prisma.StringFieldUpdateOperationsInput | string
   localLanguage?: Prisma.StringFieldUpdateOperationsInput | string
   room?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelPhone?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  logo?: Prisma.StringFieldUpdateOperationsInput | string
-  website?: Prisma.StringFieldUpdateOperationsInput | string
   journeyId?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategory?: Prisma.StringFieldUpdateOperationsInput | string
   guestCategoryClone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1694,22 +1297,42 @@ export type GuestUserUncheckedUpdateManyWithoutHotelInput = {
   isChatting?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  babyBed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  blanket?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  hairDryer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  iron?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  pillow?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  soap?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  toiletPaper?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  towel?: Prisma.BoolFieldUpdateOperationsInput | boolean
   hotelVisitedArray?: Prisma.GuestUserUpdatehotelVisitedArrayInput | string[]
 }
 
 
+/**
+ * Count Type GuestUserCountOutputType
+ */
+
+export type GuestUserCountOutputType = {
+  roomAmeneties: number
+}
+
+export type GuestUserCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  roomAmeneties?: boolean | GuestUserCountOutputTypeCountRoomAmenetiesArgs
+}
+
+/**
+ * GuestUserCountOutputType without action
+ */
+export type GuestUserCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the GuestUserCountOutputType
+   */
+  select?: Prisma.GuestUserCountOutputTypeSelect<ExtArgs> | null
+}
+
+/**
+ * GuestUserCountOutputType without action
+ */
+export type GuestUserCountOutputTypeCountRoomAmenetiesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.RoomAmenetiesWhereInput
+}
+
 
 export type GuestUserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
   username?: boolean
   email?: boolean
   password?: boolean
@@ -1720,14 +1343,6 @@ export type GuestUserSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   localLanguage?: boolean
   room?: boolean
   hotelId?: boolean
-  hotelName?: boolean
-  hotelDept?: boolean
-  hotelRegion?: boolean
-  hotelPhone?: boolean
-  city?: boolean
-  classement?: boolean
-  logo?: boolean
-  website?: boolean
   journeyId?: boolean
   guestCategory?: boolean
   guestCategoryClone?: boolean
@@ -1738,22 +1353,15 @@ export type GuestUserSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   isChatting?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  babyBed?: boolean
-  blanket?: boolean
-  hairDryer?: boolean
-  iron?: boolean
-  pillow?: boolean
-  soap?: boolean
-  toiletPaper?: boolean
-  towel?: boolean
   hotelVisitedArray?: boolean
-  hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
   token?: boolean | Prisma.GuestUser$tokenArgs<ExtArgs>
+  roomAmeneties?: boolean | Prisma.GuestUser$roomAmenetiesArgs<ExtArgs>
+  hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
+  _count?: boolean | Prisma.GuestUserCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["guestUser"]>
 
 export type GuestUserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
   username?: boolean
   email?: boolean
   password?: boolean
@@ -1764,14 +1372,6 @@ export type GuestUserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ext
   localLanguage?: boolean
   room?: boolean
   hotelId?: boolean
-  hotelName?: boolean
-  hotelDept?: boolean
-  hotelRegion?: boolean
-  hotelPhone?: boolean
-  city?: boolean
-  classement?: boolean
-  logo?: boolean
-  website?: boolean
   journeyId?: boolean
   guestCategory?: boolean
   guestCategoryClone?: boolean
@@ -1782,21 +1382,12 @@ export type GuestUserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ext
   isChatting?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  babyBed?: boolean
-  blanket?: boolean
-  hairDryer?: boolean
-  iron?: boolean
-  pillow?: boolean
-  soap?: boolean
-  toiletPaper?: boolean
-  towel?: boolean
   hotelVisitedArray?: boolean
   hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["guestUser"]>
 
 export type GuestUserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
   username?: boolean
   email?: boolean
   password?: boolean
@@ -1807,14 +1398,6 @@ export type GuestUserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ext
   localLanguage?: boolean
   room?: boolean
   hotelId?: boolean
-  hotelName?: boolean
-  hotelDept?: boolean
-  hotelRegion?: boolean
-  hotelPhone?: boolean
-  city?: boolean
-  classement?: boolean
-  logo?: boolean
-  website?: boolean
   journeyId?: boolean
   guestCategory?: boolean
   guestCategoryClone?: boolean
@@ -1825,21 +1408,12 @@ export type GuestUserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ext
   isChatting?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  babyBed?: boolean
-  blanket?: boolean
-  hairDryer?: boolean
-  iron?: boolean
-  pillow?: boolean
-  soap?: boolean
-  toiletPaper?: boolean
-  towel?: boolean
   hotelVisitedArray?: boolean
   hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["guestUser"]>
 
 export type GuestUserSelectScalar = {
   id?: boolean
-  userId?: boolean
   username?: boolean
   email?: boolean
   password?: boolean
@@ -1850,14 +1424,6 @@ export type GuestUserSelectScalar = {
   localLanguage?: boolean
   room?: boolean
   hotelId?: boolean
-  hotelName?: boolean
-  hotelDept?: boolean
-  hotelRegion?: boolean
-  hotelPhone?: boolean
-  city?: boolean
-  classement?: boolean
-  logo?: boolean
-  website?: boolean
   journeyId?: boolean
   guestCategory?: boolean
   guestCategoryClone?: boolean
@@ -1868,21 +1434,15 @@ export type GuestUserSelectScalar = {
   isChatting?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  babyBed?: boolean
-  blanket?: boolean
-  hairDryer?: boolean
-  iron?: boolean
-  pillow?: boolean
-  soap?: boolean
-  toiletPaper?: boolean
-  towel?: boolean
   hotelVisitedArray?: boolean
 }
 
-export type GuestUserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "username" | "email" | "password" | "phone" | "gender" | "photo" | "language" | "localLanguage" | "room" | "hotelId" | "hotelName" | "hotelDept" | "hotelRegion" | "hotelPhone" | "city" | "classement" | "logo" | "website" | "journeyId" | "guestCategory" | "guestCategoryClone" | "checkoutDate" | "notificationStatus" | "lastTimeConnected" | "newConnection" | "isChatting" | "createdAt" | "updatedAt" | "babyBed" | "blanket" | "hairDryer" | "iron" | "pillow" | "soap" | "toiletPaper" | "towel" | "hotelVisitedArray", ExtArgs["result"]["guestUser"]>
+export type GuestUserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "username" | "email" | "password" | "phone" | "gender" | "photo" | "language" | "localLanguage" | "room" | "hotelId" | "journeyId" | "guestCategory" | "guestCategoryClone" | "checkoutDate" | "notificationStatus" | "lastTimeConnected" | "newConnection" | "isChatting" | "createdAt" | "updatedAt" | "hotelVisitedArray", ExtArgs["result"]["guestUser"]>
 export type GuestUserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
   token?: boolean | Prisma.GuestUser$tokenArgs<ExtArgs>
+  roomAmeneties?: boolean | Prisma.GuestUser$roomAmenetiesArgs<ExtArgs>
+  hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
+  _count?: boolean | Prisma.GuestUserCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type GuestUserIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
@@ -1894,12 +1454,12 @@ export type GuestUserIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Ex
 export type $GuestUserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "GuestUser"
   objects: {
-    hotel: Prisma.$HotelPayload<ExtArgs>
     token: Prisma.$GuestTokenPayload<ExtArgs> | null
+    roomAmeneties: Prisma.$RoomAmenetiesPayload<ExtArgs>[]
+    hotel: Prisma.$HotelPayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    userId: string
     username: string
     email: string
     password: string
@@ -1910,14 +1470,6 @@ export type $GuestUserPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     localLanguage: string
     room: string
     hotelId: string
-    hotelName: string
-    hotelDept: string
-    hotelRegion: string
-    hotelPhone: string
-    city: string
-    classement: string
-    logo: string
-    website: string
     journeyId: string
     guestCategory: string
     guestCategoryClone: string | null
@@ -1928,14 +1480,6 @@ export type $GuestUserPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     isChatting: boolean | null
     createdAt: Date
     updatedAt: Date
-    babyBed: boolean
-    blanket: boolean
-    hairDryer: boolean
-    iron: boolean
-    pillow: boolean
-    soap: boolean
-    toiletPaper: boolean
-    towel: boolean
     hotelVisitedArray: string[]
   }, ExtArgs["result"]["guestUser"]>
   composites: {}
@@ -2331,8 +1875,9 @@ readonly fields: GuestUserFieldRefs;
  */
 export interface Prisma__GuestUserClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  hotel<T extends Prisma.HotelDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.HotelDefaultArgs<ExtArgs>>): Prisma.Prisma__HotelClient<runtime.Types.Result.GetResult<Prisma.$HotelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   token<T extends Prisma.GuestUser$tokenArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.GuestUser$tokenArgs<ExtArgs>>): Prisma.Prisma__GuestTokenClient<runtime.Types.Result.GetResult<Prisma.$GuestTokenPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  roomAmeneties<T extends Prisma.GuestUser$roomAmenetiesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.GuestUser$roomAmenetiesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$RoomAmenetiesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  hotel<T extends Prisma.HotelDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.HotelDefaultArgs<ExtArgs>>): Prisma.Prisma__HotelClient<runtime.Types.Result.GetResult<Prisma.$HotelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2363,7 +1908,6 @@ export interface Prisma__GuestUserClient<T, Null = never, ExtArgs extends runtim
  */
 export interface GuestUserFieldRefs {
   readonly id: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly userId: Prisma.FieldRef<"GuestUser", 'String'>
   readonly username: Prisma.FieldRef<"GuestUser", 'String'>
   readonly email: Prisma.FieldRef<"GuestUser", 'String'>
   readonly password: Prisma.FieldRef<"GuestUser", 'String'>
@@ -2374,14 +1918,6 @@ export interface GuestUserFieldRefs {
   readonly localLanguage: Prisma.FieldRef<"GuestUser", 'String'>
   readonly room: Prisma.FieldRef<"GuestUser", 'String'>
   readonly hotelId: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly hotelName: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly hotelDept: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly hotelRegion: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly hotelPhone: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly city: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly classement: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly logo: Prisma.FieldRef<"GuestUser", 'String'>
-  readonly website: Prisma.FieldRef<"GuestUser", 'String'>
   readonly journeyId: Prisma.FieldRef<"GuestUser", 'String'>
   readonly guestCategory: Prisma.FieldRef<"GuestUser", 'String'>
   readonly guestCategoryClone: Prisma.FieldRef<"GuestUser", 'String'>
@@ -2392,14 +1928,6 @@ export interface GuestUserFieldRefs {
   readonly isChatting: Prisma.FieldRef<"GuestUser", 'Boolean'>
   readonly createdAt: Prisma.FieldRef<"GuestUser", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"GuestUser", 'DateTime'>
-  readonly babyBed: Prisma.FieldRef<"GuestUser", 'Boolean'>
-  readonly blanket: Prisma.FieldRef<"GuestUser", 'Boolean'>
-  readonly hairDryer: Prisma.FieldRef<"GuestUser", 'Boolean'>
-  readonly iron: Prisma.FieldRef<"GuestUser", 'Boolean'>
-  readonly pillow: Prisma.FieldRef<"GuestUser", 'Boolean'>
-  readonly soap: Prisma.FieldRef<"GuestUser", 'Boolean'>
-  readonly toiletPaper: Prisma.FieldRef<"GuestUser", 'Boolean'>
-  readonly towel: Prisma.FieldRef<"GuestUser", 'Boolean'>
   readonly hotelVisitedArray: Prisma.FieldRef<"GuestUser", 'String[]'>
 }
     
@@ -2818,6 +2346,30 @@ export type GuestUser$tokenArgs<ExtArgs extends runtime.Types.Extensions.Interna
    */
   include?: Prisma.GuestTokenInclude<ExtArgs> | null
   where?: Prisma.GuestTokenWhereInput
+}
+
+/**
+ * GuestUser.roomAmeneties
+ */
+export type GuestUser$roomAmenetiesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the RoomAmeneties
+   */
+  select?: Prisma.RoomAmenetiesSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the RoomAmeneties
+   */
+  omit?: Prisma.RoomAmenetiesOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.RoomAmenetiesInclude<ExtArgs> | null
+  where?: Prisma.RoomAmenetiesWhereInput
+  orderBy?: Prisma.RoomAmenetiesOrderByWithRelationInput | Prisma.RoomAmenetiesOrderByWithRelationInput[]
+  cursor?: Prisma.RoomAmenetiesWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.RoomAmenetiesScalarFieldEnum | Prisma.RoomAmenetiesScalarFieldEnum[]
 }
 
 /**

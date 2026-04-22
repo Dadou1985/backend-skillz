@@ -360,11 +360,13 @@ export type HotelWhereInput = {
   pricingModel?: Prisma.StringNullableFilter<"Hotel"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Hotel"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Hotel"> | Date | string
-  chatRoom?: Prisma.ChatMessageListRelationFilter
+  chatRoom?: Prisma.ChatListRelationFilter
   businessUsers?: Prisma.BusinessUserListRelationFilter
   guestUsers?: Prisma.GuestUserListRelationFilter
   feedbacks?: Prisma.FeedbackListRelationFilter
   supports?: Prisma.SupportListRelationFilter
+  checkLists?: Prisma.CheckListListRelationFilter
+  roomAmeneties?: Prisma.RoomAmenetiesListRelationFilter
 }
 
 export type HotelOrderByWithRelationInput = {
@@ -390,11 +392,13 @@ export type HotelOrderByWithRelationInput = {
   pricingModel?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  chatRoom?: Prisma.ChatMessageOrderByRelationAggregateInput
+  chatRoom?: Prisma.ChatOrderByRelationAggregateInput
   businessUsers?: Prisma.BusinessUserOrderByRelationAggregateInput
   guestUsers?: Prisma.GuestUserOrderByRelationAggregateInput
   feedbacks?: Prisma.FeedbackOrderByRelationAggregateInput
   supports?: Prisma.SupportOrderByRelationAggregateInput
+  checkLists?: Prisma.CheckListOrderByRelationAggregateInput
+  roomAmeneties?: Prisma.RoomAmenetiesOrderByRelationAggregateInput
 }
 
 export type HotelWhereUniqueInput = Prisma.AtLeast<{
@@ -423,11 +427,13 @@ export type HotelWhereUniqueInput = Prisma.AtLeast<{
   pricingModel?: Prisma.StringNullableFilter<"Hotel"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Hotel"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Hotel"> | Date | string
-  chatRoom?: Prisma.ChatMessageListRelationFilter
+  chatRoom?: Prisma.ChatListRelationFilter
   businessUsers?: Prisma.BusinessUserListRelationFilter
   guestUsers?: Prisma.GuestUserListRelationFilter
   feedbacks?: Prisma.FeedbackListRelationFilter
   supports?: Prisma.SupportListRelationFilter
+  checkLists?: Prisma.CheckListListRelationFilter
+  roomAmeneties?: Prisma.RoomAmenetiesListRelationFilter
 }, "id">
 
 export type HotelOrderByWithAggregationInput = {
@@ -511,11 +517,13 @@ export type HotelCreateInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutHotelInput
 }
 
 export type HotelUncheckedCreateInput = {
@@ -541,11 +549,13 @@ export type HotelUncheckedCreateInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportUncheckedCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListUncheckedCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutHotelInput
 }
 
 export type HotelUpdateInput = {
@@ -571,11 +581,13 @@ export type HotelUpdateInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUpdateManyWithoutHotelNestedInput
   businessUsers?: Prisma.BusinessUserUpdateManyWithoutHotelNestedInput
   guestUsers?: Prisma.GuestUserUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelUncheckedUpdateInput = {
@@ -601,11 +613,13 @@ export type HotelUncheckedUpdateInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutHotelNestedInput
   businessUsers?: Prisma.BusinessUserUncheckedUpdateManyWithoutHotelNestedInput
   guestUsers?: Prisma.GuestUserUncheckedUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUncheckedUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUncheckedUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUncheckedUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelCreateManyInput = {
@@ -775,6 +789,11 @@ export type HotelScalarRelationFilter = {
   isNot?: Prisma.HotelWhereInput
 }
 
+export type HotelNullableScalarRelationFilter = {
+  is?: Prisma.HotelWhereInput | null
+  isNot?: Prisma.HotelWhereInput | null
+}
+
 export type StringFieldUpdateOperationsInput = {
   set?: string
 }
@@ -807,6 +826,20 @@ export type DateTimeFieldUpdateOperationsInput = {
   set?: Date | string
 }
 
+export type HotelCreateNestedOneWithoutCheckListsInput = {
+  create?: Prisma.XOR<Prisma.HotelCreateWithoutCheckListsInput, Prisma.HotelUncheckedCreateWithoutCheckListsInput>
+  connectOrCreate?: Prisma.HotelCreateOrConnectWithoutCheckListsInput
+  connect?: Prisma.HotelWhereUniqueInput
+}
+
+export type HotelUpdateOneRequiredWithoutCheckListsNestedInput = {
+  create?: Prisma.XOR<Prisma.HotelCreateWithoutCheckListsInput, Prisma.HotelUncheckedCreateWithoutCheckListsInput>
+  connectOrCreate?: Prisma.HotelCreateOrConnectWithoutCheckListsInput
+  upsert?: Prisma.HotelUpsertWithoutCheckListsInput
+  connect?: Prisma.HotelWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.HotelUpdateToOneWithWhereWithoutCheckListsInput, Prisma.HotelUpdateWithoutCheckListsInput>, Prisma.HotelUncheckedUpdateWithoutCheckListsInput>
+}
+
 export type HotelCreateNestedOneWithoutBusinessUsersInput = {
   create?: Prisma.XOR<Prisma.HotelCreateWithoutBusinessUsersInput, Prisma.HotelUncheckedCreateWithoutBusinessUsersInput>
   connectOrCreate?: Prisma.HotelCreateOrConnectWithoutBusinessUsersInput
@@ -833,6 +866,22 @@ export type HotelUpdateOneRequiredWithoutGuestUsersNestedInput = {
   upsert?: Prisma.HotelUpsertWithoutGuestUsersInput
   connect?: Prisma.HotelWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.HotelUpdateToOneWithWhereWithoutGuestUsersInput, Prisma.HotelUpdateWithoutGuestUsersInput>, Prisma.HotelUncheckedUpdateWithoutGuestUsersInput>
+}
+
+export type HotelCreateNestedOneWithoutRoomAmenetiesInput = {
+  create?: Prisma.XOR<Prisma.HotelCreateWithoutRoomAmenetiesInput, Prisma.HotelUncheckedCreateWithoutRoomAmenetiesInput>
+  connectOrCreate?: Prisma.HotelCreateOrConnectWithoutRoomAmenetiesInput
+  connect?: Prisma.HotelWhereUniqueInput
+}
+
+export type HotelUpdateOneWithoutRoomAmenetiesNestedInput = {
+  create?: Prisma.XOR<Prisma.HotelCreateWithoutRoomAmenetiesInput, Prisma.HotelUncheckedCreateWithoutRoomAmenetiesInput>
+  connectOrCreate?: Prisma.HotelCreateOrConnectWithoutRoomAmenetiesInput
+  upsert?: Prisma.HotelUpsertWithoutRoomAmenetiesInput
+  disconnect?: Prisma.HotelWhereInput | boolean
+  delete?: Prisma.HotelWhereInput | boolean
+  connect?: Prisma.HotelWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.HotelUpdateToOneWithWhereWithoutRoomAmenetiesInput, Prisma.HotelUpdateWithoutRoomAmenetiesInput>, Prisma.HotelUncheckedUpdateWithoutRoomAmenetiesInput>
 }
 
 export type HotelCreateNestedOneWithoutFeedbacksInput = {
@@ -869,12 +918,154 @@ export type HotelCreateNestedOneWithoutChatRoomInput = {
   connect?: Prisma.HotelWhereUniqueInput
 }
 
-export type HotelUpdateOneRequiredWithoutChatRoomNestedInput = {
+export type HotelUpdateOneWithoutChatRoomNestedInput = {
   create?: Prisma.XOR<Prisma.HotelCreateWithoutChatRoomInput, Prisma.HotelUncheckedCreateWithoutChatRoomInput>
   connectOrCreate?: Prisma.HotelCreateOrConnectWithoutChatRoomInput
   upsert?: Prisma.HotelUpsertWithoutChatRoomInput
+  disconnect?: Prisma.HotelWhereInput | boolean
+  delete?: Prisma.HotelWhereInput | boolean
   connect?: Prisma.HotelWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.HotelUpdateToOneWithWhereWithoutChatRoomInput, Prisma.HotelUpdateWithoutChatRoomInput>, Prisma.HotelUncheckedUpdateWithoutChatRoomInput>
+}
+
+export type HotelCreateWithoutCheckListsInput = {
+  id?: string
+  hotelName: string
+  adresse: string
+  city: string
+  classement: string
+  code_postal: string
+  country: string
+  departement: string
+  region: string
+  lat: number
+  lng: number
+  mail: string
+  partnership: boolean
+  phone: string
+  room: number
+  website: string
+  appLink?: string | null
+  base64Url?: string | null
+  logo?: string | null
+  pricingModel?: string | null
+  createdAt: Date | string
+  updatedAt: Date | string
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
+  businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
+  guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
+  feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
+  supports?: Prisma.SupportCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutHotelInput
+}
+
+export type HotelUncheckedCreateWithoutCheckListsInput = {
+  id?: string
+  hotelName: string
+  adresse: string
+  city: string
+  classement: string
+  code_postal: string
+  country: string
+  departement: string
+  region: string
+  lat: number
+  lng: number
+  mail: string
+  partnership: boolean
+  phone: string
+  room: number
+  website: string
+  appLink?: string | null
+  base64Url?: string | null
+  logo?: string | null
+  pricingModel?: string | null
+  createdAt: Date | string
+  updatedAt: Date | string
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
+  businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
+  guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
+  feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
+  supports?: Prisma.SupportUncheckedCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutHotelInput
+}
+
+export type HotelCreateOrConnectWithoutCheckListsInput = {
+  where: Prisma.HotelWhereUniqueInput
+  create: Prisma.XOR<Prisma.HotelCreateWithoutCheckListsInput, Prisma.HotelUncheckedCreateWithoutCheckListsInput>
+}
+
+export type HotelUpsertWithoutCheckListsInput = {
+  update: Prisma.XOR<Prisma.HotelUpdateWithoutCheckListsInput, Prisma.HotelUncheckedUpdateWithoutCheckListsInput>
+  create: Prisma.XOR<Prisma.HotelCreateWithoutCheckListsInput, Prisma.HotelUncheckedCreateWithoutCheckListsInput>
+  where?: Prisma.HotelWhereInput
+}
+
+export type HotelUpdateToOneWithWhereWithoutCheckListsInput = {
+  where?: Prisma.HotelWhereInput
+  data: Prisma.XOR<Prisma.HotelUpdateWithoutCheckListsInput, Prisma.HotelUncheckedUpdateWithoutCheckListsInput>
+}
+
+export type HotelUpdateWithoutCheckListsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  classement?: Prisma.StringFieldUpdateOperationsInput | string
+  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
+  country?: Prisma.StringFieldUpdateOperationsInput | string
+  departement?: Prisma.StringFieldUpdateOperationsInput | string
+  region?: Prisma.StringFieldUpdateOperationsInput | string
+  lat?: Prisma.FloatFieldUpdateOperationsInput | number
+  lng?: Prisma.FloatFieldUpdateOperationsInput | number
+  mail?: Prisma.StringFieldUpdateOperationsInput | string
+  partnership?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  room?: Prisma.IntFieldUpdateOperationsInput | number
+  website?: Prisma.StringFieldUpdateOperationsInput | string
+  appLink?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  chatRoom?: Prisma.ChatUpdateManyWithoutHotelNestedInput
+  businessUsers?: Prisma.BusinessUserUpdateManyWithoutHotelNestedInput
+  guestUsers?: Prisma.GuestUserUpdateManyWithoutHotelNestedInput
+  feedbacks?: Prisma.FeedbackUpdateManyWithoutHotelNestedInput
+  supports?: Prisma.SupportUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutHotelNestedInput
+}
+
+export type HotelUncheckedUpdateWithoutCheckListsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  classement?: Prisma.StringFieldUpdateOperationsInput | string
+  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
+  country?: Prisma.StringFieldUpdateOperationsInput | string
+  departement?: Prisma.StringFieldUpdateOperationsInput | string
+  region?: Prisma.StringFieldUpdateOperationsInput | string
+  lat?: Prisma.FloatFieldUpdateOperationsInput | number
+  lng?: Prisma.FloatFieldUpdateOperationsInput | number
+  mail?: Prisma.StringFieldUpdateOperationsInput | string
+  partnership?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  room?: Prisma.IntFieldUpdateOperationsInput | number
+  website?: Prisma.StringFieldUpdateOperationsInput | string
+  appLink?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutHotelNestedInput
+  businessUsers?: Prisma.BusinessUserUncheckedUpdateManyWithoutHotelNestedInput
+  guestUsers?: Prisma.GuestUserUncheckedUpdateManyWithoutHotelNestedInput
+  feedbacks?: Prisma.FeedbackUncheckedUpdateManyWithoutHotelNestedInput
+  supports?: Prisma.SupportUncheckedUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelCreateWithoutBusinessUsersInput = {
@@ -900,10 +1091,12 @@ export type HotelCreateWithoutBusinessUsersInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutHotelInput
 }
 
 export type HotelUncheckedCreateWithoutBusinessUsersInput = {
@@ -929,10 +1122,12 @@ export type HotelUncheckedCreateWithoutBusinessUsersInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportUncheckedCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListUncheckedCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutHotelInput
 }
 
 export type HotelCreateOrConnectWithoutBusinessUsersInput = {
@@ -974,10 +1169,12 @@ export type HotelUpdateWithoutBusinessUsersInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUpdateManyWithoutHotelNestedInput
   guestUsers?: Prisma.GuestUserUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelUncheckedUpdateWithoutBusinessUsersInput = {
@@ -1003,10 +1200,12 @@ export type HotelUncheckedUpdateWithoutBusinessUsersInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutHotelNestedInput
   guestUsers?: Prisma.GuestUserUncheckedUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUncheckedUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUncheckedUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUncheckedUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelCreateWithoutGuestUsersInput = {
@@ -1032,10 +1231,12 @@ export type HotelCreateWithoutGuestUsersInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutHotelInput
 }
 
 export type HotelUncheckedCreateWithoutGuestUsersInput = {
@@ -1061,10 +1262,12 @@ export type HotelUncheckedCreateWithoutGuestUsersInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportUncheckedCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListUncheckedCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutHotelInput
 }
 
 export type HotelCreateOrConnectWithoutGuestUsersInput = {
@@ -1106,10 +1309,12 @@ export type HotelUpdateWithoutGuestUsersInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUpdateManyWithoutHotelNestedInput
   businessUsers?: Prisma.BusinessUserUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelUncheckedUpdateWithoutGuestUsersInput = {
@@ -1135,10 +1340,152 @@ export type HotelUncheckedUpdateWithoutGuestUsersInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutHotelNestedInput
   businessUsers?: Prisma.BusinessUserUncheckedUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUncheckedUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUncheckedUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUncheckedUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutHotelNestedInput
+}
+
+export type HotelCreateWithoutRoomAmenetiesInput = {
+  id?: string
+  hotelName: string
+  adresse: string
+  city: string
+  classement: string
+  code_postal: string
+  country: string
+  departement: string
+  region: string
+  lat: number
+  lng: number
+  mail: string
+  partnership: boolean
+  phone: string
+  room: number
+  website: string
+  appLink?: string | null
+  base64Url?: string | null
+  logo?: string | null
+  pricingModel?: string | null
+  createdAt: Date | string
+  updatedAt: Date | string
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
+  businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
+  guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
+  feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
+  supports?: Prisma.SupportCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListCreateNestedManyWithoutHotelInput
+}
+
+export type HotelUncheckedCreateWithoutRoomAmenetiesInput = {
+  id?: string
+  hotelName: string
+  adresse: string
+  city: string
+  classement: string
+  code_postal: string
+  country: string
+  departement: string
+  region: string
+  lat: number
+  lng: number
+  mail: string
+  partnership: boolean
+  phone: string
+  room: number
+  website: string
+  appLink?: string | null
+  base64Url?: string | null
+  logo?: string | null
+  pricingModel?: string | null
+  createdAt: Date | string
+  updatedAt: Date | string
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
+  businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
+  guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
+  feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
+  supports?: Prisma.SupportUncheckedCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListUncheckedCreateNestedManyWithoutHotelInput
+}
+
+export type HotelCreateOrConnectWithoutRoomAmenetiesInput = {
+  where: Prisma.HotelWhereUniqueInput
+  create: Prisma.XOR<Prisma.HotelCreateWithoutRoomAmenetiesInput, Prisma.HotelUncheckedCreateWithoutRoomAmenetiesInput>
+}
+
+export type HotelUpsertWithoutRoomAmenetiesInput = {
+  update: Prisma.XOR<Prisma.HotelUpdateWithoutRoomAmenetiesInput, Prisma.HotelUncheckedUpdateWithoutRoomAmenetiesInput>
+  create: Prisma.XOR<Prisma.HotelCreateWithoutRoomAmenetiesInput, Prisma.HotelUncheckedCreateWithoutRoomAmenetiesInput>
+  where?: Prisma.HotelWhereInput
+}
+
+export type HotelUpdateToOneWithWhereWithoutRoomAmenetiesInput = {
+  where?: Prisma.HotelWhereInput
+  data: Prisma.XOR<Prisma.HotelUpdateWithoutRoomAmenetiesInput, Prisma.HotelUncheckedUpdateWithoutRoomAmenetiesInput>
+}
+
+export type HotelUpdateWithoutRoomAmenetiesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  classement?: Prisma.StringFieldUpdateOperationsInput | string
+  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
+  country?: Prisma.StringFieldUpdateOperationsInput | string
+  departement?: Prisma.StringFieldUpdateOperationsInput | string
+  region?: Prisma.StringFieldUpdateOperationsInput | string
+  lat?: Prisma.FloatFieldUpdateOperationsInput | number
+  lng?: Prisma.FloatFieldUpdateOperationsInput | number
+  mail?: Prisma.StringFieldUpdateOperationsInput | string
+  partnership?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  room?: Prisma.IntFieldUpdateOperationsInput | number
+  website?: Prisma.StringFieldUpdateOperationsInput | string
+  appLink?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  chatRoom?: Prisma.ChatUpdateManyWithoutHotelNestedInput
+  businessUsers?: Prisma.BusinessUserUpdateManyWithoutHotelNestedInput
+  guestUsers?: Prisma.GuestUserUpdateManyWithoutHotelNestedInput
+  feedbacks?: Prisma.FeedbackUpdateManyWithoutHotelNestedInput
+  supports?: Prisma.SupportUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUpdateManyWithoutHotelNestedInput
+}
+
+export type HotelUncheckedUpdateWithoutRoomAmenetiesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  classement?: Prisma.StringFieldUpdateOperationsInput | string
+  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
+  country?: Prisma.StringFieldUpdateOperationsInput | string
+  departement?: Prisma.StringFieldUpdateOperationsInput | string
+  region?: Prisma.StringFieldUpdateOperationsInput | string
+  lat?: Prisma.FloatFieldUpdateOperationsInput | number
+  lng?: Prisma.FloatFieldUpdateOperationsInput | number
+  mail?: Prisma.StringFieldUpdateOperationsInput | string
+  partnership?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  room?: Prisma.IntFieldUpdateOperationsInput | number
+  website?: Prisma.StringFieldUpdateOperationsInput | string
+  appLink?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutHotelNestedInput
+  businessUsers?: Prisma.BusinessUserUncheckedUpdateManyWithoutHotelNestedInput
+  guestUsers?: Prisma.GuestUserUncheckedUpdateManyWithoutHotelNestedInput
+  feedbacks?: Prisma.FeedbackUncheckedUpdateManyWithoutHotelNestedInput
+  supports?: Prisma.SupportUncheckedUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUncheckedUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelCreateWithoutFeedbacksInput = {
@@ -1164,10 +1511,12 @@ export type HotelCreateWithoutFeedbacksInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutHotelInput
 }
 
 export type HotelUncheckedCreateWithoutFeedbacksInput = {
@@ -1193,10 +1542,12 @@ export type HotelUncheckedCreateWithoutFeedbacksInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportUncheckedCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListUncheckedCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutHotelInput
 }
 
 export type HotelCreateOrConnectWithoutFeedbacksInput = {
@@ -1238,10 +1589,12 @@ export type HotelUpdateWithoutFeedbacksInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUpdateManyWithoutHotelNestedInput
   businessUsers?: Prisma.BusinessUserUpdateManyWithoutHotelNestedInput
   guestUsers?: Prisma.GuestUserUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelUncheckedUpdateWithoutFeedbacksInput = {
@@ -1267,10 +1620,12 @@ export type HotelUncheckedUpdateWithoutFeedbacksInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutHotelNestedInput
   businessUsers?: Prisma.BusinessUserUncheckedUpdateManyWithoutHotelNestedInput
   guestUsers?: Prisma.GuestUserUncheckedUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUncheckedUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUncheckedUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelCreateWithoutSupportsInput = {
@@ -1296,10 +1651,12 @@ export type HotelCreateWithoutSupportsInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutHotelInput
 }
 
 export type HotelUncheckedCreateWithoutSupportsInput = {
@@ -1325,10 +1682,12 @@ export type HotelUncheckedCreateWithoutSupportsInput = {
   pricingModel?: string | null
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutHotelInput
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListUncheckedCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutHotelInput
 }
 
 export type HotelCreateOrConnectWithoutSupportsInput = {
@@ -1370,10 +1729,12 @@ export type HotelUpdateWithoutSupportsInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUpdateManyWithoutHotelNestedInput
   businessUsers?: Prisma.BusinessUserUpdateManyWithoutHotelNestedInput
   guestUsers?: Prisma.GuestUserUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelUncheckedUpdateWithoutSupportsInput = {
@@ -1399,10 +1760,12 @@ export type HotelUncheckedUpdateWithoutSupportsInput = {
   pricingModel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedUpdateManyWithoutHotelNestedInput
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutHotelNestedInput
   businessUsers?: Prisma.BusinessUserUncheckedUpdateManyWithoutHotelNestedInput
   guestUsers?: Prisma.GuestUserUncheckedUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUncheckedUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUncheckedUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelCreateWithoutChatRoomInput = {
@@ -1432,6 +1795,8 @@ export type HotelCreateWithoutChatRoomInput = {
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesCreateNestedManyWithoutHotelInput
 }
 
 export type HotelUncheckedCreateWithoutChatRoomInput = {
@@ -1461,6 +1826,8 @@ export type HotelUncheckedCreateWithoutChatRoomInput = {
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
   supports?: Prisma.SupportUncheckedCreateNestedManyWithoutHotelInput
+  checkLists?: Prisma.CheckListUncheckedCreateNestedManyWithoutHotelInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedCreateNestedManyWithoutHotelInput
 }
 
 export type HotelCreateOrConnectWithoutChatRoomInput = {
@@ -1506,6 +1873,8 @@ export type HotelUpdateWithoutChatRoomInput = {
   guestUsers?: Prisma.GuestUserUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUpdateManyWithoutHotelNestedInput
 }
 
 export type HotelUncheckedUpdateWithoutChatRoomInput = {
@@ -1535,6 +1904,8 @@ export type HotelUncheckedUpdateWithoutChatRoomInput = {
   guestUsers?: Prisma.GuestUserUncheckedUpdateManyWithoutHotelNestedInput
   feedbacks?: Prisma.FeedbackUncheckedUpdateManyWithoutHotelNestedInput
   supports?: Prisma.SupportUncheckedUpdateManyWithoutHotelNestedInput
+  checkLists?: Prisma.CheckListUncheckedUpdateManyWithoutHotelNestedInput
+  roomAmeneties?: Prisma.RoomAmenetiesUncheckedUpdateManyWithoutHotelNestedInput
 }
 
 
@@ -1548,6 +1919,8 @@ export type HotelCountOutputType = {
   guestUsers: number
   feedbacks: number
   supports: number
+  checkLists: number
+  roomAmeneties: number
 }
 
 export type HotelCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -1556,6 +1929,8 @@ export type HotelCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.
   guestUsers?: boolean | HotelCountOutputTypeCountGuestUsersArgs
   feedbacks?: boolean | HotelCountOutputTypeCountFeedbacksArgs
   supports?: boolean | HotelCountOutputTypeCountSupportsArgs
+  checkLists?: boolean | HotelCountOutputTypeCountCheckListsArgs
+  roomAmeneties?: boolean | HotelCountOutputTypeCountRoomAmenetiesArgs
 }
 
 /**
@@ -1572,7 +1947,7 @@ export type HotelCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extens
  * HotelCountOutputType without action
  */
 export type HotelCountOutputTypeCountChatRoomArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ChatMessageWhereInput
+  where?: Prisma.ChatWhereInput
 }
 
 /**
@@ -1601,6 +1976,20 @@ export type HotelCountOutputTypeCountFeedbacksArgs<ExtArgs extends runtime.Types
  */
 export type HotelCountOutputTypeCountSupportsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.SupportWhereInput
+}
+
+/**
+ * HotelCountOutputType without action
+ */
+export type HotelCountOutputTypeCountCheckListsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.CheckListWhereInput
+}
+
+/**
+ * HotelCountOutputType without action
+ */
+export type HotelCountOutputTypeCountRoomAmenetiesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.RoomAmenetiesWhereInput
 }
 
 
@@ -1632,6 +2021,8 @@ export type HotelSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   guestUsers?: boolean | Prisma.Hotel$guestUsersArgs<ExtArgs>
   feedbacks?: boolean | Prisma.Hotel$feedbacksArgs<ExtArgs>
   supports?: boolean | Prisma.Hotel$supportsArgs<ExtArgs>
+  checkLists?: boolean | Prisma.Hotel$checkListsArgs<ExtArgs>
+  roomAmeneties?: boolean | Prisma.Hotel$roomAmenetiesArgs<ExtArgs>
   _count?: boolean | Prisma.HotelCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["hotel"]>
 
@@ -1717,6 +2108,8 @@ export type HotelInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   guestUsers?: boolean | Prisma.Hotel$guestUsersArgs<ExtArgs>
   feedbacks?: boolean | Prisma.Hotel$feedbacksArgs<ExtArgs>
   supports?: boolean | Prisma.Hotel$supportsArgs<ExtArgs>
+  checkLists?: boolean | Prisma.Hotel$checkListsArgs<ExtArgs>
+  roomAmeneties?: boolean | Prisma.Hotel$roomAmenetiesArgs<ExtArgs>
   _count?: boolean | Prisma.HotelCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type HotelIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -1725,11 +2118,13 @@ export type HotelIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extens
 export type $HotelPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Hotel"
   objects: {
-    chatRoom: Prisma.$ChatMessagePayload<ExtArgs>[]
+    chatRoom: Prisma.$ChatPayload<ExtArgs>[]
     businessUsers: Prisma.$BusinessUserPayload<ExtArgs>[]
     guestUsers: Prisma.$GuestUserPayload<ExtArgs>[]
     feedbacks: Prisma.$FeedbackPayload<ExtArgs>[]
     supports: Prisma.$SupportPayload<ExtArgs>[]
+    checkLists: Prisma.$CheckListPayload<ExtArgs>[]
+    roomAmeneties: Prisma.$RoomAmenetiesPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -2148,11 +2543,13 @@ readonly fields: HotelFieldRefs;
  */
 export interface Prisma__HotelClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  chatRoom<T extends Prisma.Hotel$chatRoomArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Hotel$chatRoomArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ChatMessagePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  chatRoom<T extends Prisma.Hotel$chatRoomArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Hotel$chatRoomArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ChatPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   businessUsers<T extends Prisma.Hotel$businessUsersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Hotel$businessUsersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$BusinessUserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   guestUsers<T extends Prisma.Hotel$guestUsersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Hotel$guestUsersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$GuestUserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   feedbacks<T extends Prisma.Hotel$feedbacksArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Hotel$feedbacksArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$FeedbackPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   supports<T extends Prisma.Hotel$supportsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Hotel$supportsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$SupportPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  checkLists<T extends Prisma.Hotel$checkListsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Hotel$checkListsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$CheckListPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  roomAmeneties<T extends Prisma.Hotel$roomAmenetiesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Hotel$roomAmenetiesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$RoomAmenetiesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2601,23 +2998,23 @@ export type HotelDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Interna
  */
 export type Hotel$chatRoomArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the ChatMessage
+   * Select specific fields to fetch from the Chat
    */
-  select?: Prisma.ChatMessageSelect<ExtArgs> | null
+  select?: Prisma.ChatSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the ChatMessage
+   * Omit specific fields from the Chat
    */
-  omit?: Prisma.ChatMessageOmit<ExtArgs> | null
+  omit?: Prisma.ChatOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ChatMessageInclude<ExtArgs> | null
-  where?: Prisma.ChatMessageWhereInput
-  orderBy?: Prisma.ChatMessageOrderByWithRelationInput | Prisma.ChatMessageOrderByWithRelationInput[]
-  cursor?: Prisma.ChatMessageWhereUniqueInput
+  include?: Prisma.ChatInclude<ExtArgs> | null
+  where?: Prisma.ChatWhereInput
+  orderBy?: Prisma.ChatOrderByWithRelationInput | Prisma.ChatOrderByWithRelationInput[]
+  cursor?: Prisma.ChatWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.ChatMessageScalarFieldEnum | Prisma.ChatMessageScalarFieldEnum[]
+  distinct?: Prisma.ChatScalarFieldEnum | Prisma.ChatScalarFieldEnum[]
 }
 
 /**
@@ -2714,6 +3111,54 @@ export type Hotel$supportsArgs<ExtArgs extends runtime.Types.Extensions.Internal
   take?: number
   skip?: number
   distinct?: Prisma.SupportScalarFieldEnum | Prisma.SupportScalarFieldEnum[]
+}
+
+/**
+ * Hotel.checkLists
+ */
+export type Hotel$checkListsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the CheckList
+   */
+  select?: Prisma.CheckListSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the CheckList
+   */
+  omit?: Prisma.CheckListOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.CheckListInclude<ExtArgs> | null
+  where?: Prisma.CheckListWhereInput
+  orderBy?: Prisma.CheckListOrderByWithRelationInput | Prisma.CheckListOrderByWithRelationInput[]
+  cursor?: Prisma.CheckListWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.CheckListScalarFieldEnum | Prisma.CheckListScalarFieldEnum[]
+}
+
+/**
+ * Hotel.roomAmeneties
+ */
+export type Hotel$roomAmenetiesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the RoomAmeneties
+   */
+  select?: Prisma.RoomAmenetiesSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the RoomAmeneties
+   */
+  omit?: Prisma.RoomAmenetiesOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.RoomAmenetiesInclude<ExtArgs> | null
+  where?: Prisma.RoomAmenetiesWhereInput
+  orderBy?: Prisma.RoomAmenetiesOrderByWithRelationInput | Prisma.RoomAmenetiesOrderByWithRelationInput[]
+  cursor?: Prisma.RoomAmenetiesWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.RoomAmenetiesScalarFieldEnum | Prisma.RoomAmenetiesScalarFieldEnum[]
 }
 
 /**

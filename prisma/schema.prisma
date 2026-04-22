@@ -36,40 +36,59 @@ model Hotel {
   createdAt    DateTime
   updatedAt    DateTime
 
-  chatRoom ChatMessage[]
+  chatRoom      Chat[] 
   businessUsers BusinessUser[]
   guestUsers    GuestUser[]
   feedbacks     Feedback[]
   supports      Support[]
+  checkLists    CheckList[]
+  roomAmeneties  RoomAmeneties[]
 
   @@map("hotels")
+}
+model CheckList {
+  id           String   @id @default(cuid())
+  hotelId      String
+  morning      CheckListItem[] @relation("MorningItems")
+  evening      CheckListItem[] @relation("EveningItems")
+  night        CheckListItem[] @relation("NightItems")
+
+  createdAt    DateTime
+  updatedAt    DateTime
+
+  hotel Hotel @relation(fields: [hotelId], references: [id])
+
+  @@map("check_lists")
+}
+model CheckListItem {
+  id           String   @id @default(cuid())
+  task         String
+  status       Boolean
+  checkListId  String
+  morningId    String?
+  eveningId    String?
+  nightId      String?
+
+  createdAt    DateTime
+  updatedAt    DateTime
+
+  morning CheckList? @relation("MorningItems", fields: [morningId], references: [id])
+  evening CheckList? @relation("EveningItems", fields: [eveningId], references: [id])
+  night   CheckList? @relation("NightItems", fields: [nightId], references: [id])
+
+  @@index([morningId])
+  @@index([eveningId])
+  @@index([nightId])
+  @@map("check_list_items")
 }
 
 model BusinessUser {
   id           String   @id @default(cuid())
-  userId       String   @unique
   adminStatus  Boolean
-  appLink      String
-  city         String
-  classement   String
-  code_postal  String
-  country      String
   email        String
-  hotelDept    String
   hotelId      String
-  hotelName    String
-  hotelRegion  String
-  language     String
   password     String
-  pricingModel String
-  room         String
   username     String
-  adresse      String?
-  base64Url    String?
-  logo         String?
-  mail         String?
-  phone        String?
-  website      String?
 
   createdAt    DateTime
   updatedAt    DateTime
@@ -81,7 +100,6 @@ model BusinessUser {
 
 model GuestUser {
   id                 String    @id @default(cuid())
-  userId             String    @unique
   username           String
   email              String
   password           String    
@@ -92,14 +110,6 @@ model GuestUser {
   localLanguage      String
   room               String
   hotelId            String
-  hotelName          String
-  hotelDept          String
-  hotelRegion        String
-  hotelPhone         String
-  city               String
-  classement         String
-  logo               String
-  website            String
   journeyId          String
   guestCategory      String
   guestCategoryClone String?
@@ -108,27 +118,68 @@ model GuestUser {
   lastTimeConnected  BigInt
   newConnection      Boolean
   isChatting         Boolean?
+  token              GuestToken?
 
   createdAt          DateTime
   updatedAt          DateTime
 
-  // Room amenities
-  babyBed     Boolean
-  blanket     Boolean
-  hairDryer   Boolean
-  iron        Boolean
-  pillow      Boolean
-  soap        Boolean
-  toiletPaper Boolean
-  towel       Boolean
-
   // Visited hotels stored as array of hotel IDs
   hotelVisitedArray String[]
-
-  hotel Hotel        @relation(fields: [hotelId], references: [id])
-  token GuestToken?
+  roomAmeneties     RoomAmeneties[]
+  hotel             Hotel @relation(fields: [hotelId], references: [id])
 
   @@map("guest_users")
+}
+
+model RoomAmeneties {
+  id                 String    @id @default(cuid())
+  babyBed            Amenety[] @relation("babyBed")
+  blanket            Amenety[] @relation("blanket") 
+  hairDryer          Amenety[] @relation("hairDryer")
+  iron               Amenety[] @relation("iron")
+  pillow             Amenety[] @relation("pillow")
+  soap               Amenety[] @relation("soap")
+  toiletPaper        Amenety[] @relation("toiletPaper")
+  towel              Amenety[] @relation("towel")
+  guestUserId        String?
+  hotelId            String?
+
+  createdAt          DateTime
+  updatedAt          DateTime
+
+  hotel Hotel? @relation(fields: [hotelId], references: [id])
+  guestUser GuestUser? @relation(fields: [guestUserId], references: [id])
+
+  @@map("room_ameneties")
+}
+
+model Amenety {
+  id                 String    @id @default(cuid())
+  checkoutDate       String    
+  clientName         String
+  room               String
+  babyBedId          String?
+  blanketId          String?
+  hairDryerId        String?
+  ironId             String?
+  pillowId           String?
+  soapId             String?
+  toiletPaperId      String?
+  towelId            String?
+
+  createdAt          DateTime
+  updatedAt          DateTime
+
+  babyBed RoomAmeneties? @relation("babyBed", fields: [babyBedId], references: [id])
+  blanket RoomAmeneties? @relation("blanket", fields: [blanketId], references: [id])
+  hairDryer RoomAmeneties? @relation("hairDryer", fields: [hairDryerId], references: [id])
+  iron RoomAmeneties? @relation("iron", fields: [ironId], references: [id])
+  pillow RoomAmeneties? @relation("pillow", fields: [pillowId], references: [id])
+  soap RoomAmeneties? @relation("soap", fields: [soapId], references: [id])
+  toiletPaper RoomAmeneties? @relation("toiletPaper", fields: [toiletPaperId], references: [id])
+  towel RoomAmeneties? @relation("towel", fields: [towelId], references: [id])
+
+  @@map("ameneties")
 }
 
 model GuestToken {
@@ -138,6 +189,8 @@ model GuestToken {
   expirationTime String?
   auth           String
   p256dh         String
+  chats Chat[]
+
   createdAt      DateTime
   updatedAt      DateTime
 
@@ -167,13 +220,14 @@ model FeedbackItem {
   hotelDept            String
   hotelName            String
   hotelRegion          String
-  satisfactionFeedback Feedback? @relation("SatisfactionItems", fields: [satisfactionFeedbackId], references: [id])
   satisfactionFeedbackId String?
-  improvementFeedback  Feedback? @relation("ImprovementItems", fields: [improvementFeedbackId], references: [id])
   improvementFeedbackId String?
 
   createdAt            DateTime
   updatedAt            DateTime
+
+  satisfactionFeedback Feedback? @relation("SatisfactionItems", fields: [satisfactionFeedbackId], references: [id])
+  improvementFeedback  Feedback? @relation("ImprovementItems", fields: [improvementFeedbackId], references: [id])
 
   @@map("feedback_items")
 }
@@ -190,28 +244,53 @@ model Support {
   createdAt    DateTime
   updatedAt    DateTime
 
-  hotel    Hotel         @relation(fields: [hotelId], references: [id])
-  chatRoom ChatMessage[]
+  hotel    Hotel @relation(fields: [hotelId], references: [id])
+  chatRoom Chat[]
 
   @@map("support")
 }
 
+model Chat {
+  id              String   @id @default(cuid()) 
+  clientFullName  String
+  checkoutDate    String
+  guestLanguage   String
+  hotelResponding Boolean
+  isChatting      Boolean
+  room            String
+  status          Boolean
+  userId          String
+  hotelId         String?
+  supportId       String?
+  guestTokenId    String?
+
+  createdAt DateTime
+  updatedAt DateTime
+  
+  hotel Hotel? @relation(fields: [hotelId], references: [id])
+  support Support? @relation(fields: [supportId], references: [id])
+  token    GuestToken? @relation(fields: [guestTokenId], references: [id]) 
+  chatRoom ChatMessage[]
+
+  @@map("chat")
+}
+
 model ChatMessage {
   id        String   @id @default(cuid()) 
-  supportId String
-  hotelId   String  
   author    String
   email     String  
+  title     String
   text      String
   photo     String?
   date      DateTime
-  
+  room      String
+  userId    String
+  chatId    String
+
   createdAt DateTime
   updatedAt DateTime
 
-  support Support @relation(fields: [supportId], references: [id])
-  hotel Hotel @relation(fields: [hotelId], references: [id])
-
+  chat Chat @relation(fields: [chatId], references: [id])
 
   @@map("chat_messages")
 }

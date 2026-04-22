@@ -215,7 +215,7 @@ export type SupportWhereInput = {
   createdAt?: Prisma.DateTimeFilter<"Support"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Support"> | Date | string
   hotel?: Prisma.XOR<Prisma.HotelScalarRelationFilter, Prisma.HotelWhereInput>
-  chatRoom?: Prisma.ChatMessageListRelationFilter
+  chatRoom?: Prisma.ChatListRelationFilter
 }
 
 export type SupportOrderByWithRelationInput = {
@@ -229,7 +229,7 @@ export type SupportOrderByWithRelationInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   hotel?: Prisma.HotelOrderByWithRelationInput
-  chatRoom?: Prisma.ChatMessageOrderByRelationAggregateInput
+  chatRoom?: Prisma.ChatOrderByRelationAggregateInput
 }
 
 export type SupportWhereUniqueInput = Prisma.AtLeast<{
@@ -246,7 +246,7 @@ export type SupportWhereUniqueInput = Prisma.AtLeast<{
   createdAt?: Prisma.DateTimeFilter<"Support"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Support"> | Date | string
   hotel?: Prisma.XOR<Prisma.HotelScalarRelationFilter, Prisma.HotelWhereInput>
-  chatRoom?: Prisma.ChatMessageListRelationFilter
+  chatRoom?: Prisma.ChatListRelationFilter
 }, "id">
 
 export type SupportOrderByWithAggregationInput = {
@@ -289,7 +289,7 @@ export type SupportCreateInput = {
   createdAt: Date | string
   updatedAt: Date | string
   hotel: Prisma.HotelCreateNestedOneWithoutSupportsInput
-  chatRoom?: Prisma.ChatMessageCreateNestedManyWithoutSupportInput
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutSupportInput
 }
 
 export type SupportUncheckedCreateInput = {
@@ -302,7 +302,7 @@ export type SupportUncheckedCreateInput = {
   status: boolean
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutSupportInput
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutSupportInput
 }
 
 export type SupportUpdateInput = {
@@ -315,7 +315,7 @@ export type SupportUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   hotel?: Prisma.HotelUpdateOneRequiredWithoutSupportsNestedInput
-  chatRoom?: Prisma.ChatMessageUpdateManyWithoutSupportNestedInput
+  chatRoom?: Prisma.ChatUpdateManyWithoutSupportNestedInput
 }
 
 export type SupportUncheckedUpdateInput = {
@@ -328,7 +328,7 @@ export type SupportUncheckedUpdateInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedUpdateManyWithoutSupportNestedInput
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutSupportNestedInput
 }
 
 export type SupportCreateManyInput = {
@@ -412,9 +412,9 @@ export type SupportMinOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
 }
 
-export type SupportScalarRelationFilter = {
-  is?: Prisma.SupportWhereInput
-  isNot?: Prisma.SupportWhereInput
+export type SupportNullableScalarRelationFilter = {
+  is?: Prisma.SupportWhereInput | null
+  isNot?: Prisma.SupportWhereInput | null
 }
 
 export type SupportCreateNestedManyWithoutHotelInput = {
@@ -465,10 +465,12 @@ export type SupportCreateNestedOneWithoutChatRoomInput = {
   connect?: Prisma.SupportWhereUniqueInput
 }
 
-export type SupportUpdateOneRequiredWithoutChatRoomNestedInput = {
+export type SupportUpdateOneWithoutChatRoomNestedInput = {
   create?: Prisma.XOR<Prisma.SupportCreateWithoutChatRoomInput, Prisma.SupportUncheckedCreateWithoutChatRoomInput>
   connectOrCreate?: Prisma.SupportCreateOrConnectWithoutChatRoomInput
   upsert?: Prisma.SupportUpsertWithoutChatRoomInput
+  disconnect?: Prisma.SupportWhereInput | boolean
+  delete?: Prisma.SupportWhereInput | boolean
   connect?: Prisma.SupportWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.SupportUpdateToOneWithWhereWithoutChatRoomInput, Prisma.SupportUpdateWithoutChatRoomInput>, Prisma.SupportUncheckedUpdateWithoutChatRoomInput>
 }
@@ -482,7 +484,7 @@ export type SupportCreateWithoutHotelInput = {
   status: boolean
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageCreateNestedManyWithoutSupportInput
+  chatRoom?: Prisma.ChatCreateNestedManyWithoutSupportInput
 }
 
 export type SupportUncheckedCreateWithoutHotelInput = {
@@ -494,7 +496,7 @@ export type SupportUncheckedCreateWithoutHotelInput = {
   status: boolean
   createdAt: Date | string
   updatedAt: Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutSupportInput
+  chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutSupportInput
 }
 
 export type SupportCreateOrConnectWithoutHotelInput = {
@@ -622,7 +624,7 @@ export type SupportUpdateWithoutHotelInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUpdateManyWithoutSupportNestedInput
+  chatRoom?: Prisma.ChatUpdateManyWithoutSupportNestedInput
 }
 
 export type SupportUncheckedUpdateWithoutHotelInput = {
@@ -634,7 +636,7 @@ export type SupportUncheckedUpdateWithoutHotelInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chatRoom?: Prisma.ChatMessageUncheckedUpdateManyWithoutSupportNestedInput
+  chatRoom?: Prisma.ChatUncheckedUpdateManyWithoutSupportNestedInput
 }
 
 export type SupportUncheckedUpdateManyWithoutHotelInput = {
@@ -675,7 +677,7 @@ export type SupportCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Exte
  * SupportCountOutputType without action
  */
 export type SupportCountOutputTypeCountChatRoomArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ChatMessageWhereInput
+  where?: Prisma.ChatWhereInput
 }
 
 
@@ -749,7 +751,7 @@ export type $SupportPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
   name: "Support"
   objects: {
     hotel: Prisma.$HotelPayload<ExtArgs>
-    chatRoom: Prisma.$ChatMessagePayload<ExtArgs>[]
+    chatRoom: Prisma.$ChatPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1156,7 +1158,7 @@ readonly fields: SupportFieldRefs;
 export interface Prisma__SupportClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   hotel<T extends Prisma.HotelDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.HotelDefaultArgs<ExtArgs>>): Prisma.Prisma__HotelClient<runtime.Types.Result.GetResult<Prisma.$HotelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  chatRoom<T extends Prisma.Support$chatRoomArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Support$chatRoomArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ChatMessagePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  chatRoom<T extends Prisma.Support$chatRoomArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Support$chatRoomArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ChatPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1600,23 +1602,23 @@ export type SupportDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Inter
  */
 export type Support$chatRoomArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the ChatMessage
+   * Select specific fields to fetch from the Chat
    */
-  select?: Prisma.ChatMessageSelect<ExtArgs> | null
+  select?: Prisma.ChatSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the ChatMessage
+   * Omit specific fields from the Chat
    */
-  omit?: Prisma.ChatMessageOmit<ExtArgs> | null
+  omit?: Prisma.ChatOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ChatMessageInclude<ExtArgs> | null
-  where?: Prisma.ChatMessageWhereInput
-  orderBy?: Prisma.ChatMessageOrderByWithRelationInput | Prisma.ChatMessageOrderByWithRelationInput[]
-  cursor?: Prisma.ChatMessageWhereUniqueInput
+  include?: Prisma.ChatInclude<ExtArgs> | null
+  where?: Prisma.ChatWhereInput
+  orderBy?: Prisma.ChatOrderByWithRelationInput | Prisma.ChatOrderByWithRelationInput[]
+  cursor?: Prisma.ChatWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.ChatMessageScalarFieldEnum | Prisma.ChatMessageScalarFieldEnum[]
+  distinct?: Prisma.ChatScalarFieldEnum | Prisma.ChatScalarFieldEnum[]
 }
 
 /**
