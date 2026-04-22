@@ -206,6 +206,7 @@ export type GuestTokenWhereInput = {
   p256dh?: Prisma.StringFilter<"GuestToken"> | string
   createdAt?: Prisma.DateTimeFilter<"GuestToken"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"GuestToken"> | Date | string
+  chats?: Prisma.ChatListRelationFilter
   guestUser?: Prisma.XOR<Prisma.GuestUserScalarRelationFilter, Prisma.GuestUserWhereInput>
 }
 
@@ -218,6 +219,7 @@ export type GuestTokenOrderByWithRelationInput = {
   p256dh?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  chats?: Prisma.ChatOrderByRelationAggregateInput
   guestUser?: Prisma.GuestUserOrderByWithRelationInput
 }
 
@@ -233,6 +235,7 @@ export type GuestTokenWhereUniqueInput = Prisma.AtLeast<{
   p256dh?: Prisma.StringFilter<"GuestToken"> | string
   createdAt?: Prisma.DateTimeFilter<"GuestToken"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"GuestToken"> | Date | string
+  chats?: Prisma.ChatListRelationFilter
   guestUser?: Prisma.XOR<Prisma.GuestUserScalarRelationFilter, Prisma.GuestUserWhereInput>
 }, "id" | "guestUserId">
 
@@ -272,6 +275,7 @@ export type GuestTokenCreateInput = {
   p256dh: string
   createdAt: Date | string
   updatedAt: Date | string
+  chats?: Prisma.ChatCreateNestedManyWithoutTokenInput
   guestUser: Prisma.GuestUserCreateNestedOneWithoutTokenInput
 }
 
@@ -284,6 +288,7 @@ export type GuestTokenUncheckedCreateInput = {
   p256dh: string
   createdAt: Date | string
   updatedAt: Date | string
+  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutTokenInput
 }
 
 export type GuestTokenUpdateInput = {
@@ -294,6 +299,7 @@ export type GuestTokenUpdateInput = {
   p256dh?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  chats?: Prisma.ChatUpdateManyWithoutTokenNestedInput
   guestUser?: Prisma.GuestUserUpdateOneRequiredWithoutTokenNestedInput
 }
 
@@ -306,6 +312,7 @@ export type GuestTokenUncheckedUpdateInput = {
   p256dh?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  chats?: Prisma.ChatUncheckedUpdateManyWithoutTokenNestedInput
 }
 
 export type GuestTokenCreateManyInput = {
@@ -410,6 +417,22 @@ export type GuestTokenUncheckedUpdateOneWithoutGuestUserNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.GuestTokenUpdateToOneWithWhereWithoutGuestUserInput, Prisma.GuestTokenUpdateWithoutGuestUserInput>, Prisma.GuestTokenUncheckedUpdateWithoutGuestUserInput>
 }
 
+export type GuestTokenCreateNestedOneWithoutChatsInput = {
+  create?: Prisma.XOR<Prisma.GuestTokenCreateWithoutChatsInput, Prisma.GuestTokenUncheckedCreateWithoutChatsInput>
+  connectOrCreate?: Prisma.GuestTokenCreateOrConnectWithoutChatsInput
+  connect?: Prisma.GuestTokenWhereUniqueInput
+}
+
+export type GuestTokenUpdateOneWithoutChatsNestedInput = {
+  create?: Prisma.XOR<Prisma.GuestTokenCreateWithoutChatsInput, Prisma.GuestTokenUncheckedCreateWithoutChatsInput>
+  connectOrCreate?: Prisma.GuestTokenCreateOrConnectWithoutChatsInput
+  upsert?: Prisma.GuestTokenUpsertWithoutChatsInput
+  disconnect?: Prisma.GuestTokenWhereInput | boolean
+  delete?: Prisma.GuestTokenWhereInput | boolean
+  connect?: Prisma.GuestTokenWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.GuestTokenUpdateToOneWithWhereWithoutChatsInput, Prisma.GuestTokenUpdateWithoutChatsInput>, Prisma.GuestTokenUncheckedUpdateWithoutChatsInput>
+}
+
 export type GuestTokenCreateWithoutGuestUserInput = {
   id?: string
   endpoint: string
@@ -418,6 +441,7 @@ export type GuestTokenCreateWithoutGuestUserInput = {
   p256dh: string
   createdAt: Date | string
   updatedAt: Date | string
+  chats?: Prisma.ChatCreateNestedManyWithoutTokenInput
 }
 
 export type GuestTokenUncheckedCreateWithoutGuestUserInput = {
@@ -428,6 +452,7 @@ export type GuestTokenUncheckedCreateWithoutGuestUserInput = {
   p256dh: string
   createdAt: Date | string
   updatedAt: Date | string
+  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutTokenInput
 }
 
 export type GuestTokenCreateOrConnectWithoutGuestUserInput = {
@@ -454,6 +479,7 @@ export type GuestTokenUpdateWithoutGuestUserInput = {
   p256dh?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  chats?: Prisma.ChatUpdateManyWithoutTokenNestedInput
 }
 
 export type GuestTokenUncheckedUpdateWithoutGuestUserInput = {
@@ -464,8 +490,98 @@ export type GuestTokenUncheckedUpdateWithoutGuestUserInput = {
   p256dh?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  chats?: Prisma.ChatUncheckedUpdateManyWithoutTokenNestedInput
 }
 
+export type GuestTokenCreateWithoutChatsInput = {
+  id?: string
+  endpoint: string
+  expirationTime?: string | null
+  auth: string
+  p256dh: string
+  createdAt: Date | string
+  updatedAt: Date | string
+  guestUser: Prisma.GuestUserCreateNestedOneWithoutTokenInput
+}
+
+export type GuestTokenUncheckedCreateWithoutChatsInput = {
+  id?: string
+  guestUserId: string
+  endpoint: string
+  expirationTime?: string | null
+  auth: string
+  p256dh: string
+  createdAt: Date | string
+  updatedAt: Date | string
+}
+
+export type GuestTokenCreateOrConnectWithoutChatsInput = {
+  where: Prisma.GuestTokenWhereUniqueInput
+  create: Prisma.XOR<Prisma.GuestTokenCreateWithoutChatsInput, Prisma.GuestTokenUncheckedCreateWithoutChatsInput>
+}
+
+export type GuestTokenUpsertWithoutChatsInput = {
+  update: Prisma.XOR<Prisma.GuestTokenUpdateWithoutChatsInput, Prisma.GuestTokenUncheckedUpdateWithoutChatsInput>
+  create: Prisma.XOR<Prisma.GuestTokenCreateWithoutChatsInput, Prisma.GuestTokenUncheckedCreateWithoutChatsInput>
+  where?: Prisma.GuestTokenWhereInput
+}
+
+export type GuestTokenUpdateToOneWithWhereWithoutChatsInput = {
+  where?: Prisma.GuestTokenWhereInput
+  data: Prisma.XOR<Prisma.GuestTokenUpdateWithoutChatsInput, Prisma.GuestTokenUncheckedUpdateWithoutChatsInput>
+}
+
+export type GuestTokenUpdateWithoutChatsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  endpoint?: Prisma.StringFieldUpdateOperationsInput | string
+  expirationTime?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  auth?: Prisma.StringFieldUpdateOperationsInput | string
+  p256dh?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  guestUser?: Prisma.GuestUserUpdateOneRequiredWithoutTokenNestedInput
+}
+
+export type GuestTokenUncheckedUpdateWithoutChatsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  guestUserId?: Prisma.StringFieldUpdateOperationsInput | string
+  endpoint?: Prisma.StringFieldUpdateOperationsInput | string
+  expirationTime?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  auth?: Prisma.StringFieldUpdateOperationsInput | string
+  p256dh?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+
+/**
+ * Count Type GuestTokenCountOutputType
+ */
+
+export type GuestTokenCountOutputType = {
+  chats: number
+}
+
+export type GuestTokenCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  chats?: boolean | GuestTokenCountOutputTypeCountChatsArgs
+}
+
+/**
+ * GuestTokenCountOutputType without action
+ */
+export type GuestTokenCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the GuestTokenCountOutputType
+   */
+  select?: Prisma.GuestTokenCountOutputTypeSelect<ExtArgs> | null
+}
+
+/**
+ * GuestTokenCountOutputType without action
+ */
+export type GuestTokenCountOutputTypeCountChatsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ChatWhereInput
+}
 
 
 export type GuestTokenSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -477,7 +593,9 @@ export type GuestTokenSelect<ExtArgs extends runtime.Types.Extensions.InternalAr
   p256dh?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  chats?: boolean | Prisma.GuestToken$chatsArgs<ExtArgs>
   guestUser?: boolean | Prisma.GuestUserDefaultArgs<ExtArgs>
+  _count?: boolean | Prisma.GuestTokenCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["guestToken"]>
 
 export type GuestTokenSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -517,7 +635,9 @@ export type GuestTokenSelectScalar = {
 
 export type GuestTokenOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "guestUserId" | "endpoint" | "expirationTime" | "auth" | "p256dh" | "createdAt" | "updatedAt", ExtArgs["result"]["guestToken"]>
 export type GuestTokenInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  chats?: boolean | Prisma.GuestToken$chatsArgs<ExtArgs>
   guestUser?: boolean | Prisma.GuestUserDefaultArgs<ExtArgs>
+  _count?: boolean | Prisma.GuestTokenCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type GuestTokenIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   guestUser?: boolean | Prisma.GuestUserDefaultArgs<ExtArgs>
@@ -529,6 +649,7 @@ export type GuestTokenIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.E
 export type $GuestTokenPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "GuestToken"
   objects: {
+    chats: Prisma.$ChatPayload<ExtArgs>[]
     guestUser: Prisma.$GuestUserPayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
@@ -934,6 +1055,7 @@ readonly fields: GuestTokenFieldRefs;
  */
 export interface Prisma__GuestTokenClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
+  chats<T extends Prisma.GuestToken$chatsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.GuestToken$chatsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ChatPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   guestUser<T extends Prisma.GuestUserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.GuestUserDefaultArgs<ExtArgs>>): Prisma.Prisma__GuestUserClient<runtime.Types.Result.GetResult<Prisma.$GuestUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1370,6 +1492,30 @@ export type GuestTokenDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.In
    * Limit how many GuestTokens to delete.
    */
   limit?: number
+}
+
+/**
+ * GuestToken.chats
+ */
+export type GuestToken$chatsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Chat
+   */
+  select?: Prisma.ChatSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Chat
+   */
+  omit?: Prisma.ChatOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.ChatInclude<ExtArgs> | null
+  where?: Prisma.ChatWhereInput
+  orderBy?: Prisma.ChatOrderByWithRelationInput | Prisma.ChatOrderByWithRelationInput[]
+  cursor?: Prisma.ChatWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ChatScalarFieldEnum | Prisma.ChatScalarFieldEnum[]
 }
 
 /**

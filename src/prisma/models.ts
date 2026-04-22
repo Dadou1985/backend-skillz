@@ -9,11 +9,16 @@
  * 🟢 You can import this file directly.
  */
 export type * from './models/Hotel'
+export type * from './models/CheckList'
+export type * from './models/CheckListItem'
 export type * from './models/BusinessUser'
 export type * from './models/GuestUser'
+export type * from './models/RoomAmeneties'
+export type * from './models/Amenety'
 export type * from './models/GuestToken'
 export type * from './models/Feedback'
 export type * from './models/FeedbackItem'
 export type * from './models/Support'
+export type * from './models/Chat'
 export type * from './models/ChatMessage'
 export type * from './commonInputTypes'

@@ -26,87 +26,33 @@ export type AggregateBusinessUser = {
 
 export type BusinessUserMinAggregateOutputType = {
   id: string | null
-  userId: string | null
   adminStatus: boolean | null
-  appLink: string | null
-  city: string | null
-  classement: string | null
-  code_postal: string | null
-  country: string | null
   email: string | null
-  hotelDept: string | null
   hotelId: string | null
-  hotelName: string | null
-  hotelRegion: string | null
-  language: string | null
   password: string | null
-  pricingModel: string | null
-  room: string | null
   username: string | null
-  adresse: string | null
-  base64Url: string | null
-  logo: string | null
-  mail: string | null
-  phone: string | null
-  website: string | null
   createdAt: Date | null
   updatedAt: Date | null
 }
 
 export type BusinessUserMaxAggregateOutputType = {
   id: string | null
-  userId: string | null
   adminStatus: boolean | null
-  appLink: string | null
-  city: string | null
-  classement: string | null
-  code_postal: string | null
-  country: string | null
   email: string | null
-  hotelDept: string | null
   hotelId: string | null
-  hotelName: string | null
-  hotelRegion: string | null
-  language: string | null
   password: string | null
-  pricingModel: string | null
-  room: string | null
   username: string | null
-  adresse: string | null
-  base64Url: string | null
-  logo: string | null
-  mail: string | null
-  phone: string | null
-  website: string | null
   createdAt: Date | null
   updatedAt: Date | null
 }
 
 export type BusinessUserCountAggregateOutputType = {
   id: number
-  userId: number
   adminStatus: number
-  appLink: number
-  city: number
-  classement: number
-  code_postal: number
-  country: number
   email: number
-  hotelDept: number
   hotelId: number
-  hotelName: number
-  hotelRegion: number
-  language: number
   password: number
-  pricingModel: number
-  room: number
   username: number
-  adresse: number
-  base64Url: number
-  logo: number
-  mail: number
-  phone: number
-  website: number
   createdAt: number
   updatedAt: number
   _all: number
@@ -115,87 +61,33 @@ export type BusinessUserCountAggregateOutputType = {
 
 export type BusinessUserMinAggregateInputType = {
   id?: true
-  userId?: true
   adminStatus?: true
-  appLink?: true
-  city?: true
-  classement?: true
-  code_postal?: true
-  country?: true
   email?: true
-  hotelDept?: true
   hotelId?: true
-  hotelName?: true
-  hotelRegion?: true
-  language?: true
   password?: true
-  pricingModel?: true
-  room?: true
   username?: true
-  adresse?: true
-  base64Url?: true
-  logo?: true
-  mail?: true
-  phone?: true
-  website?: true
   createdAt?: true
   updatedAt?: true
 }
 
 export type BusinessUserMaxAggregateInputType = {
   id?: true
-  userId?: true
   adminStatus?: true
-  appLink?: true
-  city?: true
-  classement?: true
-  code_postal?: true
-  country?: true
   email?: true
-  hotelDept?: true
   hotelId?: true
-  hotelName?: true
-  hotelRegion?: true
-  language?: true
   password?: true
-  pricingModel?: true
-  room?: true
   username?: true
-  adresse?: true
-  base64Url?: true
-  logo?: true
-  mail?: true
-  phone?: true
-  website?: true
   createdAt?: true
   updatedAt?: true
 }
 
 export type BusinessUserCountAggregateInputType = {
   id?: true
-  userId?: true
   adminStatus?: true
-  appLink?: true
-  city?: true
-  classement?: true
-  code_postal?: true
-  country?: true
   email?: true
-  hotelDept?: true
   hotelId?: true
-  hotelName?: true
-  hotelRegion?: true
-  language?: true
   password?: true
-  pricingModel?: true
-  room?: true
   username?: true
-  adresse?: true
-  base64Url?: true
-  logo?: true
-  mail?: true
-  phone?: true
-  website?: true
   createdAt?: true
   updatedAt?: true
   _all?: true
@@ -275,29 +167,11 @@ export type BusinessUserGroupByArgs<ExtArgs extends runtime.Types.Extensions.Int
 
 export type BusinessUserGroupByOutputType = {
   id: string
-  userId: string
   adminStatus: boolean
-  appLink: string
-  city: string
-  classement: string
-  code_postal: string
-  country: string
   email: string
-  hotelDept: string
   hotelId: string
-  hotelName: string
-  hotelRegion: string
-  language: string
   password: string
-  pricingModel: string
-  room: string
   username: string
-  adresse: string | null
-  base64Url: string | null
-  logo: string | null
-  mail: string | null
-  phone: string | null
-  website: string | null
   createdAt: Date
   updatedAt: Date
   _count: BusinessUserCountAggregateOutputType | null
@@ -325,29 +199,11 @@ export type BusinessUserWhereInput = {
   OR?: Prisma.BusinessUserWhereInput[]
   NOT?: Prisma.BusinessUserWhereInput | Prisma.BusinessUserWhereInput[]
   id?: Prisma.StringFilter<"BusinessUser"> | string
-  userId?: Prisma.StringFilter<"BusinessUser"> | string
   adminStatus?: Prisma.BoolFilter<"BusinessUser"> | boolean
-  appLink?: Prisma.StringFilter<"BusinessUser"> | string
-  city?: Prisma.StringFilter<"BusinessUser"> | string
-  classement?: Prisma.StringFilter<"BusinessUser"> | string
-  code_postal?: Prisma.StringFilter<"BusinessUser"> | string
-  country?: Prisma.StringFilter<"BusinessUser"> | string
   email?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelDept?: Prisma.StringFilter<"BusinessUser"> | string
   hotelId?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelName?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelRegion?: Prisma.StringFilter<"BusinessUser"> | string
-  language?: Prisma.StringFilter<"BusinessUser"> | string
   password?: Prisma.StringFilter<"BusinessUser"> | string
-  pricingModel?: Prisma.StringFilter<"BusinessUser"> | string
-  room?: Prisma.StringFilter<"BusinessUser"> | string
   username?: Prisma.StringFilter<"BusinessUser"> | string
-  adresse?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  base64Url?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  logo?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  mail?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  phone?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  website?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
   createdAt?: Prisma.DateTimeFilter<"BusinessUser"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"BusinessUser"> | Date | string
   hotel?: Prisma.XOR<Prisma.HotelScalarRelationFilter, Prisma.HotelWhereInput>
@@ -355,29 +211,11 @@ export type BusinessUserWhereInput = {
 
 export type BusinessUserOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   adminStatus?: Prisma.SortOrder
-  appLink?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  code_postal?: Prisma.SortOrder
-  country?: Prisma.SortOrder
   email?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  language?: Prisma.SortOrder
   password?: Prisma.SortOrder
-  pricingModel?: Prisma.SortOrder
-  room?: Prisma.SortOrder
   username?: Prisma.SortOrder
-  adresse?: Prisma.SortOrderInput | Prisma.SortOrder
-  base64Url?: Prisma.SortOrderInput | Prisma.SortOrder
-  logo?: Prisma.SortOrderInput | Prisma.SortOrder
-  mail?: Prisma.SortOrderInput | Prisma.SortOrder
-  phone?: Prisma.SortOrderInput | Prisma.SortOrder
-  website?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   hotel?: Prisma.HotelOrderByWithRelationInput
@@ -385,62 +223,26 @@ export type BusinessUserOrderByWithRelationInput = {
 
 export type BusinessUserWhereUniqueInput = Prisma.AtLeast<{
   id?: string
-  userId?: string
   AND?: Prisma.BusinessUserWhereInput | Prisma.BusinessUserWhereInput[]
   OR?: Prisma.BusinessUserWhereInput[]
   NOT?: Prisma.BusinessUserWhereInput | Prisma.BusinessUserWhereInput[]
   adminStatus?: Prisma.BoolFilter<"BusinessUser"> | boolean
-  appLink?: Prisma.StringFilter<"BusinessUser"> | string
-  city?: Prisma.StringFilter<"BusinessUser"> | string
-  classement?: Prisma.StringFilter<"BusinessUser"> | string
-  code_postal?: Prisma.StringFilter<"BusinessUser"> | string
-  country?: Prisma.StringFilter<"BusinessUser"> | string
   email?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelDept?: Prisma.StringFilter<"BusinessUser"> | string
   hotelId?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelName?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelRegion?: Prisma.StringFilter<"BusinessUser"> | string
-  language?: Prisma.StringFilter<"BusinessUser"> | string
   password?: Prisma.StringFilter<"BusinessUser"> | string
-  pricingModel?: Prisma.StringFilter<"BusinessUser"> | string
-  room?: Prisma.StringFilter<"BusinessUser"> | string
   username?: Prisma.StringFilter<"BusinessUser"> | string
-  adresse?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  base64Url?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  logo?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  mail?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  phone?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  website?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
   createdAt?: Prisma.DateTimeFilter<"BusinessUser"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"BusinessUser"> | Date | string
   hotel?: Prisma.XOR<Prisma.HotelScalarRelationFilter, Prisma.HotelWhereInput>
-}, "id" | "userId">
+}, "id">
 
 export type BusinessUserOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   adminStatus?: Prisma.SortOrder
-  appLink?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  code_postal?: Prisma.SortOrder
-  country?: Prisma.SortOrder
   email?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  language?: Prisma.SortOrder
   password?: Prisma.SortOrder
-  pricingModel?: Prisma.SortOrder
-  room?: Prisma.SortOrder
   username?: Prisma.SortOrder
-  adresse?: Prisma.SortOrderInput | Prisma.SortOrder
-  base64Url?: Prisma.SortOrderInput | Prisma.SortOrder
-  logo?: Prisma.SortOrderInput | Prisma.SortOrder
-  mail?: Prisma.SortOrderInput | Prisma.SortOrder
-  phone?: Prisma.SortOrderInput | Prisma.SortOrder
-  website?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   _count?: Prisma.BusinessUserCountOrderByAggregateInput
@@ -453,57 +255,21 @@ export type BusinessUserScalarWhereWithAggregatesInput = {
   OR?: Prisma.BusinessUserScalarWhereWithAggregatesInput[]
   NOT?: Prisma.BusinessUserScalarWhereWithAggregatesInput | Prisma.BusinessUserScalarWhereWithAggregatesInput[]
   id?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  userId?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
   adminStatus?: Prisma.BoolWithAggregatesFilter<"BusinessUser"> | boolean
-  appLink?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  city?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  classement?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  code_postal?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  country?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
   email?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  hotelDept?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
   hotelId?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  hotelName?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  hotelRegion?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  language?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
   password?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  pricingModel?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  room?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
   username?: Prisma.StringWithAggregatesFilter<"BusinessUser"> | string
-  adresse?: Prisma.StringNullableWithAggregatesFilter<"BusinessUser"> | string | null
-  base64Url?: Prisma.StringNullableWithAggregatesFilter<"BusinessUser"> | string | null
-  logo?: Prisma.StringNullableWithAggregatesFilter<"BusinessUser"> | string | null
-  mail?: Prisma.StringNullableWithAggregatesFilter<"BusinessUser"> | string | null
-  phone?: Prisma.StringNullableWithAggregatesFilter<"BusinessUser"> | string | null
-  website?: Prisma.StringNullableWithAggregatesFilter<"BusinessUser"> | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"BusinessUser"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"BusinessUser"> | Date | string
 }
 
 export type BusinessUserCreateInput = {
   id?: string
-  userId: string
   adminStatus: boolean
-  appLink: string
-  city: string
-  classement: string
-  code_postal: string
-  country: string
   email: string
-  hotelDept: string
-  hotelName: string
-  hotelRegion: string
-  language: string
   password: string
-  pricingModel: string
-  room: string
   username: string
-  adresse?: string | null
-  base64Url?: string | null
-  logo?: string | null
-  mail?: string | null
-  phone?: string | null
-  website?: string | null
   createdAt: Date | string
   updatedAt: Date | string
   hotel: Prisma.HotelCreateNestedOneWithoutBusinessUsersInput
@@ -511,57 +277,21 @@ export type BusinessUserCreateInput = {
 
 export type BusinessUserUncheckedCreateInput = {
   id?: string
-  userId: string
   adminStatus: boolean
-  appLink: string
-  city: string
-  classement: string
-  code_postal: string
-  country: string
   email: string
-  hotelDept: string
   hotelId: string
-  hotelName: string
-  hotelRegion: string
-  language: string
   password: string
-  pricingModel: string
-  room: string
   username: string
-  adresse?: string | null
-  base64Url?: string | null
-  logo?: string | null
-  mail?: string | null
-  phone?: string | null
-  website?: string | null
   createdAt: Date | string
   updatedAt: Date | string
 }
 
 export type BusinessUserUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   adminStatus?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  appLink?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
-  country?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  language?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
-  pricingModel?: Prisma.StringFieldUpdateOperationsInput | string
-  room?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  mail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   hotel?: Prisma.HotelUpdateOneRequiredWithoutBusinessUsersNestedInput
@@ -569,115 +299,43 @@ export type BusinessUserUpdateInput = {
 
 export type BusinessUserUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   adminStatus?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  appLink?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
-  country?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
   hotelId?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  language?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
-  pricingModel?: Prisma.StringFieldUpdateOperationsInput | string
-  room?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  mail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type BusinessUserCreateManyInput = {
   id?: string
-  userId: string
   adminStatus: boolean
-  appLink: string
-  city: string
-  classement: string
-  code_postal: string
-  country: string
   email: string
-  hotelDept: string
   hotelId: string
-  hotelName: string
-  hotelRegion: string
-  language: string
   password: string
-  pricingModel: string
-  room: string
   username: string
-  adresse?: string | null
-  base64Url?: string | null
-  logo?: string | null
-  mail?: string | null
-  phone?: string | null
-  website?: string | null
   createdAt: Date | string
   updatedAt: Date | string
 }
 
 export type BusinessUserUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   adminStatus?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  appLink?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
-  country?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  language?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
-  pricingModel?: Prisma.StringFieldUpdateOperationsInput | string
-  room?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  mail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type BusinessUserUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   adminStatus?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  appLink?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
-  country?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
   hotelId?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  language?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
-  pricingModel?: Prisma.StringFieldUpdateOperationsInput | string
-  room?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  mail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -694,87 +352,33 @@ export type BusinessUserOrderByRelationAggregateInput = {
 
 export type BusinessUserCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   adminStatus?: Prisma.SortOrder
-  appLink?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  code_postal?: Prisma.SortOrder
-  country?: Prisma.SortOrder
   email?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  language?: Prisma.SortOrder
   password?: Prisma.SortOrder
-  pricingModel?: Prisma.SortOrder
-  room?: Prisma.SortOrder
   username?: Prisma.SortOrder
-  adresse?: Prisma.SortOrder
-  base64Url?: Prisma.SortOrder
-  logo?: Prisma.SortOrder
-  mail?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  website?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
 
 export type BusinessUserMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   adminStatus?: Prisma.SortOrder
-  appLink?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  code_postal?: Prisma.SortOrder
-  country?: Prisma.SortOrder
   email?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  language?: Prisma.SortOrder
   password?: Prisma.SortOrder
-  pricingModel?: Prisma.SortOrder
-  room?: Prisma.SortOrder
   username?: Prisma.SortOrder
-  adresse?: Prisma.SortOrder
-  base64Url?: Prisma.SortOrder
-  logo?: Prisma.SortOrder
-  mail?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  website?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
 
 export type BusinessUserMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
   adminStatus?: Prisma.SortOrder
-  appLink?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  classement?: Prisma.SortOrder
-  code_postal?: Prisma.SortOrder
-  country?: Prisma.SortOrder
   email?: Prisma.SortOrder
-  hotelDept?: Prisma.SortOrder
   hotelId?: Prisma.SortOrder
-  hotelName?: Prisma.SortOrder
-  hotelRegion?: Prisma.SortOrder
-  language?: Prisma.SortOrder
   password?: Prisma.SortOrder
-  pricingModel?: Prisma.SortOrder
-  room?: Prisma.SortOrder
   username?: Prisma.SortOrder
-  adresse?: Prisma.SortOrder
-  base64Url?: Prisma.SortOrder
-  logo?: Prisma.SortOrder
-  mail?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  website?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
@@ -823,56 +427,20 @@ export type BusinessUserUncheckedUpdateManyWithoutHotelNestedInput = {
 
 export type BusinessUserCreateWithoutHotelInput = {
   id?: string
-  userId: string
   adminStatus: boolean
-  appLink: string
-  city: string
-  classement: string
-  code_postal: string
-  country: string
   email: string
-  hotelDept: string
-  hotelName: string
-  hotelRegion: string
-  language: string
   password: string
-  pricingModel: string
-  room: string
   username: string
-  adresse?: string | null
-  base64Url?: string | null
-  logo?: string | null
-  mail?: string | null
-  phone?: string | null
-  website?: string | null
   createdAt: Date | string
   updatedAt: Date | string
 }
 
 export type BusinessUserUncheckedCreateWithoutHotelInput = {
   id?: string
-  userId: string
   adminStatus: boolean
-  appLink: string
-  city: string
-  classement: string
-  code_postal: string
-  country: string
   email: string
-  hotelDept: string
-  hotelName: string
-  hotelRegion: string
-  language: string
   password: string
-  pricingModel: string
-  room: string
   username: string
-  adresse?: string | null
-  base64Url?: string | null
-  logo?: string | null
-  mail?: string | null
-  phone?: string | null
-  website?: string | null
   createdAt: Date | string
   updatedAt: Date | string
 }
@@ -908,141 +476,51 @@ export type BusinessUserScalarWhereInput = {
   OR?: Prisma.BusinessUserScalarWhereInput[]
   NOT?: Prisma.BusinessUserScalarWhereInput | Prisma.BusinessUserScalarWhereInput[]
   id?: Prisma.StringFilter<"BusinessUser"> | string
-  userId?: Prisma.StringFilter<"BusinessUser"> | string
   adminStatus?: Prisma.BoolFilter<"BusinessUser"> | boolean
-  appLink?: Prisma.StringFilter<"BusinessUser"> | string
-  city?: Prisma.StringFilter<"BusinessUser"> | string
-  classement?: Prisma.StringFilter<"BusinessUser"> | string
-  code_postal?: Prisma.StringFilter<"BusinessUser"> | string
-  country?: Prisma.StringFilter<"BusinessUser"> | string
   email?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelDept?: Prisma.StringFilter<"BusinessUser"> | string
   hotelId?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelName?: Prisma.StringFilter<"BusinessUser"> | string
-  hotelRegion?: Prisma.StringFilter<"BusinessUser"> | string
-  language?: Prisma.StringFilter<"BusinessUser"> | string
   password?: Prisma.StringFilter<"BusinessUser"> | string
-  pricingModel?: Prisma.StringFilter<"BusinessUser"> | string
-  room?: Prisma.StringFilter<"BusinessUser"> | string
   username?: Prisma.StringFilter<"BusinessUser"> | string
-  adresse?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  base64Url?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  logo?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  mail?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  phone?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
-  website?: Prisma.StringNullableFilter<"BusinessUser"> | string | null
   createdAt?: Prisma.DateTimeFilter<"BusinessUser"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"BusinessUser"> | Date | string
 }
 
 export type BusinessUserCreateManyHotelInput = {
   id?: string
-  userId: string
   adminStatus: boolean
-  appLink: string
-  city: string
-  classement: string
-  code_postal: string
-  country: string
   email: string
-  hotelDept: string
-  hotelName: string
-  hotelRegion: string
-  language: string
   password: string
-  pricingModel: string
-  room: string
   username: string
-  adresse?: string | null
-  base64Url?: string | null
-  logo?: string | null
-  mail?: string | null
-  phone?: string | null
-  website?: string | null
   createdAt: Date | string
   updatedAt: Date | string
 }
 
 export type BusinessUserUpdateWithoutHotelInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   adminStatus?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  appLink?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
-  country?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  language?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
-  pricingModel?: Prisma.StringFieldUpdateOperationsInput | string
-  room?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  mail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type BusinessUserUncheckedUpdateWithoutHotelInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   adminStatus?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  appLink?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
-  country?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  language?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
-  pricingModel?: Prisma.StringFieldUpdateOperationsInput | string
-  room?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  mail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type BusinessUserUncheckedUpdateManyWithoutHotelInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   adminStatus?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  appLink?: Prisma.StringFieldUpdateOperationsInput | string
-  city?: Prisma.StringFieldUpdateOperationsInput | string
-  classement?: Prisma.StringFieldUpdateOperationsInput | string
-  code_postal?: Prisma.StringFieldUpdateOperationsInput | string
-  country?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelDept?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelName?: Prisma.StringFieldUpdateOperationsInput | string
-  hotelRegion?: Prisma.StringFieldUpdateOperationsInput | string
-  language?: Prisma.StringFieldUpdateOperationsInput | string
   password?: Prisma.StringFieldUpdateOperationsInput | string
-  pricingModel?: Prisma.StringFieldUpdateOperationsInput | string
-  room?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  base64Url?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  mail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -1051,29 +529,11 @@ export type BusinessUserUncheckedUpdateManyWithoutHotelInput = {
 
 export type BusinessUserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
   adminStatus?: boolean
-  appLink?: boolean
-  city?: boolean
-  classement?: boolean
-  code_postal?: boolean
-  country?: boolean
   email?: boolean
-  hotelDept?: boolean
   hotelId?: boolean
-  hotelName?: boolean
-  hotelRegion?: boolean
-  language?: boolean
   password?: boolean
-  pricingModel?: boolean
-  room?: boolean
   username?: boolean
-  adresse?: boolean
-  base64Url?: boolean
-  logo?: boolean
-  mail?: boolean
-  phone?: boolean
-  website?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
@@ -1081,29 +541,11 @@ export type BusinessUserSelect<ExtArgs extends runtime.Types.Extensions.Internal
 
 export type BusinessUserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
   adminStatus?: boolean
-  appLink?: boolean
-  city?: boolean
-  classement?: boolean
-  code_postal?: boolean
-  country?: boolean
   email?: boolean
-  hotelDept?: boolean
   hotelId?: boolean
-  hotelName?: boolean
-  hotelRegion?: boolean
-  language?: boolean
   password?: boolean
-  pricingModel?: boolean
-  room?: boolean
   username?: boolean
-  adresse?: boolean
-  base64Url?: boolean
-  logo?: boolean
-  mail?: boolean
-  phone?: boolean
-  website?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
@@ -1111,29 +553,11 @@ export type BusinessUserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.
 
 export type BusinessUserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
   adminStatus?: boolean
-  appLink?: boolean
-  city?: boolean
-  classement?: boolean
-  code_postal?: boolean
-  country?: boolean
   email?: boolean
-  hotelDept?: boolean
   hotelId?: boolean
-  hotelName?: boolean
-  hotelRegion?: boolean
-  language?: boolean
   password?: boolean
-  pricingModel?: boolean
-  room?: boolean
   username?: boolean
-  adresse?: boolean
-  base64Url?: boolean
-  logo?: boolean
-  mail?: boolean
-  phone?: boolean
-  website?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
@@ -1141,34 +565,16 @@ export type BusinessUserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.
 
 export type BusinessUserSelectScalar = {
   id?: boolean
-  userId?: boolean
   adminStatus?: boolean
-  appLink?: boolean
-  city?: boolean
-  classement?: boolean
-  code_postal?: boolean
-  country?: boolean
   email?: boolean
-  hotelDept?: boolean
   hotelId?: boolean
-  hotelName?: boolean
-  hotelRegion?: boolean
-  language?: boolean
   password?: boolean
-  pricingModel?: boolean
-  room?: boolean
   username?: boolean
-  adresse?: boolean
-  base64Url?: boolean
-  logo?: boolean
-  mail?: boolean
-  phone?: boolean
-  website?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type BusinessUserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "adminStatus" | "appLink" | "city" | "classement" | "code_postal" | "country" | "email" | "hotelDept" | "hotelId" | "hotelName" | "hotelRegion" | "language" | "password" | "pricingModel" | "room" | "username" | "adresse" | "base64Url" | "logo" | "mail" | "phone" | "website" | "createdAt" | "updatedAt", ExtArgs["result"]["businessUser"]>
+export type BusinessUserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "adminStatus" | "email" | "hotelId" | "password" | "username" | "createdAt" | "updatedAt", ExtArgs["result"]["businessUser"]>
 export type BusinessUserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   hotel?: boolean | Prisma.HotelDefaultArgs<ExtArgs>
 }
@@ -1186,29 +592,11 @@ export type $BusinessUserPayload<ExtArgs extends runtime.Types.Extensions.Intern
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    userId: string
     adminStatus: boolean
-    appLink: string
-    city: string
-    classement: string
-    code_postal: string
-    country: string
     email: string
-    hotelDept: string
     hotelId: string
-    hotelName: string
-    hotelRegion: string
-    language: string
     password: string
-    pricingModel: string
-    room: string
     username: string
-    adresse: string | null
-    base64Url: string | null
-    logo: string | null
-    mail: string | null
-    phone: string | null
-    website: string | null
     createdAt: Date
     updatedAt: Date
   }, ExtArgs["result"]["businessUser"]>
@@ -1636,29 +1024,11 @@ export interface Prisma__BusinessUserClient<T, Null = never, ExtArgs extends run
  */
 export interface BusinessUserFieldRefs {
   readonly id: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly userId: Prisma.FieldRef<"BusinessUser", 'String'>
   readonly adminStatus: Prisma.FieldRef<"BusinessUser", 'Boolean'>
-  readonly appLink: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly city: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly classement: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly code_postal: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly country: Prisma.FieldRef<"BusinessUser", 'String'>
   readonly email: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly hotelDept: Prisma.FieldRef<"BusinessUser", 'String'>
   readonly hotelId: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly hotelName: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly hotelRegion: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly language: Prisma.FieldRef<"BusinessUser", 'String'>
   readonly password: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly pricingModel: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly room: Prisma.FieldRef<"BusinessUser", 'String'>
   readonly username: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly adresse: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly base64Url: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly logo: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly mail: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly phone: Prisma.FieldRef<"BusinessUser", 'String'>
-  readonly website: Prisma.FieldRef<"BusinessUser", 'String'>
   readonly createdAt: Prisma.FieldRef<"BusinessUser", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"BusinessUser", 'DateTime'>
 }

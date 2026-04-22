@@ -52,12 +52,17 @@ export const AnyNull = runtime.AnyNull
 
 export const ModelName = {
   Hotel: 'Hotel',
+  CheckList: 'CheckList',
+  CheckListItem: 'CheckListItem',
   BusinessUser: 'BusinessUser',
   GuestUser: 'GuestUser',
+  RoomAmeneties: 'RoomAmeneties',
+  Amenety: 'Amenety',
   GuestToken: 'GuestToken',
   Feedback: 'Feedback',
   FeedbackItem: 'FeedbackItem',
   Support: 'Support',
+  Chat: 'Chat',
   ChatMessage: 'ChatMessage'
 } as const
 
@@ -105,31 +110,38 @@ export const HotelScalarFieldEnum = {
 export type HotelScalarFieldEnum = (typeof HotelScalarFieldEnum)[keyof typeof HotelScalarFieldEnum]
 
 
+export const CheckListScalarFieldEnum = {
+  id: 'id',
+  hotelId: 'hotelId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CheckListScalarFieldEnum = (typeof CheckListScalarFieldEnum)[keyof typeof CheckListScalarFieldEnum]
+
+
+export const CheckListItemScalarFieldEnum = {
+  id: 'id',
+  task: 'task',
+  status: 'status',
+  checkListId: 'checkListId',
+  morningId: 'morningId',
+  eveningId: 'eveningId',
+  nightId: 'nightId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CheckListItemScalarFieldEnum = (typeof CheckListItemScalarFieldEnum)[keyof typeof CheckListItemScalarFieldEnum]
+
+
 export const BusinessUserScalarFieldEnum = {
   id: 'id',
-  userId: 'userId',
   adminStatus: 'adminStatus',
-  appLink: 'appLink',
-  city: 'city',
-  classement: 'classement',
-  code_postal: 'code_postal',
-  country: 'country',
   email: 'email',
-  hotelDept: 'hotelDept',
   hotelId: 'hotelId',
-  hotelName: 'hotelName',
-  hotelRegion: 'hotelRegion',
-  language: 'language',
   password: 'password',
-  pricingModel: 'pricingModel',
-  room: 'room',
   username: 'username',
-  adresse: 'adresse',
-  base64Url: 'base64Url',
-  logo: 'logo',
-  mail: 'mail',
-  phone: 'phone',
-  website: 'website',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
@@ -139,7 +151,6 @@ export type BusinessUserScalarFieldEnum = (typeof BusinessUserScalarFieldEnum)[k
 
 export const GuestUserScalarFieldEnum = {
   id: 'id',
-  userId: 'userId',
   username: 'username',
   email: 'email',
   password: 'password',
@@ -150,14 +161,6 @@ export const GuestUserScalarFieldEnum = {
   localLanguage: 'localLanguage',
   room: 'room',
   hotelId: 'hotelId',
-  hotelName: 'hotelName',
-  hotelDept: 'hotelDept',
-  hotelRegion: 'hotelRegion',
-  hotelPhone: 'hotelPhone',
-  city: 'city',
-  classement: 'classement',
-  logo: 'logo',
-  website: 'website',
   journeyId: 'journeyId',
   guestCategory: 'guestCategory',
   guestCategoryClone: 'guestCategoryClone',
@@ -168,18 +171,41 @@ export const GuestUserScalarFieldEnum = {
   isChatting: 'isChatting',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  babyBed: 'babyBed',
-  blanket: 'blanket',
-  hairDryer: 'hairDryer',
-  iron: 'iron',
-  pillow: 'pillow',
-  soap: 'soap',
-  toiletPaper: 'toiletPaper',
-  towel: 'towel',
   hotelVisitedArray: 'hotelVisitedArray'
 } as const
 
 export type GuestUserScalarFieldEnum = (typeof GuestUserScalarFieldEnum)[keyof typeof GuestUserScalarFieldEnum]
+
+
+export const RoomAmenetiesScalarFieldEnum = {
+  id: 'id',
+  guestUserId: 'guestUserId',
+  hotelId: 'hotelId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type RoomAmenetiesScalarFieldEnum = (typeof RoomAmenetiesScalarFieldEnum)[keyof typeof RoomAmenetiesScalarFieldEnum]
+
+
+export const AmenetyScalarFieldEnum = {
+  id: 'id',
+  checkoutDate: 'checkoutDate',
+  clientName: 'clientName',
+  room: 'room',
+  babyBedId: 'babyBedId',
+  blanketId: 'blanketId',
+  hairDryerId: 'hairDryerId',
+  ironId: 'ironId',
+  pillowId: 'pillowId',
+  soapId: 'soapId',
+  toiletPaperId: 'toiletPaperId',
+  towelId: 'towelId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type AmenetyScalarFieldEnum = (typeof AmenetyScalarFieldEnum)[keyof typeof AmenetyScalarFieldEnum]
 
 
 export const GuestTokenScalarFieldEnum = {
@@ -237,15 +263,37 @@ export const SupportScalarFieldEnum = {
 export type SupportScalarFieldEnum = (typeof SupportScalarFieldEnum)[keyof typeof SupportScalarFieldEnum]
 
 
+export const ChatScalarFieldEnum = {
+  id: 'id',
+  clientFullName: 'clientFullName',
+  checkoutDate: 'checkoutDate',
+  guestLanguage: 'guestLanguage',
+  hotelResponding: 'hotelResponding',
+  isChatting: 'isChatting',
+  room: 'room',
+  status: 'status',
+  userId: 'userId',
+  hotelId: 'hotelId',
+  supportId: 'supportId',
+  guestTokenId: 'guestTokenId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ChatScalarFieldEnum = (typeof ChatScalarFieldEnum)[keyof typeof ChatScalarFieldEnum]
+
+
 export const ChatMessageScalarFieldEnum = {
   id: 'id',
-  supportId: 'supportId',
-  hotelId: 'hotelId',
   author: 'author',
   email: 'email',
+  title: 'title',
   text: 'text',
   photo: 'photo',
   date: 'date',
+  room: 'room',
+  userId: 'userId',
+  chatId: 'chatId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
