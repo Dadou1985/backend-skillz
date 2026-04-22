@@ -27,6 +27,9 @@ CREATE TABLE "_ChatToChatMessage" (
 -- CreateIndex
 CREATE INDEX "_ChatToChatMessage_B_index" ON "_ChatToChatMessage"("B");
 
+-- CreateIndex (enforce one-chat-per-message)
+CREATE UNIQUE INDEX "_ChatToChatMessage_B_key" ON "_ChatToChatMessage"("B");
+
 -- AddForeignKey
 ALTER TABLE "Chat" ADD CONSTRAINT "Chat_guestTokenId_fkey" FOREIGN KEY ("guestTokenId") REFERENCES "guest_tokens"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 

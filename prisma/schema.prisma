@@ -65,9 +65,9 @@ model CheckListItem {
   task         String
   status       Boolean
   checkListId  String
-  morningId    String? @unique
-  eveningId    String? @unique
-  nightId      String? @unique
+  morningId    String?
+  eveningId    String?
+  nightId      String?
 
   createdAt    DateTime
   updatedAt    DateTime
@@ -76,6 +76,9 @@ model CheckListItem {
   evening CheckList? @relation("EveningItems", fields: [eveningId], references: [id])
   night   CheckList? @relation("NightItems", fields: [nightId], references: [id])
 
+  @@index([morningId])
+  @@index([eveningId])
+  @@index([nightId])
   @@map("check_list_items")
 }
 

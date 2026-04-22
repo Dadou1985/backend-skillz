@@ -200,14 +200,14 @@ CREATE TABLE "chat" (
     CONSTRAINT "chat_pkey" PRIMARY KEY ("id")
 );
 
--- CreateIndex
-CREATE UNIQUE INDEX "check_list_items_morningId_key" ON "check_list_items"("morningId");
+-- CreateIndex (non-unique to allow multiple items per period)
+CREATE INDEX "check_list_items_morningId_idx" ON "check_list_items"("morningId");
 
--- CreateIndex
-CREATE UNIQUE INDEX "check_list_items_eveningId_key" ON "check_list_items"("eveningId");
+-- CreateIndex (non-unique to allow multiple items per period)
+CREATE INDEX "check_list_items_eveningId_idx" ON "check_list_items"("eveningId");
 
--- CreateIndex
-CREATE UNIQUE INDEX "check_list_items_nightId_key" ON "check_list_items"("nightId");
+-- CreateIndex (non-unique to allow multiple items per period)
+CREATE INDEX "check_list_items_nightId_idx" ON "check_list_items"("nightId");
 
 -- AddForeignKey
 ALTER TABLE "check_lists" ADD CONSTRAINT "check_lists_hotelId_fkey" FOREIGN KEY ("hotelId") REFERENCES "hotels"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
