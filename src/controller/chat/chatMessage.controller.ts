@@ -1,0 +1,30 @@
+import {
+    createChatMessageService,
+    deleteChatMessageService,
+    getChatMessageByIdService,
+    getChatMessagesService,
+    updateChatMessageService,
+} from '../../services/chat/chatMessage.services';
+
+import type { Request, Response } from 'express';
+import {
+    createController,
+    deleteController,
+    getByIdController,
+    updateController,
+} from '../../utils/controllerFunctions';
+
+export const createChatMessageController = (req: Request, res: Response) =>
+    createController(req, res, createChatMessageService, 'Chat message data is required', 'Failed to create chat message');
+
+export const getChatMessagesController = (req: Request, res: Response) =>
+    getByIdController(req, res, getChatMessagesService, 'Chat messages not found', 'Failed to retrieve chat messages');
+
+export const getChatMessageByIdController = (req: Request, res: Response) =>
+    getByIdController(req, res, getChatMessageByIdService, 'Chat message not found', 'Failed to retrieve chat message');
+
+export const updateChatMessageController = (req: Request, res: Response) =>
+    updateController(req, res, updateChatMessageService, 'Chat message not found', 'Failed to update chat message');
+
+export const deleteChatMessageController = (req: Request, res: Response) =>
+    deleteController(req, res, deleteChatMessageService, 'Failed to delete chat message');

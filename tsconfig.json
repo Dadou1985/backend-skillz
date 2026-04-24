@@ -43,6 +43,6 @@
     "ignoreDeprecations": "5.0",
     "moduleResolution": "bundler"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/models/guestToken"],
   "exclude": ["node_modules", "dist"]
 }

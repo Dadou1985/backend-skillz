@@ -5,8 +5,8 @@ export async function createChat(data: ChatCreateInput) {
     return await prisma.chat.create({ data });
 }
 
-export async function getChats() {
-    return await prisma.chat.findMany();
+export async function getChats(id: string) {
+    return await prisma.chat.findMany({ where: { id } });
 }
 
 export async function getChatById(id: string) {
@@ -18,10 +18,5 @@ export async function updateChat(id: string, data: Partial<ChatCreateInput>) {
 }
 
 export async function deleteChat(id: string) {
-    return await prisma.$transaction(async (tx) => {
-        // Delete child messages first to avoid FK constraint violation
-        await tx.chatMessage.deleteMany({ where: { chatId: id } });
-        // Then delete the chat
-        return await tx.chat.delete({ where: { id } });
-    });
+    return await prisma.chat.delete({ where: { id } });
 }
