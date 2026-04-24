@@ -5,8 +5,8 @@ export async function createGuestUser(data: GuestUserCreateInput) {
     return await prisma.guestUser.create({ data });
 }
 
-export async function getGuestUsers() {
-    return await prisma.guestUser.findMany();
+export async function getGuestUsers(id: string) {
+    return await prisma.guestUser.findMany({ where: { hotelId: id } });
 }
 
 export async function getGuestUserById(id: string) {

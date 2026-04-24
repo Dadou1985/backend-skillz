@@ -1,6 +1,6 @@
-import type { Request, Response } from "express";
+import type { Request, Response, NextFunction } from "express";
 
-export function validateRequestBody(req: Request, res: Response, requiredFields: string[]) {
+export function validateRequestBody(req: Request, res: Response, requiredFields: string[], next: NextFunction) {
     const data = req.body;
     if (!data) {
         return res.status(400).json({ message: "Request body is required" });
@@ -12,5 +12,5 @@ export function validateRequestBody(req: Request, res: Response, requiredFields:
         }
     }
 
-    return null; // No validation errors
+    return next;
 }

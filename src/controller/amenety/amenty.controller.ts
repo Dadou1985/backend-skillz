@@ -3,6 +3,7 @@ import {
     deleteAmenetyService,
     getAmenetiesService,
     getAmenetyByIdService,
+    updateAmenetyService
 } from '../../services/amenety/amenety.services';
 
 import type { Request, Response } from 'express';
@@ -11,6 +12,7 @@ import {
     deleteController,
     getAllController,
     getByIdController,
+    updateController,
 } from '../../utils/controllerFunctions';
 
 export const createAmenetyController = (req: Request, res: Response) =>
@@ -21,6 +23,9 @@ export const getAmenetiesController = (_req: Request, res: Response) =>
 
 export const getAmenetyByIdController = (req: Request, res: Response) =>
     getByIdController(req, res, getAmenetyByIdService, 'Amenety not found', 'Failed to retrieve amenety');
+
+export const updateAmenetyController = (req: Request, res: Response) =>
+    updateController(req, res, updateAmenetyService, 'Amenety not found', 'Failed to update amenety');
 
 export const deleteAmenetyController = (req: Request, res: Response) =>
     deleteController(req, res, deleteAmenetyService, 'Failed to delete amenety');

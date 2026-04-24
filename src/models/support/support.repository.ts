@@ -5,8 +5,8 @@ export async function createSupport(data: SupportCreateInput) {
     return await prisma.support.create({ data });
 }
 
-export async function getSupports() {
-    return await prisma.support.findMany();
+export async function getSupports(id: string) {
+    return await prisma.support.findMany({ where: { hotelId: id } });
 }
 
 export async function getSupportById(id: string) {

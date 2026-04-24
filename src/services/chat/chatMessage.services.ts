@@ -10,7 +10,7 @@ export async function createChatMessageService(data: Parameters<typeof createCha
     return await createChatMessage(data);
 }
 
-export async function getChatMessagesService(id: Parameters<typeof getChatMessageById>[0]) {
+export async function getChatMessagesService(id: Parameters<typeof getChatMessages>[0]) {
     return await getChatMessages(id);
 }
 

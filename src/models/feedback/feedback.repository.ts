@@ -5,8 +5,8 @@ export async function createFeedback(data: FeedbackCreateInput) {
     return await prisma.feedback.create({ data });
 }
 
-export async function getFeedbacks() {
-    return await prisma.feedback.findMany();
+export async function getFeedbacks(id: string) {
+    return await prisma.feedback.findMany({ where: { hotelId: id } });
 }
 
 export async function getFeedbackById(id: string) {

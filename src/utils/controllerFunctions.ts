@@ -55,6 +55,7 @@ export const deleteController = async (req: Request, res: Response, serviceFunct
     const { id } = req.params;
     try {
         await serviceFunction(id as string);
+        if (!id) return handleNotFound(res, 'Resource not found');
         return res.status(204).send();
     } catch (error) {
         return handleControllerError(res, serverErrorMessage, error);

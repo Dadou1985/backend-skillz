@@ -10,8 +10,8 @@ export async function createRoomAmenetiesService(data: Parameters<typeof createR
     return await createRoomAmenety(data);
 }
 
-export async function getAllRoomAmenetiesService() {
-    return await getRoomAmeneties();
+export async function getAllRoomAmenetiesService(data: Parameters<typeof getRoomAmeneties>[0]) {
+    return await getRoomAmeneties(data);
 }
 
 export async function getRoomAmenetiesByIdService(id: Parameters<typeof getRoomAmenetyById>[0]) {

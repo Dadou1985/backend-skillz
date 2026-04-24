@@ -6,7 +6,7 @@ export async function createChat(data: ChatCreateInput) {
 }
 
 export async function getChats(id: string) {
-    return await prisma.chat.findMany({ where: { id } });
+    return await prisma.chat.findMany({ where: { hotelId: id } });
 }
 
 export async function getChatById(id: string) {
