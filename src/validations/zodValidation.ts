@@ -97,14 +97,14 @@ export type GuestUserInput = z.infer<typeof GuestUserSchema>;
 
 // ─── RoomAmeneties ────────────────────────────────────────────────────────────
 
-export const RoomAmeNetiesSchema = z.object({
+export const RoomAmenetiesSchema = z.object({
   body: z.object({
     guestUserId: z.cuid().optional(),
     hotelId:     z.cuid().optional(),
   })
 });
 
-export type RoomAmeNetiesInput = z.infer<typeof RoomAmeNetiesSchema>;
+export type RoomAmeNetiesInput = z.infer<typeof RoomAmenetiesSchema>;
 
 // ─── Amenety ──────────────────────────────────────────────────────────────────
 
