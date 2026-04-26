@@ -10,7 +10,6 @@ import type { Request, Response } from 'express';
 import {
     createController,
     deleteController,
-    getAllController,
     getByIdController,
     updateController,
 } from '../../utils/controllerFunctions';
@@ -18,8 +17,8 @@ import {
 export const createFeedbackController = (req: Request, res: Response) =>
     createController(req, res, createFeedbackService, 'Feedback data is required', 'Failed to create feedback');
 
-export const getAllFeedbackController = (_req: Request, res: Response) =>
-    getAllController(res, getAllFeedbackService, 'Failed to retrieve feedbacks');
+export const getAllFeedbackController = (req: Request, res: Response) =>
+    getByIdController(req, res, getAllFeedbackService, 'Failed to retrieve feedbacks', 'Failed to retrieve feedbacks');
 
 export const getFeedbackByIdController = (req: Request, res: Response) =>
     getByIdController(req, res, getFeedbackByIdService, 'Feedback not found', 'Failed to retrieve feedback');

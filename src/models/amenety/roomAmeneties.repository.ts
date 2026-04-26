@@ -1,9 +1,6 @@
 import { prisma } from "../../config/prisma";
 import type { RoomAmenetiesCreateInput } from "../../prisma/models/RoomAmeneties";
-
-interface RoomAmenetiesRepository {
-    [key: string]: string
-}
+import type { RoomAmenetiesRepository } from "../../types/types";
 
 export async function createRoomAmenety(data: RoomAmenetiesCreateInput) {
     return await prisma.roomAmeneties.create({ data });

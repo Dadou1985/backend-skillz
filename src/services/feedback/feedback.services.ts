@@ -10,8 +10,8 @@ export async function createFeedbackService(data: Parameters<typeof createFeedba
     return await createFeedback(data);
 }
 
-export async function getAllFeedbackService() {
-    return await getFeedbacks();
+export async function getAllFeedbackService(id: Parameters<typeof getFeedbacks>[0]) {
+    return await getFeedbacks(id);
 }
 
 export async function getFeedbackByIdService(id: Parameters<typeof getFeedbackById>[0]) {

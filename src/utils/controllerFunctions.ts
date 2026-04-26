@@ -1,7 +1,8 @@
 import type { Request, Response } from "express";
 
 export function handleControllerError(res: Response, message: string, error: unknown) {
-    return res.status(500).json({ message, error });
+    console.log(message, error);
+    return res.status(500).json({ message });
 }
 
 export function handleNotFound(res: Response, message: string) {
@@ -54,8 +55,9 @@ export const updateController = async <T, D>(req: Request, res: Response, servic
 export const deleteController = async (req: Request, res: Response, serviceFunction: (id: string) => Promise<unknown>, serverErrorMessage: string) => {
     const { id } = req.params;
     try {
-        await serviceFunction(id as string);
         if (!id) return handleNotFound(res, 'Resource not found');
+
+        await serviceFunction(id as string);
         return res.status(204).send();
     } catch (error) {
         return handleControllerError(res, serverErrorMessage, error);
