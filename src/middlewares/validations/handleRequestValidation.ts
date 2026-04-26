@@ -1,11 +1,23 @@
 import type { Request, Response, NextFunction } from "express";
+import { z } from 'zod';
 
-export function validateRequestBody(requiredFields: string[]) {
+export function validateRequestBody(schema: z.ZodObject) {
     return (req: Request, res: Response, next: NextFunction) => {
-        const missingFields = requiredFields.filter(field => !(field in req.body));
-        if (missingFields.length > 0) {
-            return res.status(400).json({ message: `Missing required fields: ${missingFields.join(', ')}` });
-        }
+        const result = schema.safeParse({body: req.body});
+      
+          if (!result.success) {
+      
+            return res.status(400).json({
+      
+              message: "Validation error",
+      
+              errors: result.error.flatten(),
+      
+            });
+      
+          }
+      
+          req.body = result.data.body ?? req.body;
         next();
     };
 }
