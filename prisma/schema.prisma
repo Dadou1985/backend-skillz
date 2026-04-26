@@ -13,7 +13,7 @@ datasource db {
 
 model Hotel {
   id           String   @id @default(cuid())
-  hotelName    String
+  hotelName    String   
   adresse      String
   city         String
   classement   String
