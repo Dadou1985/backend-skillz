@@ -104,7 +104,7 @@ export const RoomAmeNetiesSchema = z.object({
   })
 });
 
-export type RoomAmeNetiesInput = z.infer<typeof RoomAmeNetiesSchema>;
+export type RoomAmeNetiesInput = z.infer<typeof RoomAmenetiesSchema>;
 
 // ─── Amenety ──────────────────────────────────────────────────────────────────
 
