@@ -19,7 +19,7 @@ export const createCheckListController = (req: Request, res: Response) =>
     createController(req, res, createCheckListService, 'CheckList data is required', 'Failed to create checkList');
 
 export const getCheckListsController = (req: Request, res: Response) =>
-    getByIdController(req, res, getCheckListsService, 'Failed to retrieve checkLists', 'Failed to retrieve checkLists');
+    getByIdController(req, res, getCheckListsService, 'CheckLists not found', 'Failed to retrieve checkLists');
 
 export const getCheckListByIdController = (req: Request, res: Response) =>
     getByIdController(req, res, getCheckListByIdService, 'CheckList not found', 'Failed to retrieve checkList');
