@@ -56,7 +56,7 @@ model CheckList {
   createdAt    DateTime
   updatedAt    DateTime
 
-  hotel Hotel @relation(fields: [hotelId], references: [id])
+  hotel Hotel @relation(fields: [hotelId], references: [id], onDelete: Cascade)
 
   @@map("check_lists")
 }
@@ -72,9 +72,9 @@ model CheckListItem {
   createdAt    DateTime
   updatedAt    DateTime
 
-  morning CheckList? @relation("MorningItems", fields: [morningId], references: [id])
-  evening CheckList? @relation("EveningItems", fields: [eveningId], references: [id])
-  night   CheckList? @relation("NightItems", fields: [nightId], references: [id])
+  morning CheckList? @relation("MorningItems", fields: [morningId], references: [id], onDelete: Cascade)
+  evening CheckList? @relation("EveningItems", fields: [eveningId], references: [id], onDelete: Cascade)
+  night   CheckList? @relation("NightItems", fields: [nightId], references: [id], onDelete: Cascade)
 
   @@index([morningId])
   @@index([eveningId])
@@ -93,7 +93,7 @@ model BusinessUser {
   createdAt    DateTime
   updatedAt    DateTime
 
-  hotel Hotel @relation(fields: [hotelId], references: [id])
+  hotel Hotel @relation(fields: [hotelId], references: [id], onDelete: Cascade)
 
   @@map("business_users")
 }
@@ -126,7 +126,7 @@ model GuestUser {
   // Visited hotels stored as array of hotel IDs
   hotelVisitedArray String[]
   roomAmeneties     RoomAmeneties[]
-  hotel             Hotel @relation(fields: [hotelId], references: [id])
+  hotel             Hotel @relation(fields: [hotelId], references: [id], onDelete: Cascade)
 
   @@map("guest_users")
 }
@@ -147,8 +147,8 @@ model RoomAmeneties {
   createdAt          DateTime
   updatedAt          DateTime
 
-  hotel Hotel? @relation(fields: [hotelId], references: [id])
-  guestUser GuestUser? @relation(fields: [guestUserId], references: [id])
+  hotel Hotel? @relation(fields: [hotelId], references: [id], onDelete: Cascade)
+  guestUser GuestUser? @relation(fields: [guestUserId], references: [id], onDelete: Cascade)
 
   @@map("room_ameneties")
 }
@@ -170,14 +170,14 @@ model Amenety {
   createdAt          DateTime
   updatedAt          DateTime
 
-  babyBed RoomAmeneties? @relation("babyBed", fields: [babyBedId], references: [id])
-  blanket RoomAmeneties? @relation("blanket", fields: [blanketId], references: [id])
-  hairDryer RoomAmeneties? @relation("hairDryer", fields: [hairDryerId], references: [id])
-  iron RoomAmeneties? @relation("iron", fields: [ironId], references: [id])
-  pillow RoomAmeneties? @relation("pillow", fields: [pillowId], references: [id])
-  soap RoomAmeneties? @relation("soap", fields: [soapId], references: [id])
-  toiletPaper RoomAmeneties? @relation("toiletPaper", fields: [toiletPaperId], references: [id])
-  towel RoomAmeneties? @relation("towel", fields: [towelId], references: [id])
+  babyBed RoomAmeneties? @relation("babyBed", fields: [babyBedId], references: [id], onDelete: Cascade)
+  blanket RoomAmeneties? @relation("blanket", fields: [blanketId], references: [id], onDelete: Cascade)
+  hairDryer RoomAmeneties? @relation("hairDryer", fields: [hairDryerId], references: [id], onDelete: Cascade)
+  iron RoomAmeneties? @relation("iron", fields: [ironId], references: [id], onDelete: Cascade)
+  pillow RoomAmeneties? @relation("pillow", fields: [pillowId], references: [id], onDelete: Cascade)
+  soap RoomAmeneties? @relation("soap", fields: [soapId], references: [id], onDelete: Cascade)
+  toiletPaper RoomAmeneties? @relation("toiletPaper", fields: [toiletPaperId], references: [id], onDelete: Cascade)
+  towel RoomAmeneties? @relation("towel", fields: [towelId], references: [id], onDelete: Cascade)
 
   @@map("ameneties")
 }
@@ -194,7 +194,7 @@ model GuestToken {
   createdAt      DateTime
   updatedAt      DateTime
 
-  guestUser GuestUser @relation(fields: [guestUserId], references: [id])
+  guestUser GuestUser @relation(fields: [guestUserId], references: [id], onDelete: Cascade)
 
   @@map("guest_tokens")
 }
@@ -206,7 +206,7 @@ model Feedback {
   createdAt DateTime
   updatedAt DateTime
 
-  hotel        Hotel          @relation(fields: [hotelId], references: [id])
+  hotel        Hotel          @relation(fields: [hotelId], references: [id], onDelete: Cascade)
   satisfaction FeedbackItem[] @relation("SatisfactionItems")
   improvement  FeedbackItem[] @relation("ImprovementItems")
 
@@ -226,8 +226,8 @@ model FeedbackItem {
   createdAt            DateTime
   updatedAt            DateTime
 
-  satisfactionFeedback Feedback? @relation("SatisfactionItems", fields: [satisfactionFeedbackId], references: [id])
-  improvementFeedback  Feedback? @relation("ImprovementItems", fields: [improvementFeedbackId], references: [id])
+  satisfactionFeedback Feedback? @relation("SatisfactionItems", fields: [satisfactionFeedbackId], references: [id], onDelete: Cascade)
+  improvementFeedback  Feedback? @relation("ImprovementItems", fields: [improvementFeedbackId], references: [id], onDelete: Cascade)
 
   @@map("feedback_items")
 }
@@ -244,7 +244,7 @@ model Support {
   createdAt    DateTime
   updatedAt    DateTime
 
-  hotel    Hotel @relation(fields: [hotelId], references: [id])
+  hotel    Hotel @relation(fields: [hotelId], references: [id], onDelete: Cascade)
   chatRoom Chat[]
 
   @@map("support")
@@ -267,9 +267,9 @@ model Chat {
   createdAt DateTime
   updatedAt DateTime
   
-  hotel Hotel? @relation(fields: [hotelId], references: [id])
-  support Support? @relation(fields: [supportId], references: [id])
-  token    GuestToken? @relation(fields: [guestTokenId], references: [id]) 
+  hotel Hotel? @relation(fields: [hotelId], references: [id], onDelete: Cascade)
+  support Support? @relation(fields: [supportId], references: [id], onDelete: Cascade)
+  token    GuestToken? @relation(fields: [guestTokenId], references: [id], onDelete: Cascade) 
   chatRoom ChatMessage[]
 
   @@map("chat")
@@ -285,12 +285,12 @@ model ChatMessage {
   date      DateTime
   room      String
   userId    String
-  chatId    String
+  chatId    String 
 
   createdAt DateTime
   updatedAt DateTime
 
-  chat Chat @relation(fields: [chatId], references: [id])
+  chat Chat @relation(fields: [chatId], references: [id], onDelete: Cascade) 
 
   @@map("chat_messages")
 }

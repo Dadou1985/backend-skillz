@@ -18,7 +18,7 @@ export async function createBusinessUser(data: BusinessUserCreateInput) {
 }
 
 export async function getBusinessUsers() {
-    return await prisma.businessUser.findMany({ select: safeBusinessUserSelect });
+    return await prisma.businessUser.findMany();
 }
 
 export async function getBusinessUserById(id: string) {
