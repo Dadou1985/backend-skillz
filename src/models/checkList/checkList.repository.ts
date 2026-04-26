@@ -5,8 +5,8 @@ export async function createCheckList(data: CheckListCreateInput) {
     return await prisma.checkList.create({ data });
 }
 
-export async function getCheckLists(id: string) {
-    return await prisma.checkList.findMany({ where: { hotelId: id } });
+export async function getCheckLists() {
+    return await prisma.checkList.findMany();
 }
 
 export async function getCheckListById(id: string) {

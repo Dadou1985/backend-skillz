@@ -5,8 +5,8 @@ export async function createAmenety(data: AmenetyCreateInput) {
     return await prisma.amenety.create({ data });
 }
 
-export async function getAmeneties(id: string) {
-    return await prisma.amenety.findMany({ where: { id: id } });
+export async function getAmeneties() {
+    return await prisma.amenety.findMany();
 }
 
 export async function getAmenetyById(id: string) {

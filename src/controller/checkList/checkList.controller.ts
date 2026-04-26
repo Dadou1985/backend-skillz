@@ -10,6 +10,7 @@ import {
     deleteController,
     getByIdController,
     updateController,
+    getAllController
 } from '../../utils/controllerFunctions';
 
 import type { Request, Response } from 'express';
@@ -18,8 +19,8 @@ import type { Request, Response } from 'express';
 export const createCheckListController = (req: Request, res: Response) =>
     createController(req, res, createCheckListService, 'CheckList data is required', 'Failed to create checkList');
 
-export const getCheckListsController = (req: Request, res: Response) =>
-    getByIdController(req, res, getCheckListsService, 'CheckLists not found', 'Failed to retrieve checkLists');
+export const getCheckListsController = (res: Response) =>
+    getAllController(res, getCheckListsService, 'CheckLists not found');
 
 export const getCheckListByIdController = (req: Request, res: Response) =>
     getByIdController(req, res, getCheckListByIdService, 'CheckList not found', 'Failed to retrieve checkList');

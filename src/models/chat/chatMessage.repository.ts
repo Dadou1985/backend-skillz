@@ -5,8 +5,8 @@ export async function createChatMessage(data: ChatMessageCreateInput) {
     return await prisma.chatMessage.create({ data });
 }
 
-export async function getChatMessages(id: string) {
-    return await prisma.chatMessage.findMany( { where: { chatId: id } }); 
+export async function getChatMessages() {
+    return await prisma.chatMessage.findMany(); 
 }
 
 export async function getChatMessageById(id: string) {

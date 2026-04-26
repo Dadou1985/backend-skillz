@@ -12,13 +12,14 @@ import {
     deleteController,
     getByIdController,
     updateController,
+    getAllController
 } from '../../utils/controllerFunctions';
 
 export const createAmenetyController = (req: Request, res: Response) =>
     createController(req, res, createAmenetyService, 'Amenety data is required', 'Failed to create amenety');
 
-export const getAmenetiesController = (req: Request, res: Response) =>
-    getByIdController(req, res, getAmenetiesService, 'Failed to retrieve ameneties', 'Failed to retrieve ameneties');
+export const getAmenetiesController = (res: Response) =>
+    getAllController(res, getAmenetiesService, 'Failed to retrieve ameneties');
 
 export const getAmenetyByIdController = (req: Request, res: Response) =>
     getByIdController(req, res, getAmenetyByIdService, 'Amenety not found', 'Failed to retrieve amenety');

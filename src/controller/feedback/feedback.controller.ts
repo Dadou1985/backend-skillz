@@ -12,13 +12,14 @@ import {
     deleteController,
     getByIdController,
     updateController,
+    getAllController
 } from '../../utils/controllerFunctions';
 
 export const createFeedbackController = (req: Request, res: Response) =>
     createController(req, res, createFeedbackService, 'Feedback data is required', 'Failed to create feedback');
 
-export const getAllFeedbackController = (req: Request, res: Response) =>
-    getByIdController(req, res, getAllFeedbackService, 'Failed to retrieve feedbacks', 'Failed to retrieve feedbacks');
+export const getAllFeedbackController = (res: Response) =>
+    getAllController(res, getAllFeedbackService, 'Failed to retrieve feedbacks');
 
 export const getFeedbackByIdController = (req: Request, res: Response) =>
     getByIdController(req, res, getFeedbackByIdService, 'Feedback not found', 'Failed to retrieve feedback');

@@ -10,8 +10,8 @@ export async function createCheckListService(data: Parameters<typeof createCheck
     return await createCheckList(data);
 }
 
-export async function getCheckListsService(id: Parameters<typeof getCheckLists>[0]) {
-    return await getCheckLists(id);
+export async function getCheckListsService() {
+    return await getCheckLists();
 }
 
 export async function getCheckListByIdService(id: Parameters<typeof getCheckListById>[0]) {

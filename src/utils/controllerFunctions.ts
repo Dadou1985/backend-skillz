@@ -44,8 +44,12 @@ export const updateController = async <T, D>(req: Request, res: Response, servic
     const { id } = req.params;
     const data = req.body as D;
     try {
+        if (!id) return handleNotFound(res, 'ID parameter is required');
+        if (!data) return handleNotFound(res, 'Update data is required');
+
         const result = await serviceFunction(id as string, data);
         if (!result) return handleNotFound(res, notFoundMessage);
+        
         return res.status(200).json(result);
     } catch (error) {
         return handleControllerError(res, serverErrorMessage, error);
@@ -55,8 +59,6 @@ export const updateController = async <T, D>(req: Request, res: Response, servic
 export const deleteController = async (req: Request, res: Response, serviceFunction: (id: string) => Promise<unknown>, serverErrorMessage: string) => {
     const { id } = req.params;
     try {
-        if (!id) return handleNotFound(res, 'Resource not found');
-
         await serviceFunction(id as string);
         return res.status(204).send();
     } catch (error) {

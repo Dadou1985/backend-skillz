@@ -236,21 +236,21 @@ export type CheckListItemOrderByWithRelationInput = {
 
 export type CheckListItemWhereUniqueInput = Prisma.AtLeast<{
   id?: string
-  morningId?: string
-  eveningId?: string
-  nightId?: string
   AND?: Prisma.CheckListItemWhereInput | Prisma.CheckListItemWhereInput[]
   OR?: Prisma.CheckListItemWhereInput[]
   NOT?: Prisma.CheckListItemWhereInput | Prisma.CheckListItemWhereInput[]
   task?: Prisma.StringFilter<"CheckListItem"> | string
   status?: Prisma.BoolFilter<"CheckListItem"> | boolean
   checkListId?: Prisma.StringFilter<"CheckListItem"> | string
+  morningId?: Prisma.StringNullableFilter<"CheckListItem"> | string | null
+  eveningId?: Prisma.StringNullableFilter<"CheckListItem"> | string | null
+  nightId?: Prisma.StringNullableFilter<"CheckListItem"> | string | null
   createdAt?: Prisma.DateTimeFilter<"CheckListItem"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"CheckListItem"> | Date | string
   morning?: Prisma.XOR<Prisma.CheckListNullableScalarRelationFilter, Prisma.CheckListWhereInput> | null
   evening?: Prisma.XOR<Prisma.CheckListNullableScalarRelationFilter, Prisma.CheckListWhereInput> | null
   night?: Prisma.XOR<Prisma.CheckListNullableScalarRelationFilter, Prisma.CheckListWhereInput> | null
-}, "id" | "morningId" | "eveningId" | "nightId">
+}, "id">
 
 export type CheckListItemOrderByWithAggregationInput = {
   id?: Prisma.SortOrder

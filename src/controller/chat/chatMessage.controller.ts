@@ -12,13 +12,14 @@ import {
     deleteController,
     getByIdController,
     updateController,
+    getAllController
 } from '../../utils/controllerFunctions';
 
 export const createChatMessageController = (req: Request, res: Response) =>
     createController(req, res, createChatMessageService, 'Chat message data is required', 'Failed to create chat message');
 
-export const getChatMessagesController = (req: Request, res: Response) =>
-    getByIdController(req, res, getChatMessagesService, 'Chat messages not found', 'Failed to retrieve chat messages');
+export const getChatMessagesController = (res: Response) =>
+    getAllController(res, getChatMessagesService, 'Chat messages not found');
 
 export const getChatMessageByIdController = (req: Request, res: Response) =>
     getByIdController(req, res, getChatMessageByIdService, 'Chat message not found', 'Failed to retrieve chat message');

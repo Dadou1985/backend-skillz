@@ -12,13 +12,14 @@ import {
     deleteController,
     getByIdController,
     updateController,
+    getAllController
 } from "../../utils/controllerFunctions";
 
 export const createRoomAmenetyController = (req: Request, res: Response) =>
     createController(req, res, createRoomAmenetiesService, 'Room amenety data is required', 'Failed to create room amenety');
 
-export const getAllRoomAmenetiesController = (req: Request, res: Response) =>
-    getByIdController(req, res, getAllRoomAmenetiesService, 'Failed to retrieve room ameneties', 'Failed to retrieve room ameneties');
+export const getAllRoomAmenetiesController = (res: Response) =>
+    getAllController(res, getAllRoomAmenetiesService, 'Failed to retrieve room ameneties');
 
 export const getRoomAmenetyByIdController = (req: Request, res: Response) =>
     getByIdController(req, res, getRoomAmenetiesByIdService, 'Room amenety not found', 'Failed to retrieve room amenety');

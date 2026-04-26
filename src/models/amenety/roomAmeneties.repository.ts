@@ -5,8 +5,8 @@ export async function createRoomAmenety(data: RoomAmenetiesCreateInput) {
     return await prisma.roomAmeneties.create({ data });
 }
 
-export async function getRoomAmeneties(id: string) {
-    return await prisma.roomAmeneties.findMany({ where: { id } });
+export async function getRoomAmeneties() {
+    return await prisma.roomAmeneties.findMany();
 }
 
 export async function getRoomAmenetyById(id: string) {
