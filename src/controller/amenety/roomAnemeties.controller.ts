@@ -10,7 +10,6 @@ import type { Request, Response } from "express";
 import {
     createController,
     deleteController,
-    getAllController,
     getByIdController,
     updateController,
 } from "../../utils/controllerFunctions";

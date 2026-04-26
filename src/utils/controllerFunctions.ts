@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
 
 export function handleControllerError(res: Response, message: string, error: unknown) {
-    console.log(message, error);
+    console.error(message, error);
     return res.status(500).json({ message });
 }
 
