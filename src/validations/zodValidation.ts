@@ -86,7 +86,7 @@ export const GuestUserSchema = z.object({
     guestCategoryClone: z.string().optional(),
     checkoutDate:       z.string(),
     notificationStatus: z.string(),
-    lastTimeConnected:  z.bigint(),
+    lastTimeConnected:  z.coerce.bigint(),
     newConnection:      z.boolean(),
     isChatting:         z.boolean().optional(),
     hotelVisitedArray:  z.array(z.string()).default([]),
