@@ -18,7 +18,7 @@ import {
 export const createBusinessUserController = (req: Request, res: Response) =>
     createController(req, res, createBusinessUserService, 'Business user data is required', 'Failed to create business user');
 
-export const getBusinessUsersController = (_req: Request, res: Response) =>
+export const getBusinessUsersController = (res: Response) =>
     getAllController(res, getBusinessUsersService, 'Failed to retrieve business users');
 
 export const getBusinessUserByIdController = (req: Request, res: Response) =>

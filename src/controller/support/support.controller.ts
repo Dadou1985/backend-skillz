@@ -18,7 +18,7 @@ import {
 export const createSupportController = (req: Request, res: Response) =>
     createController(req, res, createSupportService, 'Support data is required', 'Failed to create support');
 
-export const getSupportsController = (_req: Request, res: Response) =>
+export const getSupportsController = (res: Response) =>
     getAllController(res, getSupportsService, 'Failed to retrieve supports');
 
 export const getSupportByIdController = (req: Request, res: Response) =>
