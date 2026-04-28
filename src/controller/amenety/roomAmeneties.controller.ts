@@ -4,7 +4,7 @@ import {
     getAllRoomAmenetiesService,
     getRoomAmenetiesByIdService,
     updateRoomAmenetiesService,
-} from "../../services/amenety/roomAmeneties.services";
+} from "../../services/amenety/roomAmeneties.services.ts";
 
 import type { Request, Response } from "express";
 import {
@@ -13,7 +13,7 @@ import {
     getByIdController,
     updateController,
     getAllController
-} from "../../utils/controllerFunctions";
+} from "../../utils/controllerFunctions.ts";
 
 export const createRoomAmenetyController = (req: Request, res: Response) =>
     createController(req, res, createRoomAmenetiesService, 'Room amenety data is required', 'Failed to create room amenety');

@@ -1,5 +1,5 @@
-import { prisma } from "../../config/prisma";
-import type { FeedbackCreateInput } from "../../prisma/models/Feedback";
+import { prisma } from "../../config/prisma.ts";
+import type { FeedbackCreateInput } from "../../prisma/models/Feedback.ts";
 
 export async function createFeedback(data: FeedbackCreateInput) {
     return await prisma.feedback.create({ data });

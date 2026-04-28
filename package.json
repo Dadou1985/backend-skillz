@@ -5,10 +5,13 @@
   "license": "ISC",
   "author": "Daddou",
   "type": "module",
-  "main": "index.ts",
+  "main": "server.ts",
   "scripts": {
-    "dev": "nodemon --exec ts-node index.ts",
-    "test": "npm run test"
+    "dev": "NODE_ENV=development nodemon --exec ts-node --esm server.ts",
+    "test": "echo \"No tests configured yet\"",
+    "db:generate": "prisma generate && node scripts/fix-prisma-imports.mjs",
+    "db:migrate-dev": "NODE_ENV=development npx prisma migrate dev --name init",
+    "db:migrate-prod": "NODE_ENV=production npx prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.7.0",
@@ -22,6 +25,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.1.1",
     "mongoose": "^9.4.1",

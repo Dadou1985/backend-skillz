@@ -4,7 +4,7 @@ import {
     getFeedbacks,
     getFeedbackById,
     updateFeedback,
-} from '../../models/feedback/feedback.repository';
+} from '../../models/feedback/feedback.repository.ts';
 
 export async function createFeedbackService(data: Parameters<typeof createFeedback>[0]) {
     return await createFeedback(data);

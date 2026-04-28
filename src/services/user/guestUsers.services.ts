@@ -4,7 +4,7 @@ import {
     getGuestUsers,
     getGuestUserById,
     updateGuestUser
-} from '../../models/user/guestUsers.repository';
+} from '../../models/user/guestUsers.repository.ts';
 
 export async function createGuestUserService(data: Parameters<typeof createGuestUser>[0]) {
     return await createGuestUser(data);

@@ -1,5 +1,5 @@
-import { prisma } from "../../config/prisma";
-import type { ChatCreateInput } from "../../prisma/models/Chat";
+import { prisma } from "../../config/prisma.ts";
+import type { ChatCreateInput } from "../../prisma/models/Chat.ts";
 
 export async function createChat(data: ChatCreateInput) {
     return await prisma.chat.create({ data });

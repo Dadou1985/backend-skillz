@@ -4,7 +4,7 @@ import {
     getCheckListById,
     getCheckLists,
     updateCheckList,
-} from '../../models/checkList/checkList.repository';
+} from '../../models/checkList/checkList.repository.ts';
 
 export async function createCheckListService(data: Parameters<typeof createCheckList>[0]) {
     return await createCheckList(data);

@@ -1,5 +1,5 @@
-import { prisma } from "../../config/prisma";
-import type { GuestUserCreateInput } from "../../prisma/models/GuestUser";
+import { prisma } from "../../config/prisma.ts";
+import type { GuestUserCreateInput } from "../../prisma/models/GuestUser.ts";
 
 export async function createGuestUser(data: GuestUserCreateInput) {
     return await prisma.guestUser.create({ data });

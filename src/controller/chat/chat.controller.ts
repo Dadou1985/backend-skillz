@@ -4,7 +4,7 @@ import {
     getChatByIdService,
     getChatsService,
     updateChatService,
-} from '../../services/chat/chat.services';
+} from '../../services/chat/chat.services.ts';
 
 import type { Request, Response } from 'express';
 import {
@@ -13,7 +13,7 @@ import {
     getByIdController,
     updateController,
     getAllController
-} from '../../utils/controllerFunctions';
+} from '../../utils/controllerFunctions.ts';
 
 export const createChatController = (req: Request, res: Response) =>
     createController(req, res, createChatService, 'Chat data is required', 'Failed to create chat');

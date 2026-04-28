@@ -1,5 +1,5 @@
-import { prisma } from "../../config/prisma";
-import type { CheckListCreateInput } from "../../prisma/models/CheckList";
+import { prisma } from "../../config/prisma.ts";
+import type { CheckListCreateInput } from "../../prisma/models/CheckList.ts";
 
 export async function createCheckList(data: CheckListCreateInput) {
     return await prisma.checkList.create({ data });

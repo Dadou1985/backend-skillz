@@ -4,7 +4,7 @@ import {
     getHotelByIdService,
     getHotelsService,
     updateHotelService,
-} from "../../services/hotel/hotel.services";
+} from "../../services/hotel/hotel.services.ts";
 
 import type { Request, Response } from "express";
 import {
@@ -13,7 +13,7 @@ import {
     getAllController,
     getByIdController,
     updateController,
-} from "../../utils/controllerFunctions";
+} from "../../utils/controllerFunctions.ts";
 
 export const createHotelController = (req: Request, res: Response) =>
     createController(req, res, createHotelService, 'Hotel data is required', 'Failed to create hotel');

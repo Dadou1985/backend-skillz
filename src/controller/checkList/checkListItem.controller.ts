@@ -4,14 +4,14 @@ import {
     getCheckListItemByIdService,
     getCheckListItemsService,
     updateCheckListItemService,
-} from '../../services/checkList/checkListItem.services';
+} from '../../services/checkList/checkListItem.services.ts';
 import {
     createController,
     deleteController,
     getByIdController,
     updateController,
     getAllController
-} from '../../utils/controllerFunctions';
+} from '../../utils/controllerFunctions.ts';
 import type { Request, Response } from 'express';
 
 export const createCheckListItemController = (req: Request, res: Response) =>

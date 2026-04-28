@@ -4,7 +4,7 @@ import {
     getChatMessageById,
     getChatMessages,
     updateChatMessage,
-} from '../../models/chat/chatMessage.repository';
+} from '../../models/chat/chatMessage.repository.ts';
 
 export async function createChatMessageService(data: Parameters<typeof createChatMessage>[0]) {
     return await createChatMessage(data);

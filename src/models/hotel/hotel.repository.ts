@@ -1,5 +1,5 @@
-import { prisma } from "../../config/prisma";
-import type { HotelCreateInput } from "../../prisma/models/Hotel";
+import { prisma } from "../../config/prisma.ts";
+import type { HotelCreateInput } from "../../prisma/models/Hotel.ts";
 
 export async function createHotel(data: HotelCreateInput) {
     return await prisma.hotel.create({ data });

@@ -4,7 +4,7 @@ import {
     getSupportByIdService,
     getSupportsService,
     updateSupportService,
-} from '../../services/support/support.services';
+} from '../../services/support/support.services.ts';
 
 import type { Request, Response } from 'express';
 import {
@@ -13,7 +13,7 @@ import {
     getAllController,
     getByIdController,
     updateController,
-} from '../../utils/controllerFunctions';
+} from '../../utils/controllerFunctions.ts';
 
 export const createSupportController = (req: Request, res: Response) =>
     createController(req, res, createSupportService, 'Support data is required', 'Failed to create support');

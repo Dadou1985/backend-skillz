@@ -4,9 +4,9 @@ import {
     getCheckListItemsController,
     updateCheckListItemController,
     getCheckListItemByIdController,
-} from '../../controller/checkList/checkListItem.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { CheckListItemSchema } from '../../validations/zodValidation';
+} from '../../controller/checkList/checkListItem.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { CheckListItemSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();

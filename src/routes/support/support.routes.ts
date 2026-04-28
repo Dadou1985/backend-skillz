@@ -4,9 +4,9 @@ import {
     getSupportsController,
     getSupportByIdController,
     updateSupportController,
-} from '../../controller/support/support.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { SupportSchema } from '../../validations/zodValidation';
+} from '../../controller/support/support.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { SupportSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();

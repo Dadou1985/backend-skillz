@@ -2,7 +2,7 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    "rootDir": "./src",
+    "rootDir": "/",
     "outDir": "./dist",
 
     // Environment Settings
@@ -41,8 +41,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "ignoreDeprecations": "5.0",
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true
   },
-  "include": ["src/**/*.ts", "src/models/guestToken"],
+  "include": ["src/**/*.ts", "server.ts"],
   "exclude": ["node_modules", "dist"]
 }
