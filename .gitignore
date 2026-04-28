@@ -6,7 +6,8 @@ node_modules
 dist
 coverage
 
-.env
+.env.development
+.env.production
 .DS_Store
 
 # Optional npm cache directory

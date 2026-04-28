@@ -19,7 +19,11 @@ import guestUsersRoutes from './routes/user/guestUsers.routes.ts';
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = [
+    'https://mysweethotelpro.web.app', 
+    'https://mysweethotel.eu', 
+    'http://localhost:3000', 
+  ];
 
 app.use(cors({
     origin: allowedOrigins,
