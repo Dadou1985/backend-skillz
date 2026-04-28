@@ -4,9 +4,9 @@ import {
     getChatByIdController,
     getChatsController,
     updateChatController,
-} from '../../controller/chat/chat.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { ChatSchema } from '../../validations/zodValidation';
+} from '../../controller/chat/chat.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { ChatSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();

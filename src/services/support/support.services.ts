@@ -4,7 +4,7 @@ import {
     getSupportById,
     getSupports,
     updateSupport
-} from '../../models/support/support.repository';
+} from '../../models/support/support.repository.ts';
 
 export async function createSupportService(data: Parameters<typeof createSupport>[0]) {
     return await createSupport(data);

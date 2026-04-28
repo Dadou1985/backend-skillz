@@ -4,7 +4,7 @@ import {
     getGuestTokenById,
     getGuestTokens,
     updateGuestToken,
-} from "../../models/guestToken/guestToken.repository";
+} from "../../models/guestToken/guestToken.repository.ts";
 
 export async function createGuestTokenService(data: Parameters<typeof createGuestToken>[0]) {
     return await createGuestToken(data);

@@ -4,7 +4,7 @@ import {
     getAmenetiesService,
     getAmenetyByIdService,
     updateAmenetyService
-} from '../../services/amenety/amenety.services';
+} from '../../services/amenety/amenety.services.ts';
 
 import type { Request, Response } from 'express';
 import {
@@ -13,7 +13,7 @@ import {
     getByIdController,
     updateController,
     getAllController
-} from '../../utils/controllerFunctions';
+} from '../../utils/controllerFunctions.ts';
 
 export const createAmenetyController = (req: Request, res: Response) =>
     createController(req, res, createAmenetyService, 'Amenety data is required', 'Failed to create amenety');

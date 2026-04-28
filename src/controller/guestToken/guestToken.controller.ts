@@ -4,14 +4,14 @@ import {
     getAllGuestTokensService,
     getGuestTokenByIdService,
     updateGuestTokenService,
-} from "../../services/guestToken/guestToken.services";
+} from "../../services/guestToken/guestToken.services.ts";
 import {
     createController,
     deleteController,
     getByIdController,
     getAllController,
     updateController,
-} from '../../utils/controllerFunctions';
+} from '../../utils/controllerFunctions.ts';
 import type { Request, Response } from 'express';
 
 export const createGuestTokenController = (req: Request, res: Response) =>

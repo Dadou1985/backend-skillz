@@ -4,9 +4,9 @@ import {
     getHotelByIdController,
     getHotelsController,
     updateHotelController,
-} from '../../controller/hotel/hotel.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { HotelSchema } from '../../validations/zodValidation';
+} from '../../controller/hotel/hotel.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { HotelSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();

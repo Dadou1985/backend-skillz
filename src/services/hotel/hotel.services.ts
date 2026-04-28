@@ -4,7 +4,7 @@ import {
     getHotelById,
     getHotels,
     updateHotel,
-} from "../../models/hotel/hotel.repository";
+} from "../../models/hotel/hotel.repository.ts";
 
 export async function createHotelService(data: Parameters<typeof createHotel>[0]) {
     return await createHotel(data);

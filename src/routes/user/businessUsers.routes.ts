@@ -3,9 +3,9 @@ import {
     deleteBusinessUserController,
     getBusinessUserByIdController,
     getBusinessUsersController,
-} from '../../controller/user/businessUsers.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { BusinessUserSchema } from '../../validations/zodValidation';
+} from '../../controller/user/businessUsers.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { BusinessUserSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();

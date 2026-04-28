@@ -4,7 +4,7 @@ import {
     getBusinessUserById,
     getBusinessUsers,
     updateBusinessUser
-} from "../../models/user/businessUsers.repository";
+} from "../../models/user/businessUsers.repository.ts";
 
 export async function createBusinessUserService(data: Parameters<typeof createBusinessUser>[0]) {
     return await createBusinessUser(data);

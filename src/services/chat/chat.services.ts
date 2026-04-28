@@ -4,7 +4,7 @@ import {
     getChats,
     getChatById,
     updateChat
-} from '../../models/chat/chat.repository';
+} from '../../models/chat/chat.repository.ts';
 
 export async function createChatService(data: Parameters<typeof createChat>[0]) {
     return await createChat(data);

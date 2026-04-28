@@ -4,7 +4,7 @@ import {
     getAmeneties,
     getAmenetyById,
     updateAmenety
-} from "../../models/amenety/amenety.repository";
+} from "../../models/amenety/amenety.repository.ts";
 
 export async function createAmenetyService(data: Parameters<typeof createAmenety>[0]) {
     return await createAmenety(data);

@@ -4,7 +4,7 @@ import {
     getAllFeedbackService,
     getFeedbackByIdService,
     updateFeedbackService,
-} from '../../services/feedback/feedback.services';
+} from '../../services/feedback/feedback.services.ts';
 
 import type { Request, Response } from 'express';
 import {
@@ -13,7 +13,7 @@ import {
     getByIdController,
     updateController,
     getAllController
-} from '../../utils/controllerFunctions';
+} from '../../utils/controllerFunctions.ts';
 
 export const createFeedbackController = (req: Request, res: Response) =>
     createController(req, res, createFeedbackService, 'Feedback data is required', 'Failed to create feedback');

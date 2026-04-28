@@ -4,9 +4,9 @@ import {
     getAllRoomAmenetiesController,
     getRoomAmenetyByIdController,
     updateRoomAmenetyController,
-} from '../../controller/amenety/roomAmeneties.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { RoomAmenetiesSchema } from '../../validations/zodValidation';
+} from '../../controller/amenety/roomAmeneties.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { RoomAmenetiesSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();

@@ -4,9 +4,9 @@ import {
     getAmenetyByIdController,
     getAmenetiesController,
     updateAmenetyController,
-} from '../../controller/amenety/amenety.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { AmenetySchema } from '../../validations/zodValidation';
+} from '../../controller/amenety/amenety.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { AmenetySchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();

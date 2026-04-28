@@ -4,7 +4,7 @@ import {
     getRoomAmeneties,
     getRoomAmenetyById,
     updateRoomAmenety,
-} from "../../models/amenety/roomAmeneties.repository";
+} from "../../models/amenety/roomAmeneties.repository.ts";
 
 export async function createRoomAmenetiesService(data: Parameters<typeof createRoomAmenety>[0]) {
     return await createRoomAmenety(data);

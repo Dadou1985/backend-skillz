@@ -4,7 +4,7 @@ import {
     getBusinessUserByIdService,
     getBusinessUsersService,
     updateBusinessUserService,
-} from '../../services/user/businessUsers.services';
+} from '../../services/user/businessUsers.services.ts';
 
 import type { Request, Response } from 'express';
 import {
@@ -13,7 +13,7 @@ import {
     getAllController,
     getByIdController,
     updateController,
-} from '../../utils/controllerFunctions';
+} from '../../utils/controllerFunctions.ts';
 
 export const createBusinessUserController = (req: Request, res: Response) =>
     createController(req, res, createBusinessUserService, 'Business user data is required', 'Failed to create business user');

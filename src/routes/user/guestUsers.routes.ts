@@ -4,9 +4,9 @@ import {
     getGuestUsersController,
     getGuestUserByIdController,
     updateGuestUserController,
-} from '../../controller/user/guestUsers.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { GuestUserSchema } from '../../validations/zodValidation';
+} from '../../controller/user/guestUsers.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { GuestUserSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();

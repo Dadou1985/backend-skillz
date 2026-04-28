@@ -4,7 +4,7 @@ import {
     getGuestUserByIdService,
     getGuestUsersService,
     updateGuestUserService,
-} from '../../services/user/guestUsers.services';
+} from '../../services/user/guestUsers.services.ts';
 
 import type { Request, Response } from 'express';
 import {
@@ -13,7 +13,7 @@ import {
     getAllController,
     getByIdController,
     updateController,
-} from '../../utils/controllerFunctions';
+} from '../../utils/controllerFunctions.ts';
 
 export const createGuestUserController = (req: Request, res: Response) =>
     createController(req, res, createGuestUserService, 'Guest user data is required', 'Failed to create guest user');

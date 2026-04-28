@@ -5,9 +5,9 @@
   "license": "ISC",
   "author": "Daddou",
   "type": "module",
-  "main": "index.ts",
+  "main": "server.ts",
   "scripts": {
-    "dev": "nodemon --exec ts-node index.ts",
+    "dev": "NODE_ENV=development nodemon --exec ts-node server.ts",
     "test": "npm run test"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.1.1",
     "mongoose": "^9.4.1",

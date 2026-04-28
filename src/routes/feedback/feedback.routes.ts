@@ -4,9 +4,9 @@ import {
     getAllFeedbackController,
     getFeedbackByIdController,
     updateFeedbackController,
-} from '../../controller/feedback/feedback.controller';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation';
-import { FeedbackSchema } from '../../validations/zodValidation';
+} from '../../controller/feedback/feedback.controller.ts';
+import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { FeedbackSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();
