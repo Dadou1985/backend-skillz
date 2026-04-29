@@ -42,6 +42,7 @@
     "forceConsistentCasingInFileNames": true,
     "ignoreDeprecations": "5.0",
     "moduleResolution": "bundler",
+    "noEmit": true,
     "allowImportingTsExtensions": true
   },
   "include": ["src/**/*.ts", "server.ts"],
