@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { AppError } from "./customError";
+import { AppError } from "./customError.ts";
 
 export function handleControllerError(res: Response, message: string, error: unknown) {
     console.error(message, error);
