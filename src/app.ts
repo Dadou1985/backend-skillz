@@ -34,7 +34,6 @@ app.use(helmet());
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
-app.use(errorHandler);
 
 app.use(`${API_PREFIX}amenety`, amenetyRoutes);
 app.use(`${API_PREFIX}room-amenety`, roomAmenetiesRoutes);
@@ -48,6 +47,8 @@ app.use(`${API_PREFIX}hotel`, hotelRoutes);
 app.use(`${API_PREFIX}support`, supportRoutes);
 app.use(`${API_PREFIX}business-users`, businessUsersRoutes);
 app.use(`${API_PREFIX}guest-users`, guestUsersRoutes);
+
+app.use(errorHandler);
 
 app.get('/', (_, res) => {
     res.send('🟢 MSH Back Office API is running');

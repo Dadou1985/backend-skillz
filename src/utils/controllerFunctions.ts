@@ -13,11 +13,13 @@ export function handleNotFound(res: Response, message: string) {
 export const createController = async <T, D>(req: Request, res: Response, serviceFunction: (data: D) => Promise<T>, clientErrorMessage: string, serverErrorMessage: string) => {
     const data = req.body as D;
     try {
-        if (!data) throw new AppError(clientErrorMessage, 400, 'BAD_REQUEST');
-
+        if (!data || Object.keys(data).length === 0) {
+            throw new AppError(clientErrorMessage, 400, 'BAD_REQUEST');
+        }
         const result = await serviceFunction(data);
         return res.status(201).json(result);
     } catch (error) {
+        if (error instanceof AppError) throw error;
         console.error(serverErrorMessage, error);
         throw new AppError(serverErrorMessage, 500, 'INTERNAL_SERVER_ERROR');
     }
@@ -40,6 +42,7 @@ export const getByIdController = async <T>(req: Request, res: Response, serviceF
         if (!result) throw new AppError(notFoundMessage, 404, 'NOT_FOUND');
         return res.status(200).json(result);
     } catch (error) {
+        if (error instanceof AppError) throw error;
         console.error(serverErrorMessage, error);
         throw new AppError(serverErrorMessage, 500, 'INTERNAL_SERVER_ERROR');
     }
@@ -49,14 +52,19 @@ export const updateController = async <T, D>(req: Request, res: Response, servic
     const { id } = req.params;
     const data = req.body as D;
     try {
-        if (!id) throw new AppError('ID parameter is required', 400, 'BAD_REQUEST');
-        if (!data) throw new AppError('Request body is required', 400, 'BAD_REQUEST');
+        if (!id) {
+            throw new AppError('ID parameter is required', 400, 'BAD_REQUEST');
+        }
+        if (!data || Object.keys(data).length === 0) {
+            throw new AppError('Request body is required', 400, 'BAD_REQUEST');
+        }
 
         const result = await serviceFunction(id as string, data);
         if (!result) throw new AppError(notFoundMessage, 404, 'NOT_FOUND');
         
         return res.status(200).json(result);
     } catch (error) {
+        if (error instanceof AppError) throw error;
         console.error(serverErrorMessage, error);
         throw new AppError(serverErrorMessage, 500, 'INTERNAL_SERVER_ERROR');
     }

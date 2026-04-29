@@ -1,9 +1,10 @@
-import type { Request, Response } from "express";
+import type { Request, Response, NextFunction } from "express";
 import type { AppError } from "../../utils/customError";
+import { z } from "zod";
 
-export function errorHandler(error: AppError, req: Request, res: Response) {
+export function errorHandler(error: AppError, req: Request, res: Response, next: NextFunction) {
     if (error.name === "ZodError") {
-
+        const zodError = z.treeifyError(error as unknown as z.ZodError);
         return res.status(400).json({
     
           error: {
@@ -12,7 +13,7 @@ export function errorHandler(error: AppError, req: Request, res: Response) {
     
             code: "VALIDATION_ERROR",
     
-            details: error.stack,
+            details: zodError,
     
           },
     
