@@ -4,7 +4,7 @@ import {
     getBusinessUserByIdController,
     getBusinessUsersController,
 } from '../../controller/user/businessUsers.controller.ts';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
 import { BusinessUserSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 

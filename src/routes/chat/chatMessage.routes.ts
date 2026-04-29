@@ -5,7 +5,7 @@ import {
     updateChatMessageController,
     getChatMessageByIdController
 } from '../../controller/chat/chatMessage.controller.ts';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
 import { ChatMessageSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 

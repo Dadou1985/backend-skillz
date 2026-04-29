@@ -5,7 +5,7 @@ import {
     getSupportByIdController,
     updateSupportController,
 } from '../../controller/support/support.controller.ts';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
 import { SupportSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 

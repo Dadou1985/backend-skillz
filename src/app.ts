@@ -3,6 +3,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import { API_PREFIX } from './config/env.ts';
+import { errorHandler } from './middlewares/error/error.middleware.ts';
 
 import amenetyRoutes from './routes/amenety/amenety.routes.ts';
 import roomAmenetiesRoutes from './routes/amenety/roomAmeneties.routes.ts';
@@ -33,6 +34,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
+app.use(errorHandler);
 
 app.use(`${API_PREFIX}amenety`, amenetyRoutes);
 app.use(`${API_PREFIX}room-amenety`, roomAmenetiesRoutes);

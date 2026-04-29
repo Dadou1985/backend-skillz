@@ -5,7 +5,7 @@ import {
     getAmenetiesController,
     updateAmenetyController,
 } from '../../controller/amenety/amenety.controller.ts';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
 import { AmenetySchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 

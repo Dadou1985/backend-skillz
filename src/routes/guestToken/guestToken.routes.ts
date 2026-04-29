@@ -5,7 +5,7 @@ import {
     getGuestTokensController,
     updateGuestTokenController,
 } from "../../controller/guestToken/guestToken.controller.ts";
-import { validateRequestBody } from "../../middlewares/validations/handleRequestValidation.ts";
+import { validateRequestBody } from "../../middlewares/validation/validator.middleware.ts";
 import { GuestTokenSchema } from "../../validations/zodValidation.ts";
 import { Router } from "express";
 
