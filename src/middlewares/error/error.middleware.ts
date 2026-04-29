@@ -63,6 +63,4 @@ export function errorHandler(error: AppError, req: Request, res: Response, next:
 
       },
     });
-
-    next();
   }
