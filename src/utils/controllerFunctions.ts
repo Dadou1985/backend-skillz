@@ -1,4 +1,5 @@
 import type { Request, Response } from "express";
+import { AppError } from "./customError";
 
 export function handleControllerError(res: Response, message: string, error: unknown) {
     console.error(message, error);
@@ -12,11 +13,15 @@ export function handleNotFound(res: Response, message: string) {
 export const createController = async <T, D>(req: Request, res: Response, serviceFunction: (data: D) => Promise<T>, clientErrorMessage: string, serverErrorMessage: string) => {
     const data = req.body as D;
     try {
-        if (!data) return res.status(400).json({ message: clientErrorMessage });
+        if (!data || Object.keys(data).length === 0) {
+            throw new AppError(clientErrorMessage, 400, 'BAD_REQUEST');
+        }
         const result = await serviceFunction(data);
         return res.status(201).json(result);
     } catch (error) {
-        return handleControllerError(res, serverErrorMessage, error);
+        if (error instanceof AppError) throw error;
+        console.error(serverErrorMessage, error);
+        throw new AppError(serverErrorMessage, 500, 'INTERNAL_SERVER_ERROR');
     }
 }
 
@@ -25,7 +30,8 @@ export const getAllController = async <T>(res: Response, serviceFunction: () => 
         const result = await serviceFunction();
         return res.status(200).json(result);
     } catch (error) {
-        return handleControllerError(res, serverErrorMessage, error);
+        console.error(serverErrorMessage, error);
+        throw new AppError(serverErrorMessage, 500, 'INTERNAL_SERVER_ERROR');
     }
 }
 
@@ -33,10 +39,12 @@ export const getByIdController = async <T>(req: Request, res: Response, serviceF
     const { id } = req.params;
     try {
         const result = await serviceFunction(id as string);
-        if (!result) return handleNotFound(res, notFoundMessage);
+        if (!result) throw new AppError(notFoundMessage, 404, 'NOT_FOUND');
         return res.status(200).json(result);
     } catch (error) {
-        return handleControllerError(res, serverErrorMessage, error);
+        if (error instanceof AppError) throw error;
+        console.error(serverErrorMessage, error);
+        throw new AppError(serverErrorMessage, 500, 'INTERNAL_SERVER_ERROR');
     }
 }
 
@@ -44,15 +52,21 @@ export const updateController = async <T, D>(req: Request, res: Response, servic
     const { id } = req.params;
     const data = req.body as D;
     try {
-        if (!id) return handleNotFound(res, 'ID parameter is required');
-        if (!data) return handleNotFound(res, 'Update data is required');
+        if (!id) {
+            throw new AppError('ID parameter is required', 400, 'BAD_REQUEST');
+        }
+        if (!data || Object.keys(data).length === 0) {
+            throw new AppError('Request body is required', 400, 'BAD_REQUEST');
+        }
 
         const result = await serviceFunction(id as string, data);
-        if (!result) return handleNotFound(res, notFoundMessage);
+        if (!result) throw new AppError(notFoundMessage, 404, 'NOT_FOUND');
         
         return res.status(200).json(result);
     } catch (error) {
-        return handleControllerError(res, serverErrorMessage, error);
+        if (error instanceof AppError) throw error;
+        console.error(serverErrorMessage, error);
+        throw new AppError(serverErrorMessage, 500, 'INTERNAL_SERVER_ERROR');
     }
 }
 
@@ -62,6 +76,7 @@ export const deleteController = async (req: Request, res: Response, serviceFunct
         await serviceFunction(id as string);
         return res.status(204).send();
     } catch (error) {
-        return handleControllerError(res, serverErrorMessage, error);
+        console.error(serverErrorMessage, error);
+        throw new AppError(serverErrorMessage, 500, 'INTERNAL_SERVER_ERROR');
     }
 }

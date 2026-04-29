@@ -5,7 +5,7 @@ import {
     getHotelsController,
     updateHotelController,
 } from '../../controller/hotel/hotel.controller.ts';
-import { validateRequestBody } from '../../middlewares/validations/handleRequestValidation.ts';
+import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
 import { HotelSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 

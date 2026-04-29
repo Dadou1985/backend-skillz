@@ -3,6 +3,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import { API_PREFIX } from './config/env.ts';
+import { errorHandler } from './middlewares/error/error.middleware.ts';
 
 import amenetyRoutes from './routes/amenety/amenety.routes.ts';
 import roomAmenetiesRoutes from './routes/amenety/roomAmeneties.routes.ts';
@@ -46,6 +47,8 @@ app.use(`${API_PREFIX}hotel`, hotelRoutes);
 app.use(`${API_PREFIX}support`, supportRoutes);
 app.use(`${API_PREFIX}business-users`, businessUsersRoutes);
 app.use(`${API_PREFIX}guest-users`, guestUsersRoutes);
+
+app.use(errorHandler);
 
 app.get('/', (_, res) => {
     res.send('🟢 MSH Back Office API is running');
