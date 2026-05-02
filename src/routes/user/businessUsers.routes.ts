@@ -3,9 +3,10 @@ import {
     deleteBusinessUserController,
     getBusinessUserByIdController,
     getBusinessUsersController,
+    updateBusinessUserController,
 } from '../../controller/user/businessUsers.controller.ts';
 import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
-import { BusinessUserSchema } from '../../validations/zodValidation.ts';
+import { BusinessUserSchema, BusinessUserUpdateSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();
@@ -15,6 +16,8 @@ router.post('/', validateRequestBody(BusinessUserSchema), createBusinessUserCont
 router.get('/', getBusinessUsersController);
 
 router.get('/:id', getBusinessUserByIdController);
+
+router.patch('/:id', validateRequestBody(BusinessUserUpdateSchema), updateBusinessUserController);
 
 router.delete('/:id', deleteBusinessUserController);
 

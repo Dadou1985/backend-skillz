@@ -1,7 +1,6 @@
 import { prisma } from "../../config/prisma.ts";
-import type { BusinessUserCreateInput } from "../../prisma/models/BusinessUser.ts";
+import type { BusinessUserCreateInput } from "../../../prisma/prisma/models/BusinessUser.ts"
 
-// Safe select object that excludes password field
 const safeBusinessUserSelect = {
     id: true,
     adminStatus: true,

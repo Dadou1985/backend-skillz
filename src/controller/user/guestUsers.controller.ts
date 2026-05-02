@@ -18,7 +18,7 @@ import {
 export const createGuestUserController = (req: Request, res: Response) =>
     createController(req, res, createGuestUserService, 'Guest user data is required', 'Failed to create guest user');
 
-export const getGuestUsersController = (res: Response) =>
+export const getGuestUsersController = (_req: Request, res: Response) =>
     getAllController(res, getGuestUsersService, 'Failed to retrieve guest users');
 
 export const getGuestUserByIdController = (req: Request, res: Response) =>

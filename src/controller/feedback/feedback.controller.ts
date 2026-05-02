@@ -18,7 +18,7 @@ import {
 export const createFeedbackController = (req: Request, res: Response) =>
     createController(req, res, createFeedbackService, 'Feedback data is required', 'Failed to create feedback');
 
-export const getAllFeedbackController = (res: Response) =>
+export const getAllFeedbackController = (_req: Request, res: Response) =>
     getAllController(res, getAllFeedbackService, 'Failed to retrieve feedbacks');
 
 export const getFeedbackByIdController = (req: Request, res: Response) =>

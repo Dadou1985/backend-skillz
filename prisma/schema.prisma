@@ -33,8 +33,8 @@ model Hotel {
   logo         String?
   pricingModel String?
 
-  createdAt    DateTime
-  updatedAt    DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   chatRoom      Chat[] 
   businessUsers BusinessUser[]
@@ -53,8 +53,8 @@ model CheckList {
   evening      CheckListItem[] @relation("EveningItems")
   night        CheckListItem[] @relation("NightItems")
 
-  createdAt    DateTime
-  updatedAt    DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   hotel Hotel @relation(fields: [hotelId], references: [id], onDelete: Cascade)
 
@@ -69,8 +69,8 @@ model CheckListItem {
   eveningId    String?
   nightId      String?
 
-  createdAt    DateTime
-  updatedAt    DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   morning CheckList? @relation("MorningItems", fields: [morningId], references: [id], onDelete: Cascade)
   evening CheckList? @relation("EveningItems", fields: [eveningId], references: [id], onDelete: Cascade)
@@ -90,8 +90,8 @@ model BusinessUser {
   password     String
   username     String
 
-  createdAt    DateTime
-  updatedAt    DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   hotel Hotel @relation(fields: [hotelId], references: [id], onDelete: Cascade)
 
@@ -241,8 +241,8 @@ model Support {
   adminSpeak   Boolean
   status       Boolean
 
-  createdAt    DateTime
-  updatedAt    DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   hotel    Hotel @relation(fields: [hotelId], references: [id], onDelete: Cascade)
   chatRoom Chat[]

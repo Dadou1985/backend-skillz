@@ -6,7 +6,7 @@ import {
     getCheckListItemByIdController,
 } from '../../controller/checkList/checkListItem.controller.ts';
 import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
-import { CheckListItemSchema } from '../../validations/zodValidation.ts';
+import { CheckListItemSchema, CheckListItemUpdateSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();
@@ -17,7 +17,7 @@ router.get('/', getCheckListItemsController);
 
 router.get('/:id', getCheckListItemByIdController);
 
-router.put('/:id', validateRequestBody(CheckListItemSchema), updateCheckListItemController);
+router.patch('/:id', validateRequestBody(CheckListItemUpdateSchema), updateCheckListItemController);
 
 router.delete('/:id', deleteCheckListItemController);
 

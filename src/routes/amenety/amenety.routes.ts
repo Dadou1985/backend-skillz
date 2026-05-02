@@ -6,7 +6,7 @@ import {
     updateAmenetyController,
 } from '../../controller/amenety/amenety.controller.ts';
 import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
-import { AmenetySchema } from '../../validations/zodValidation.ts';
+import { AmenetySchema, AmenetyUpdateSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();
@@ -17,7 +17,7 @@ router.get('/', getAmenetiesController);
 
 router.get('/:id', getAmenetyByIdController);
 
-router.put('/:id', validateRequestBody(AmenetySchema), updateAmenetyController);
+router.patch('/:id', validateRequestBody(AmenetyUpdateSchema), updateAmenetyController);
 
 router.delete('/:id', deleteAmenetyController);
 

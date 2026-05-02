@@ -1,5 +1,5 @@
 import { prisma } from "../../config/prisma.ts";
-import type { SupportCreateInput } from "../../prisma/models/Support.ts";
+import type { SupportCreateInput } from "../../../prisma/prisma/models/Support.ts";
 
 export async function createSupport(data: SupportCreateInput) {
     return await prisma.support.create({ data });

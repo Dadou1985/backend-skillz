@@ -18,7 +18,7 @@ import {
 export const createChatController = (req: Request, res: Response) =>
     createController(req, res, createChatService, 'Chat data is required', 'Failed to create chat');
 
-export const getChatsController = (res: Response) =>
+export const getChatsController = (_req: Request, res: Response) =>
     getAllController(res, getChatsService, 'Chats not found');
 
 export const getChatByIdController = (req: Request, res: Response) =>

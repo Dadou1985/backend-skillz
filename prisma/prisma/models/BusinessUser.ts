@@ -270,8 +270,8 @@ export type BusinessUserCreateInput = {
   email: string
   password: string
   username: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   hotel: Prisma.HotelCreateNestedOneWithoutBusinessUsersInput
 }
 
@@ -282,8 +282,8 @@ export type BusinessUserUncheckedCreateInput = {
   hotelId: string
   password: string
   username: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type BusinessUserUpdateInput = {
@@ -315,8 +315,8 @@ export type BusinessUserCreateManyInput = {
   hotelId: string
   password: string
   username: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type BusinessUserUpdateManyMutationInput = {
@@ -431,8 +431,8 @@ export type BusinessUserCreateWithoutHotelInput = {
   email: string
   password: string
   username: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type BusinessUserUncheckedCreateWithoutHotelInput = {
@@ -441,8 +441,8 @@ export type BusinessUserUncheckedCreateWithoutHotelInput = {
   email: string
   password: string
   username: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type BusinessUserCreateOrConnectWithoutHotelInput = {
@@ -491,8 +491,8 @@ export type BusinessUserCreateManyHotelInput = {
   email: string
   password: string
   username: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type BusinessUserUpdateWithoutHotelInput = {

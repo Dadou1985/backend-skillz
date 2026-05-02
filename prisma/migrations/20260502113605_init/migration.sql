@@ -1,0 +1,14 @@
+-- AlterTable
+ALTER TABLE "business_users" ALTER COLUMN "createdAt" SET DEFAULT CURRENT_TIMESTAMP;
+
+-- AlterTable
+ALTER TABLE "check_list_items" ALTER COLUMN "createdAt" SET DEFAULT CURRENT_TIMESTAMP;
+
+-- AlterTable
+ALTER TABLE "check_lists" ALTER COLUMN "createdAt" SET DEFAULT CURRENT_TIMESTAMP;
+
+-- AlterTable
+ALTER TABLE "hotels" ALTER COLUMN "createdAt" SET DEFAULT CURRENT_TIMESTAMP;
+
+-- AlterTable
+ALTER TABLE "support" ALTER COLUMN "createdAt" SET DEFAULT CURRENT_TIMESTAMP;

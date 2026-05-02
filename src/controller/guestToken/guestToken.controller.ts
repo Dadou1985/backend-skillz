@@ -17,7 +17,7 @@ import type { Request, Response } from 'express';
 export const createGuestTokenController = (req: Request, res: Response) =>
     createController(req, res, createGuestTokenService, 'Guest token data is required', 'Failed to create guest token');
 
-export const getGuestTokensController = (res: Response) =>
+export const getGuestTokensController = (_req: Request, res: Response) =>
     getAllController(res, getAllGuestTokensService, 'Failed to retrieve guest tokens');
 
 export const getGuestTokenByIdController = (req: Request, res: Response) =>

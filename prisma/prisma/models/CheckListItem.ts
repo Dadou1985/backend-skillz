@@ -287,8 +287,8 @@ export type CheckListItemCreateInput = {
   task: string
   status: boolean
   checkListId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListCreateNestedOneWithoutMorningInput
   evening?: Prisma.CheckListCreateNestedOneWithoutEveningInput
   night?: Prisma.CheckListCreateNestedOneWithoutNightInput
@@ -302,8 +302,8 @@ export type CheckListItemUncheckedCreateInput = {
   morningId?: string | null
   eveningId?: string | null
   nightId?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListItemUpdateInput = {
@@ -338,8 +338,8 @@ export type CheckListItemCreateManyInput = {
   morningId?: string | null
   eveningId?: string | null
   nightId?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListItemUpdateManyMutationInput = {
@@ -540,8 +540,8 @@ export type CheckListItemCreateWithoutMorningInput = {
   task: string
   status: boolean
   checkListId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   evening?: Prisma.CheckListCreateNestedOneWithoutEveningInput
   night?: Prisma.CheckListCreateNestedOneWithoutNightInput
 }
@@ -553,8 +553,8 @@ export type CheckListItemUncheckedCreateWithoutMorningInput = {
   checkListId: string
   eveningId?: string | null
   nightId?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListItemCreateOrConnectWithoutMorningInput = {
@@ -572,8 +572,8 @@ export type CheckListItemCreateWithoutEveningInput = {
   task: string
   status: boolean
   checkListId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListCreateNestedOneWithoutMorningInput
   night?: Prisma.CheckListCreateNestedOneWithoutNightInput
 }
@@ -585,8 +585,8 @@ export type CheckListItemUncheckedCreateWithoutEveningInput = {
   checkListId: string
   morningId?: string | null
   nightId?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListItemCreateOrConnectWithoutEveningInput = {
@@ -604,8 +604,8 @@ export type CheckListItemCreateWithoutNightInput = {
   task: string
   status: boolean
   checkListId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListCreateNestedOneWithoutMorningInput
   evening?: Prisma.CheckListCreateNestedOneWithoutEveningInput
 }
@@ -617,8 +617,8 @@ export type CheckListItemUncheckedCreateWithoutNightInput = {
   checkListId: string
   morningId?: string | null
   eveningId?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListItemCreateOrConnectWithoutNightInput = {
@@ -701,8 +701,8 @@ export type CheckListItemCreateManyMorningInput = {
   checkListId: string
   eveningId?: string | null
   nightId?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListItemCreateManyEveningInput = {
@@ -712,8 +712,8 @@ export type CheckListItemCreateManyEveningInput = {
   checkListId: string
   morningId?: string | null
   nightId?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListItemCreateManyNightInput = {
@@ -723,8 +723,8 @@ export type CheckListItemCreateManyNightInput = {
   checkListId: string
   morningId?: string | null
   eveningId?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListItemUpdateWithoutMorningInput = {
