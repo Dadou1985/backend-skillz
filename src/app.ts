@@ -6,6 +6,7 @@ import { API_PREFIX } from './config/env.ts';
 import { errorHandler } from './middlewares/error/error.middleware.ts';
 import { requestLogger } from './middlewares/logs/logger.middleware.ts';
 
+import authRoutes from './routes/auth/auth.routes.ts';
 import amenetyRoutes from './routes/amenety/amenety.routes.ts';
 import roomAmenetiesRoutes from './routes/amenety/roomAmeneties.routes.ts';
 import chatRoutes from './routes/chat/chat.routes.ts';
@@ -37,6 +38,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);
 
+app.use(`${API_PREFIX}auth`, authRoutes);
 app.use(`${API_PREFIX}amenety`, amenetyRoutes);
 app.use(`${API_PREFIX}room-amenety`, roomAmenetiesRoutes);
 app.use(`${API_PREFIX}chat`, chatRoutes);

@@ -123,13 +123,13 @@ describe('POST /api/v1/hotel', () => {
   });
 });
 
-describe('PUT /api/v1/hotel/:id', () => {
+describe('PATCH /api/v1/hotel/:id', () => {
   it('returns 200 with updated hotel', async () => {
     const updated = { ...mockHotel, hotelName: 'Updated Name' };
     vi.mocked(updateHotelService).mockResolvedValue(updated);
 
     const res = await request(app)
-      .put(`${BASE}/clxxxxxxxxxxxxxxxxxxxxxx01`)
+      .patch(`${BASE}/clxxxxxxxxxxxxxxxxxxxxxx01`)
       .send({ ...validHotelBody, hotelName: 'Updated Name' });
 
     expect(res.status).toBe(200);
@@ -138,7 +138,7 @@ describe('PUT /api/v1/hotel/:id', () => {
 
   it('returns 400 when body is invalid', async () => {
     const res = await request(app)
-      .put(`${BASE}/clxxxxxxxxxxxxxxxxxxxxxx01`)
+      .patch(`${BASE}/clxxxxxxxxxxxxxxxxxxxxxx01`)
       .send({ hotelName: 123 });
 
     expect(res.status).toBe(400);

@@ -5,7 +5,7 @@ import { AppError } from "../../utils/customError";
 export async function registerUserController(req: Request, res: Response) {
     const { data } = req.body;
     if (!data) {
-        throw new AppError('Category and user data are required', 400, 'MISSING_DATA');
+        throw new AppError('User data is required', 400, 'MISSING_DATA');
     }
     try {
         const token = await registerUserService(data);
