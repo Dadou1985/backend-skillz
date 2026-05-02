@@ -1,20 +1,8 @@
 import { prisma } from "../../config/prisma.ts";
-import type { BusinessUserCreateInput } from "../../prisma/models/BusinessUser.ts";
-
-// Safe select object that excludes password field
-const safeBusinessUserSelect = {
-    id: true,
-    adminStatus: true,
-    email: true,
-    hotelId: true,
-    username: true,
-    createdAt: true,
-    updatedAt: true,
-    hotel: true,
-};
+import type { BusinessUserCreateInput } from "../../../prisma/prisma/models/BusinessUser.ts"
 
 export async function createBusinessUser(data: BusinessUserCreateInput) {
-    return await prisma.businessUser.create({ data, select: safeBusinessUserSelect });
+    return await prisma.businessUser.create({ data });
 }
 
 export async function getBusinessUsers() {
@@ -22,13 +10,13 @@ export async function getBusinessUsers() {
 }
 
 export async function getBusinessUserById(id: string) {
-    return await prisma.businessUser.findUnique({ where: { id }, select: safeBusinessUserSelect });
+    return await prisma.businessUser.findUnique({ where: { id } });
 }
 
 export async function updateBusinessUser(id: string, data: Partial<BusinessUserCreateInput>) {
-    return await prisma.businessUser.update({ where: { id }, data, select: safeBusinessUserSelect });
+    return await prisma.businessUser.update({ where: { id }, data });
 }
 
 export async function deleteBusinessUser(id: string) {
-    return await prisma.businessUser.delete({ where: { id }, select: safeBusinessUserSelect });
+    return await prisma.businessUser.delete({ where: { id } });
 }

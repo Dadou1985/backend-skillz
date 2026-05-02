@@ -6,7 +6,7 @@ import {
     updateGuestTokenController,
 } from "../../controller/guestToken/guestToken.controller.ts";
 import { validateRequestBody } from "../../middlewares/validation/validator.middleware.ts";
-import { GuestTokenSchema } from "../../validations/zodValidation.ts";
+import { GuestTokenSchema, GuestTokenUpdateSchema } from "../../validations/zodValidation.ts";
 import { Router } from "express";
 
 const router = Router();
@@ -17,7 +17,7 @@ router.get("/", getGuestTokensController);
 
 router.get("/:id", getGuestTokenByIdController);
 
-router.put("/:id", validateRequestBody(GuestTokenSchema), updateGuestTokenController);
+router.patch("/:id", validateRequestBody(GuestTokenUpdateSchema), updateGuestTokenController);
 
 router.delete("/:id", deleteGuestTokenController);
 

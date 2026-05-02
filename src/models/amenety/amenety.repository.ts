@@ -1,5 +1,5 @@
 import { prisma } from "../../config/prisma.ts";
-import type { AmenetyCreateInput } from "../../prisma/models/Amenety.ts";
+import type { AmenetyCreateInput } from "../../../prisma/prisma/models/Amenety.ts";
 
 export async function createAmenety(data: AmenetyCreateInput) {
     return await prisma.amenety.create({ data });

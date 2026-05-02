@@ -6,7 +6,7 @@ import {
     updateRoomAmenetyController,
 } from '../../controller/amenety/roomAmeneties.controller.ts';
 import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
-import { RoomAmenetiesSchema } from '../../validations/zodValidation.ts';
+import { RoomAmenetiesSchema, RoomAmenetiesUpdateSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();
@@ -17,7 +17,7 @@ router.get('/', getAllRoomAmenetiesController);
 
 router.get('/:id', getRoomAmenetyByIdController);
 
-router.put('/:id', validateRequestBody(RoomAmenetiesSchema), updateRoomAmenetyController);
+router.patch('/:id', validateRequestBody(RoomAmenetiesUpdateSchema), updateRoomAmenetyController);
 
 router.delete('/:id', deleteRoomAmenetyController);
 

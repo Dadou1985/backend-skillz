@@ -515,8 +515,8 @@ export type HotelCreateInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
@@ -547,8 +547,8 @@ export type HotelUncheckedCreateInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
@@ -643,8 +643,8 @@ export type HotelCreateManyInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type HotelUpdateManyMutationInput = {
@@ -949,8 +949,8 @@ export type HotelCreateWithoutCheckListsInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
@@ -980,8 +980,8 @@ export type HotelUncheckedCreateWithoutCheckListsInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
@@ -1089,8 +1089,8 @@ export type HotelCreateWithoutBusinessUsersInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
@@ -1120,8 +1120,8 @@ export type HotelUncheckedCreateWithoutBusinessUsersInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
@@ -1229,8 +1229,8 @@ export type HotelCreateWithoutGuestUsersInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
@@ -1260,8 +1260,8 @@ export type HotelUncheckedCreateWithoutGuestUsersInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput
@@ -1369,8 +1369,8 @@ export type HotelCreateWithoutRoomAmenetiesInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
@@ -1400,8 +1400,8 @@ export type HotelUncheckedCreateWithoutRoomAmenetiesInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
@@ -1509,8 +1509,8 @@ export type HotelCreateWithoutFeedbacksInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
@@ -1540,8 +1540,8 @@ export type HotelUncheckedCreateWithoutFeedbacksInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
@@ -1649,8 +1649,8 @@ export type HotelCreateWithoutSupportsInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
@@ -1680,8 +1680,8 @@ export type HotelUncheckedCreateWithoutSupportsInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutHotelInput
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
@@ -1789,8 +1789,8 @@ export type HotelCreateWithoutChatRoomInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   businessUsers?: Prisma.BusinessUserCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackCreateNestedManyWithoutHotelInput
@@ -1820,8 +1820,8 @@ export type HotelUncheckedCreateWithoutChatRoomInput = {
   base64Url?: string | null
   logo?: string | null
   pricingModel?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   businessUsers?: Prisma.BusinessUserUncheckedCreateNestedManyWithoutHotelInput
   guestUsers?: Prisma.GuestUserUncheckedCreateNestedManyWithoutHotelInput
   feedbacks?: Prisma.FeedbackUncheckedCreateNestedManyWithoutHotelInput

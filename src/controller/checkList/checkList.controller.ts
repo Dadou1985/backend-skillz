@@ -19,7 +19,7 @@ import type { Request, Response } from 'express';
 export const createCheckListController = (req: Request, res: Response) =>
     createController(req, res, createCheckListService, 'CheckList data is required', 'Failed to create checkList');
 
-export const getCheckListsController = (res: Response) =>
+export const getCheckListsController = (_req: Request, res: Response) =>
     getAllController(res, getCheckListsService, 'CheckLists not found');
 
 export const getCheckListByIdController = (req: Request, res: Response) =>

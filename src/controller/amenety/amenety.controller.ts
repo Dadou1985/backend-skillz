@@ -18,7 +18,7 @@ import {
 export const createAmenetyController = (req: Request, res: Response) =>
     createController(req, res, createAmenetyService, 'Amenety data is required', 'Failed to create amenety');
 
-export const getAmenetiesController = (res: Response) =>
+export const getAmenetiesController = (_req: Request, res: Response) =>
     getAllController(res, getAmenetiesService, 'Failed to retrieve ameneties');
 
 export const getAmenetyByIdController = (req: Request, res: Response) =>

@@ -17,7 +17,7 @@ import type { Request, Response } from 'express';
 export const createCheckListItemController = (req: Request, res: Response) =>
     createController(req, res, createCheckListItemService, 'CheckListItem data is required', 'Failed to create checkListItem');
 
-export const getCheckListItemsController = (res: Response) =>
+export const getCheckListItemsController = (_req: Request, res: Response) =>
     getAllController(res, getCheckListItemsService, 'Failed to retrieve checkListItems');
 
 export const getCheckListItemByIdController = (req: Request, res: Response) =>

@@ -286,8 +286,8 @@ export type SupportCreateInput = {
   checkoutDate: string
   adminSpeak: boolean
   status: boolean
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   hotel: Prisma.HotelCreateNestedOneWithoutSupportsInput
   chatRoom?: Prisma.ChatCreateNestedManyWithoutSupportInput
 }
@@ -300,8 +300,8 @@ export type SupportUncheckedCreateInput = {
   checkoutDate: string
   adminSpeak: boolean
   status: boolean
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutSupportInput
 }
 
@@ -339,8 +339,8 @@ export type SupportCreateManyInput = {
   checkoutDate: string
   adminSpeak: boolean
   status: boolean
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type SupportUpdateManyMutationInput = {
@@ -482,8 +482,8 @@ export type SupportCreateWithoutHotelInput = {
   checkoutDate: string
   adminSpeak: boolean
   status: boolean
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatCreateNestedManyWithoutSupportInput
 }
 
@@ -494,8 +494,8 @@ export type SupportUncheckedCreateWithoutHotelInput = {
   checkoutDate: string
   adminSpeak: boolean
   status: boolean
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   chatRoom?: Prisma.ChatUncheckedCreateNestedManyWithoutSupportInput
 }
 
@@ -547,8 +547,8 @@ export type SupportCreateWithoutChatRoomInput = {
   checkoutDate: string
   adminSpeak: boolean
   status: boolean
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   hotel: Prisma.HotelCreateNestedOneWithoutSupportsInput
 }
 
@@ -560,8 +560,8 @@ export type SupportUncheckedCreateWithoutChatRoomInput = {
   checkoutDate: string
   adminSpeak: boolean
   status: boolean
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type SupportCreateOrConnectWithoutChatRoomInput = {
@@ -611,8 +611,8 @@ export type SupportCreateManyHotelInput = {
   checkoutDate: string
   adminSpeak: boolean
   status: boolean
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type SupportUpdateWithoutHotelInput = {

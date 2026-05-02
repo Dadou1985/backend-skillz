@@ -227,8 +227,8 @@ export type CheckListScalarWhereWithAggregatesInput = {
 
 export type CheckListCreateInput = {
   id?: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListItemCreateNestedManyWithoutMorningInput
   evening?: Prisma.CheckListItemCreateNestedManyWithoutEveningInput
   night?: Prisma.CheckListItemCreateNestedManyWithoutNightInput
@@ -238,8 +238,8 @@ export type CheckListCreateInput = {
 export type CheckListUncheckedCreateInput = {
   id?: string
   hotelId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutMorningInput
   evening?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutEveningInput
   night?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutNightInput
@@ -268,8 +268,8 @@ export type CheckListUncheckedUpdateInput = {
 export type CheckListCreateManyInput = {
   id?: string
   hotelId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListUpdateManyMutationInput = {
@@ -413,8 +413,8 @@ export type CheckListUpdateOneWithoutNightNestedInput = {
 
 export type CheckListCreateWithoutHotelInput = {
   id?: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListItemCreateNestedManyWithoutMorningInput
   evening?: Prisma.CheckListItemCreateNestedManyWithoutEveningInput
   night?: Prisma.CheckListItemCreateNestedManyWithoutNightInput
@@ -422,8 +422,8 @@ export type CheckListCreateWithoutHotelInput = {
 
 export type CheckListUncheckedCreateWithoutHotelInput = {
   id?: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutMorningInput
   evening?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutEveningInput
   night?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutNightInput
@@ -467,8 +467,8 @@ export type CheckListScalarWhereInput = {
 
 export type CheckListCreateWithoutMorningInput = {
   id?: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   evening?: Prisma.CheckListItemCreateNestedManyWithoutEveningInput
   night?: Prisma.CheckListItemCreateNestedManyWithoutNightInput
   hotel: Prisma.HotelCreateNestedOneWithoutCheckListsInput
@@ -477,8 +477,8 @@ export type CheckListCreateWithoutMorningInput = {
 export type CheckListUncheckedCreateWithoutMorningInput = {
   id?: string
   hotelId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   evening?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutEveningInput
   night?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutNightInput
 }
@@ -490,8 +490,8 @@ export type CheckListCreateOrConnectWithoutMorningInput = {
 
 export type CheckListCreateWithoutEveningInput = {
   id?: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListItemCreateNestedManyWithoutMorningInput
   night?: Prisma.CheckListItemCreateNestedManyWithoutNightInput
   hotel: Prisma.HotelCreateNestedOneWithoutCheckListsInput
@@ -500,8 +500,8 @@ export type CheckListCreateWithoutEveningInput = {
 export type CheckListUncheckedCreateWithoutEveningInput = {
   id?: string
   hotelId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutMorningInput
   night?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutNightInput
 }
@@ -513,8 +513,8 @@ export type CheckListCreateOrConnectWithoutEveningInput = {
 
 export type CheckListCreateWithoutNightInput = {
   id?: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListItemCreateNestedManyWithoutMorningInput
   evening?: Prisma.CheckListItemCreateNestedManyWithoutEveningInput
   hotel: Prisma.HotelCreateNestedOneWithoutCheckListsInput
@@ -523,8 +523,8 @@ export type CheckListCreateWithoutNightInput = {
 export type CheckListUncheckedCreateWithoutNightInput = {
   id?: string
   hotelId: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   morning?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutMorningInput
   evening?: Prisma.CheckListItemUncheckedCreateNestedManyWithoutEveningInput
 }
@@ -623,8 +623,8 @@ export type CheckListUncheckedUpdateWithoutNightInput = {
 
 export type CheckListCreateManyHotelInput = {
   id?: string
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type CheckListUpdateWithoutHotelInput = {

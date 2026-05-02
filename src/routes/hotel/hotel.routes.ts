@@ -6,7 +6,7 @@ import {
     updateHotelController,
 } from '../../controller/hotel/hotel.controller.ts';
 import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
-import { HotelSchema } from '../../validations/zodValidation.ts';
+import { HotelSchema, HotelUpdateSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();
@@ -17,7 +17,7 @@ router.get('/', getHotelsController);
 
 router.get('/:id', getHotelByIdController);
 
-router.put('/:id', validateRequestBody(HotelSchema), updateHotelController);
+router.patch('/:id', validateRequestBody(HotelUpdateSchema), updateHotelController);
 
 router.delete('/:id', deleteHotelController);
 

@@ -18,7 +18,7 @@ import {
 export const createRoomAmenetyController = (req: Request, res: Response) =>
     createController(req, res, createRoomAmenetiesService, 'Room amenety data is required', 'Failed to create room amenety');
 
-export const getAllRoomAmenetiesController = (res: Response) =>
+export const getAllRoomAmenetiesController = (_req: Request, res: Response) =>
     getAllController(res, getAllRoomAmenetiesService, 'Failed to retrieve room ameneties');
 
 export const getRoomAmenetyByIdController = (req: Request, res: Response) =>

@@ -6,7 +6,7 @@ import {
     updateGuestUserController,
 } from '../../controller/user/guestUsers.controller.ts';
 import { validateRequestBody } from '../../middlewares/validation/validator.middleware.ts';
-import { GuestUserSchema } from '../../validations/zodValidation.ts';
+import { GuestUserSchema, GuestUserUpdateSchema } from '../../validations/zodValidation.ts';
 import { Router } from 'express';
 
 const router = Router();
@@ -17,7 +17,7 @@ router.get('/', getGuestUsersController);
 
 router.get('/:id', getGuestUserByIdController);
 
-router.put('/:id', validateRequestBody(GuestUserSchema), updateGuestUserController);
+router.patch('/:id', validateRequestBody(GuestUserUpdateSchema), updateGuestUserController);
 
 router.delete('/:id', deleteGuestUserController);
 
